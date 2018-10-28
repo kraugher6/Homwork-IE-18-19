@@ -1,7 +1,0 @@
-fatto
-1) analisi preliminare: individuare le colonne costanti o uguali tra loro (screen delle distribuzioni e del matching delle colonne)
-2) fare pca con le colonne tranne quelle individuate al passo 1 (screen del grafico a cerchio con le frecce dentro e degli autovalori)
-3) fare il clustering con ward (screen del dendrogramma)
-da fare
-4) scelta dei valori o in modo random o con centroide (screen del dataset finale)
-5) calcolo della varianza persa per 3, 5, 7, 10, 13, 15, 17 cluster
