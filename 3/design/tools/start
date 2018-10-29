@@ -1,0 +1,2 @@
+#!/bin/bash
+./apache-jmeter-5.0/bin/jmeter.sh 
