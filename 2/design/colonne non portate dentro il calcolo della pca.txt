@@ -1,11 +1,8 @@
 costanti o quasi:
-cached
 active
-anonpages
-mapped
-slab
+Anonpages
 avglatency
-error
+errors
 
 colonne uguali:
 dato che memfree e writeback sono colonne uguali, portano la stessa varianza e quindi nel cacolo ne evito 1 (writeback)

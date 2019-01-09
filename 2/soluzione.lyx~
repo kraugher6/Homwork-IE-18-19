@@ -365,6 +365,7 @@ Distribuzioni delle feature
 \end_layout
 
 \begin_layout Standard
+\noindent
 Come si può osservare dalle distribuzioni mostrate, gli attributi che presentano
  CV nullo sono: 
 \shape italic
@@ -383,9 +384,11 @@ avglatency
 errors
 \shape default
 .
+ 
 \end_layout
 
 \begin_layout Standard
+\noindent
 Un'ulteriore scrematura delle feature si può effettuare osservando colonne
  che presentano stessi valori.
  Ad occhio, le colonne 
@@ -441,6 +444,7 @@ Formula confronto colonne
 \end_layout
 
 \begin_layout Standard
+\noindent
 Del risultato prodotto, si è analizzata la distribuzione verificando che
  questa abbia coefficiente di variazione nullo.
 \end_layout
@@ -486,6 +490,7 @@ Distribuzioni del risultato del confronto
 \end_layout
 
 \begin_layout Standard
+\noindent
 Il risultato di questa fase è una selezione di 19 feature a partire dalle
  24 iniziali.
 \end_layout
@@ -502,6 +507,7 @@ o la maggior parte della varianza.
 \end_layout
 
 \begin_layout Standard
+\noindent
 Il risultato può essere osservato in forma grafica tramite uno score plot
  e loading plot.
 \end_layout
@@ -547,6 +553,7 @@ Score plot e loading plot generate dal tool
 \end_layout
 
 \begin_layout Standard
+\noindent
 Il tool genera una vista degli autovalori della matrice di correlazione
  con la relativa percentuale di varianza per ogni componente ottenuta.
 \end_layout
@@ -591,6 +598,7 @@ Autovalori della matrice di correlazione
 \end_layout
 
 \begin_layout Standard
+\noindent
 Per rispondere all'obiettivo, si sceglie un numero di componenti principali
  pari a 6, rappresentativi del 95.437% della varianza totale.
 \end_layout
@@ -610,6 +618,7 @@ A valle della PCA effettuata, si vuole ridurre ulteriormente il dataset,
 \end_layout
 
 \begin_layout Standard
+\noindent
 Il risultato della fase di clustering è apprezzabile tramite il dendrogramma,
  prodotto dal tool.
 \end_layout
@@ -655,6 +664,7 @@ Dendrogramma
 \end_layout
 
 \begin_layout Standard
+\noindent
 Inoltre il tool produce anche una tabella contenente, per ogni partizione,
  il relativo valore della distanza di Ward.
 \end_layout
@@ -700,10 +710,15 @@ Cronologia di clusterizzazione
 \end_layout
 
 \begin_layout Standard
+\noindent
 Al fine di scegliere il numero di cluster si valuta, per ogni partizione,
  la percentuale di varianza spiegata rispetto a quella ottenuta a valle
  della PCA.
- La varianza spiegata, in termini percentuali, è ottenuta tramite la formula:
+\end_layout
+
+\begin_layout Standard
+\noindent
+La varianza spiegata, in termini percentuali, è ottenuta tramite la formula:
 \end_layout
 
 \begin_layout Standard
@@ -718,6 +733,7 @@ V_{TOT}=V_{PCA}-(V_{PCA}*\frac{D_{i}}{D_{t}})
 \end_layout
 
 \begin_layout Standard
+\noindent
 dove 
 \end_layout
 
@@ -952,7 +968,7 @@ Per avere un buon trade-off tra numero di cluster e varianza spiegata, si
 \begin_inset Float figure
 placement H
 wide false
-sideways true
+sideways false
 status collapsed
 
 \begin_layout Plain Layout
@@ -961,7 +977,7 @@ status collapsed
 \begin_inset Graphics
 	filename images/workload sintetico 1.png
 	lyxscale 50
-	scale 50
+	scale 80
 	rotateOrigin leftTop
 
 \end_inset
@@ -992,7 +1008,7 @@ Esempio di workload sintetico
 \begin_inset Float figure
 placement H
 wide false
-sideways true
+sideways false
 status collapsed
 
 \begin_layout Plain Layout
@@ -1001,7 +1017,7 @@ status collapsed
 \begin_inset Graphics
 	filename images/workload sintetico 2.png
 	lyxscale 50
-	scale 50
+	scale 80
 	rotateOrigin leftTop
 
 \end_inset
