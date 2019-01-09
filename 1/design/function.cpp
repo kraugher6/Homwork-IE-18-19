@@ -4,7 +4,7 @@ std::ofstream ofs("/proc/sys/vm/drop_caches");
 void *buffer;
 
 void initBuffer(long int fs) {
-	posix_memalign(&buffer, 1024, fs);
+	posix_memalign(&buffer, sizeof(void *), fs);
 	getrandom(buffer, fs, GRND_NONBLOCK);
 }
 
