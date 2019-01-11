@@ -1,5 +1,5 @@
 CC = g++
-CFLAG = -g -O2
+CFLAG = -g
 OBJ = main.cpp function.cpp
 
 all: main
