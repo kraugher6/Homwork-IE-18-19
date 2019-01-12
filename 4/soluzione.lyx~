@@ -48,27 +48,15 @@ morecomment=[s]{--}
 
 \fancyhead[RO,LE]{\bfseries \leftmark}
 \fancyfoot[LE,RO]{\thepage}
-\fancyfoot[LO,CE]{Tesina in Impianti di Elaborazione}
+\fancyfoot[LO,CE]{Tesina in ASE: Architetture dei Sistemi di Elaborazione}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
 \date{}
 \cfoot{}
-\usepackage{eso-pic,graphicx}
-\makeatletter
-\newcommand\BackgroundPicture[2]{
-\setlength{\unitlength}{1pt}
-\put(0,\strip@pt\paperheight){
-\parbox[t][\paperheight]{\paperwidth}{
-\vfill
-\centering\includegraphics[angle=#2]{#1}
-\vfill
-}
-}
-}
-\makeatother
 \end_preamble
 \use_default_options true
+\master Tesina.lyx
 \maintain_unincluded_children false
 \language italian
 \language_package default
@@ -78,7 +66,7 @@ morecomment=[s]{--}
 \font_sans "default" "default"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
-\font_default_family rmdefault
+\font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
@@ -91,7 +79,7 @@ morecomment=[s]{--}
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize 12
+\paperfontsize default
 \spacing single
 \use_hyperref false
 \papersize default
@@ -144,34 +132,61 @@ morecomment=[s]{--}
 
 \begin_body
 
-\begin_layout Standard
+\begin_layout Subsection
+Soluzione
+\end_layout
 
-\lang american
-\begin_inset Note Note
-status open
+\begin_layout Standard
+Da un'analisi del diagramma fornito, è possibile notare che i componenti
+ 2 e 3 sono disposti in parallelo; possono essere dunque ridotti ad un unico
+ blocco con reliability 
+\begin_inset Formula $R_{2,3}=1-(1-R_{2})(1-R_{3})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si osservi che non è possibile effettuare ulteriori riduzioni, per cui il
+ diagramma che ne risulta è di tipo non-serie-parallelo.
+ Per questi tipi di diagrammi, effettuiamo l'analisi dei success path; sappiamo
+ infatti che la reliability del sistema risulta essere minore o uguale di
+ quella del parallelo dei success path, che mostriamo di seguito:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
-Utilizzare questo file per generare il pdf completo
-\end_layout
+\noindent
+\align left
+\begin_inset Graphics
+	filename ../2/images/distribuzioni 1.PNG
+	lyxscale 50
+	scale 55
+	rotateOrigin leftTop
 
 \end_inset
 
 
 \end_layout
-
-\begin_layout Standard
-
-\lang american
-\begin_inset ERT
-status open
 
 \begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Distribuzioni delle feature
+\end_layout
+
+\end_inset
 
 
-\backslash
-AddToShipoutPicture{
-\backslash
-BackgroundPicture{logo.png}{0}}
 \end_layout
 
 \end_inset
@@ -180,11 +195,14 @@ BackgroundPicture{logo.png}{0}}
 \end_layout
 
 \begin_layout Standard
+Il limite superiore che individuiamo è il seguente:
+\end_layout
 
-\lang american
-\begin_inset CommandInset include
-LatexCommand input
-filename "traccia.lyx"
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{SYS}\leq1-(1-R_{1}R_{2,3})(1-R_{4}R_{2,3})(1-R_{4}R_{5})
+\]
 
 \end_inset
 
@@ -192,14 +210,17 @@ filename "traccia.lyx"
 \end_layout
 
 \begin_layout Standard
+Per avere un valore preciso di Reliability, facciamo ricorso alla tecnica
+ del conditioning, condizionando appunto il funzionamento del sistema a
+ quello di un nodo.
+ In particolare, si è scelto il nodo 4, in quanto si può notare che nel
+ caso in cui esso funzioni (considerandolo dunque come corto circuito) o
+ meno (considerandolo circuito aperto), è possibile effettuare una riduzione
+ del sistema rispettivamente ad un parallelo ed una serie, che sono di più
+ semplice trattazione.
+\end_layout
 
-\lang american
-\begin_inset CommandInset include
-LatexCommand input
-filename "soluzione.lyx"
-
-\end_inset
-
+\begin_layout Standard
 
 \end_layout
 

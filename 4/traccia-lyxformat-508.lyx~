@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -22,8 +22,6 @@
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
-\use_microtype false
-\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -54,7 +52,6 @@
 \suppress_date false
 \justification true
 \use_refstyle 1
-\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -63,10 +60,7 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\is_math_indent 0
-\math_numbering_side default
-\quotes_style english
-\dynamic_quotes 0
+\quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -79,43 +73,51 @@
 
 \begin_body
 
-\begin_layout Subsection
+\begin_layout Section
 Traccia
 \end_layout
 
 \begin_layout Standard
-Trovare la R(t) e l'MTTF per il sistema di cui viene fornito l'RBD.
- Nel calcolo dell'MTTF, assumere che tutti i componenti siano identici e
- falliscano randomicamente con failure rate 
-\begin_inset Formula $\lambda$
+Progettare una cella di un comparatore a maggioranza (magnitude comparator)
+ ad 1 bit la cui tabella di verità è riportata in fig.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Tabella-di-verità"
+
 \end_inset
 
 .
+ La sintesi è basata sull'uso di una porta NXOR come mostrato in fig.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename images/RBD.png
-	lyxscale 40
-	scale 40
+	filename images/traccia/tab-ver-bit-comparator.png
+	scale 50
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-RBD
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Tabella-di-verità"
+
+\end_inset
+
+Tabella di verità magnitude comparator
 \end_layout
 
 \end_inset
@@ -123,13 +125,15 @@ RBD
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Descrivere il circuito in VHDL e simularlo nell'ambiente Xilinx ISE costruendo
+ un ambiente di test per verificarne tutte le funzionalità e gli aspetti
+ di tempificazione.
 \end_layout
 
 \end_body
