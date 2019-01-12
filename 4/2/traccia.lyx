@@ -84,30 +84,30 @@ Traccia
 \end_layout
 
 \begin_layout Standard
-Trovare la R(t) e l'MTTF per il sistema di cui viene fornito l'RBD.
- Nel calcolo dell'MTTF, assumere che tutti i componenti siano identici e
- falliscano randomicamente con failure rate 
-\begin_inset Formula $\lambda$
-\end_inset
-
-.
+Vogliamo confrontare due diversi modi di utilizzare la ridodanza per incrementar
+e la reliability di un sistema.
+ Supponiamo che il sistema abbia bisogno di s componenti identici in serie
+ per funzionare in maniera appropriata.
+ Supponiamo inoltre che ci vengano dati m x s componenti.
+ Tra i due schemi, quale fornisce una maggiore reliability? Supposta r la
+ reliability del singolo componente, derivare le espressioni delle reliability
+ delle due configurazioni.
+ Comparare le espressioni per m=3 e s=3.
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Float figure
 wide false
 sideways false
 status collapsed
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename images/RBD.png
+	filename images/traccia.png
 	lyxscale 40
-	scale 40
+	scale 38
 
 \end_inset
 
@@ -115,15 +115,11 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-RBD
+Schemi da comparare
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 

@@ -79,7 +79,7 @@
 
 \begin_body
 
-\begin_layout Section
+\begin_layout Subsection
 Traccia
 \end_layout
 
@@ -94,16 +94,14 @@ Trovare la R(t) e l'MTTF per il sistema di cui viene fornito l'RBD.
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Float figure
 wide false
 sideways false
 status collapsed
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename images/RBD.png
 	lyxscale 40

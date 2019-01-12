@@ -181,8 +181,7 @@ R_{SoP}=(1-(1-r)^{m})^{s}
 \end_layout
 
 \begin_layout Standard
-Andando a settare s=m=3, si sono plottate le due funzioni con l'aiuto di
- MatLab; il risultato è il seguente.
+Andando a settare s=m=3, è possibile plottare le due fu
 \end_layout
 
 \begin_layout Standard
@@ -226,8 +225,10 @@ Confronto tra i due schemi
 \end_layout
 
 \begin_layout Standard
-È possibile notare che la reliability del secondo schema è migliore.
- 
+\begin_inset VSpace defskip
+\end_inset
+
+
 \end_layout
 
 \end_body
