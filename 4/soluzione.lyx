@@ -48,7 +48,7 @@ morecomment=[s]{--}
 
 \fancyhead[RO,LE]{\bfseries \leftmark}
 \fancyfoot[LE,RO]{\thepage}
-\fancyfoot[LO,CE]{Tesina in ASE: Architetture dei Sistemi di Elaborazione}
+\fancyfoot[LO,CE]{Tesina in Impianti di Elaborazione}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
@@ -147,6 +147,46 @@ Da un'analisi del diagramma fornito, è possibile notare che i componenti
 \end_layout
 
 \begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/sistema ridotto.png
+	lyxscale 50
+	scale 30
+	rotateOrigin leftTop
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sistema ridotto
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Si osservi che non è possibile effettuare ulteriori riduzioni, per cui il
  diagramma che ne risulta è di tipo non-serie-parallelo.
  Per questi tipi di diagrammi, effettuiamo l'analisi dei success path; sappiamo
@@ -164,12 +204,11 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
-\noindent
-\align left
+\align center
 \begin_inset Graphics
-	filename ../2/images/distribuzioni 1.PNG
+	filename images/success path.png
 	lyxscale 50
-	scale 55
+	scale 45
 	rotateOrigin leftTop
 
 \end_inset
@@ -178,10 +217,11 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Distribuzioni delle feature
+Success Path
 \end_layout
 
 \end_inset
@@ -221,10 +261,98 @@ Per avere un valore preciso di Reliability, facciamo ricorso alla tecnica
 \end_layout
 
 \begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/4 works.png
+	lyxscale 50
+	scale 30
+	rotateOrigin leftTop
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Caso in cui 4 funzioni
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/4 doesnt work.png
+	lyxscale 50
+	scale 45
+	rotateOrigin leftTop
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Caso in cui 4 non funzioni
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Calcoliamo dunque le probabilità condizionate:
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
 
 \shape italic
 P(system works | 4 works) = 
@@ -235,6 +363,7 @@ P(system works | 4 works) =
 \end_layout
 
 \begin_layout Standard
+\align center
 
 \shape italic
 P(system works | 4 doesn't work) = 
@@ -245,10 +374,71 @@ P(system works | 4 doesn't work) =
 \end_layout
 
 \begin_layout Standard
-La reliability totale del sistema sarà data dalla somma della prima, moltiplicat
-a per la reliability del componente 4, e la seconda, moltiplicata per l'unreliab
-ility del componente 4.
+Sfruttando il teorema della probabilità totale, la reliability totale del
+ sistema sarà data dalla somma della prima probabilità, moltiplicata per
+ la reliability del componente 4, e la seconda, moltiplicata per l'unreliability
+ del componente 4.
  
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $R_{SYS}=(1-(1-R_{2||3})(1-R_{5}))\cdot R_{4}+(R_{1}\cdot R_{2||3})\cdot(1-R_{4})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+Da traccia, tutti i nodi hanno la stessa reliability; supponiamo sia R.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $R_{2||3}=1-(1-R_{2})(1-R_{3})=1-(1-R)(1-R)=1-(1-R)^{2}=-R^{2}+2R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $R_{SYS}=(1-(1-(2R-R^{2}))(1-R))\cdot R+(R\cdot(2R-R^{2}))(1-R)=2R^{4}-6R^{3}+5R^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ora, sfruttando nuovamente l’ipotesi che tutte i componenti del sistema
+ siano identici, ed assumendo che i fallimenti seguano andamento esponenziale
+ con failure rate pari a λ (
+\begin_inset Formula $R(t)=e^{\lambda t}$
+\end_inset
+
+) possiamo calcolare:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+MTTF_{SYS}=\intop_{0}^{\infty}[2R^{4}-6R^{3}+5R^{2}]dt=\intop_{0}^{\infty}[2e^{4\lambda}-6e^{3\lambda}+5e^{2\lambda}]dt=\frac{1}{2\lambda}-\frac{2}{\lambda}+\frac{5}{2\lambda}=\frac{1}{\lambda}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
