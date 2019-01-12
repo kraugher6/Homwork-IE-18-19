@@ -133,6 +133,8 @@ morecomment=[s]{--}
 \begin_body
 
 \begin_layout Subsection
+
+\backslash
 Soluzione
 \end_layout
 
@@ -153,14 +155,14 @@ Da un'analisi del diagramma fornito, è possibile notare che i componenti
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename images/sistema ridotto.png
 	lyxscale 50
-	scale 45
+	scale 30
 	rotateOrigin leftTop
 
 \end_inset
@@ -274,7 +276,7 @@ status open
 \begin_inset Graphics
 	filename images/4 works.png
 	lyxscale 50
-	scale 45
+	scale 30
 	rotateOrigin leftTop
 
 \end_inset
@@ -307,12 +309,12 @@ Caso in cui 4 funzioni
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename images/success path.png
+	filename images/4 doesnt work.png
 	lyxscale 50
 	scale 45
 	rotateOrigin leftTop
@@ -327,7 +329,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Success Path
+Caso in cui 4 non funzioni
 \end_layout
 
 \end_inset
@@ -345,6 +347,14 @@ Calcoliamo dunque le probabilità condizionate:
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
 
 \shape italic
 P(system works | 4 works) = 
@@ -355,6 +365,7 @@ P(system works | 4 works) =
 \end_layout
 
 \begin_layout Standard
+\align center
 
 \shape italic
 P(system works | 4 doesn't work) = 
@@ -370,9 +381,14 @@ Sfruttando il teorema della probabilità totale, la reliability totale del
  la reliability del componente 4, e la seconda, moltiplicata per l'unreliability
  del componente 4.
  
+\begin_inset VSpace defskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Formula $R_{SYS}=(1-(1-R_{2||3})(1-R_{5}))\cdot R_{4}+(R_{1}\cdot R_{2||3})\cdot(1-R_{4})$
 \end_inset
 
@@ -380,10 +396,18 @@ Sfruttando il teorema della probabilità totale, la reliability totale del
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
 Da traccia, tutti i nodi hanno la stessa reliability; supponiamo sia R.
+\begin_inset VSpace defskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Formula $R_{2||3}=1-(1-R_{2})(1-R_{3})=1-(1-R)(1-R)=1-(1-R)^{2}=-R^{2}+2R$
 \end_inset
 
@@ -391,6 +415,7 @@ Da traccia, tutti i nodi hanno la stessa reliability; supponiamo sia R.
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Formula $R_{SYS}=(1-(1-(2R-R^{2}))(1-R))\cdot R+(R\cdot(2R-R^{2}))(1-R)=2R^{4}-6R^{3}+5R^{2}$
 \end_inset
 
