@@ -84,30 +84,48 @@ Traccia
 \end_layout
 
 \begin_layout Standard
-Trovare la R(t) e l'MTTF per il sistema di cui viene fornito l'RBD.
- Nel calcolo dell'MTTF, assumere che tutti i componenti siano identici e
- falliscano randomicamente con failure rate 
-\begin_inset Formula $\lambda$
+In figura è mostrata l'architettura di una rete di computer in un sistema
+ bancario.
+ L'architettura è chiamata 
+\begin_inset Quotes eld
 \end_inset
 
-.
+skip-ring network
+\begin_inset Quotes erd
+\end_inset
+
+ and è progettata per permettere ai processori di comunicare anche dopo
+ l'avvenimento di un failure in un nodo.
+ Ad esempio, se il nodo 1 fallisce, il nodo 8 può bypassare il nodo fallito
+ instradando i dati sul link alternativo che collega il nodo 8 con il 2.
+ Assumendo che i link siano perfetti e i nodi abbiano ognuno una reliability
+ 
+\begin_inset Formula $R_{m}$
+\end_inset
+
+, derivare l'espressione per la reliability della rete.
+ Se 
+\begin_inset Formula $R_{m}$
+\end_inset
+
+ segue la legge di fallimento esponenziale e il failure rate di ogni nodo
+ è di 0.005 failure all'ora, determinare la reliability del sistema alla
+ fine di un periodo di 48 ore.
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Float figure
 wide false
 sideways false
 status collapsed
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
-	filename images/RBD.png
+	filename images/traccia.png
 	lyxscale 40
-	scale 40
+	scale 34
 
 \end_inset
 
@@ -115,7 +133,7 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-RBD
+Rete del sistema bancario
 \end_layout
 
 \end_inset

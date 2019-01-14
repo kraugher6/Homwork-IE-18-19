@@ -137,309 +137,69 @@ Soluzione
 \end_layout
 
 \begin_layout Standard
-Da un'analisi del diagramma fornito, è possibile notare che i componenti
- 2 e 3 sono disposti in parallelo; possono essere dunque ridotti ad un unico
- blocco con reliability 
-\begin_inset Formula $R_{2||3}=1-(1-R_{2})(1-R_{3})$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename images/sistema ridotto.png
-	lyxscale 50
-	scale 30
-	rotateOrigin leftTop
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Sistema ridotto
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Si osservi che non è possibile effettuare ulteriori riduzioni, per cui il
- diagramma che ne risulta è di tipo non-serie-parallelo.
- Per questi tipi di diagrammi, effettuiamo l'analisi dei success path; sappiamo
- infatti che la reliability del sistema risulta essere minore o uguale di
- quella del parallelo dei success path, che mostriamo di seguito:
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename images/success path.png
-	lyxscale 50
-	scale 45
-	rotateOrigin leftTop
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Success Path
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Il limite superiore che individuiamo è il seguente:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-R_{SYS}\leq1-(1-R_{1}R_{2||3})(1-R_{4}R_{2||3})(1-R_{4}R_{5})
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Per avere un valore preciso di Reliability, facciamo ricorso alla tecnica
- del conditioning, condizionando appunto il funzionamento del sistema a
- quello di un nodo.
- In particolare, si è scelto il nodo 4, in quanto si può notare che nel
- caso in cui esso funzioni (considerandolo dunque come corto circuito) o
- meno (considerandolo circuito aperto), è possibile effettuare una riduzione
- del sistema rispettivamente ad un parallelo ed una serie, che sono di più
- semplice trattazione.
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename images/4 works.png
-	lyxscale 50
-	scale 30
-	rotateOrigin leftTop
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Caso in cui 4 funzioni
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename images/4 doesnt work.png
-	lyxscale 50
-	scale 45
-	rotateOrigin leftTop
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Caso in cui 4 non funzioni
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Calcoliamo dunque le probabilità condizionate:
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace defskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\shape italic
-P(system works | 4 works) = 
-\begin_inset Formula $1-(1-R_{2||3})(1-R_{5})$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\shape italic
-P(system works | 4 doesn't work) = 
-\begin_inset Formula $R_{1}\cdot R_{2||3}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Sfruttando il teorema della probabilità totale, la reliability totale del
- sistema sarà data dalla somma della prima probabilità, moltiplicata per
- la reliability del componente 4, e la seconda, moltiplicata per l'unreliability
- del componente 4.
+Per il tipo di rete in esame, ci chiediamo quando il sistema può dichiararsi
+ fallito.
+ La particolarità di tale rete è che un nodo fallito può essere bypassato:
+ il nodo raggiunto tramite il link alternativo dovrà necessariamente funzionare,
+ pena il fallimento dell'intero sistema.
+ Si può quindi dedurre che i fallimenti non devono riguardare nodi adiacenti.
+ Fatta questa assunzione, quanti fallimenti possono avvenire contemporaneamente?
+ Dati 8 nodi, il sistema continua a funzionare con al massimo 4 fallimenti,
+ limite oltre il quale essi saranno poi adiacenti.
  
-\begin_inset VSpace defskip
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $R_{SYS}=(1-(1-R_{2||3})(1-R_{5}))\cdot R_{4}+(R_{1}\cdot R_{2||3})\cdot(1-R_{4})$
-\end_inset
-
-
-\begin_inset VSpace defskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-Da traccia, tutti i nodi hanno la stessa reliability; supponiamo sia R.
-\begin_inset VSpace defskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Formula $R_{2||3}=1-(1-R_{2})(1-R_{3})=1-(1-R)(1-R)=1-(1-R)^{2}=-R^{2}+2R$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Formula $R_{SYS}=(1-(1-(2R-R^{2}))(1-R))\cdot R+(R\cdot(2R-R^{2}))(1-R)=2R^{4}-6R^{3}+5R^{2}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Ora, sfruttando nuovamente l’ipotesi che tutte i componenti del sistema
- siano identici, ed assumendo che i fallimenti seguano andamento esponenziale
- con failure rate pari a λ (
-\begin_inset Formula $R(t)=e^{\lambda t}$
-\end_inset
-
-) possiamo calcolare:
+Lo schema è dunque un M-out-of-N System, in particolare un 4-out-of-8.
+ La reliability in questo caso può essere espressa nel seguente modo:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-MTTF_{SYS}=\intop_{0}^{\infty}[2R^{4}-6R^{3}+5R^{2}]dt=\intop_{0}^{\infty}[2e^{4\lambda}-6e^{3\lambda}+5e^{2\lambda}]dt=\frac{1}{2\lambda}-\frac{2}{\lambda}+\frac{5}{2\lambda}=\frac{1}{\lambda}
+R_{48}=\sum_{i=0}^{4}\left(_{i}^{4}\right)R_{m}^{8-i}(1-R_{m})^{i}
 \]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Da questa sommatoria bisogna però escludere i fallimenti adiacenti.
+\end_layout
+
+\begin_layout Standard
+*FORMULA*
+\end_layout
+
+\begin_layout Standard
+Una volta fatto ciò è possibile calcolare 
+\begin_inset Formula $R_{48}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+*FORMULA*
+\end_layout
+
+\begin_layout Standard
+Tenendo conto che che 
+\begin_inset Formula $R_{m}$
+\end_inset
+
+ segue una legge di fallimento esponenziale tale che: 
+\begin_inset Formula $R_{m}=e^{-\lambda t}$
+\end_inset
+
+, con λ = 0.005, la reliability del sistema in un periodo di t = 48h risulterà
+ pari a:
+\end_layout
+
+\begin_layout Standard
+*FORMULA*
 \end_layout
 
 \end_body

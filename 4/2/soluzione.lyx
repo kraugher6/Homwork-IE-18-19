@@ -197,9 +197,9 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename images/sistema ridotto.png
+	filename images/confronto.png
 	lyxscale 50
-	scale 30
+	scale 55
 	rotateOrigin leftTop
 
 \end_inset

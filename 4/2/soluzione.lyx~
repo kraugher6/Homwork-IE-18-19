@@ -181,7 +181,8 @@ R_{SoP}=(1-(1-r)^{m})^{s}
 \end_layout
 
 \begin_layout Standard
-NB:
+Andando a settare s=m=3, si sono plottate le due funzioni con l'aiuto di
+ MatLab; il risultato è il seguente.
 \end_layout
 
 \begin_layout Standard
@@ -196,9 +197,9 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename images/sistema ridotto.png
+	filename images/confronto.png
 	lyxscale 50
-	scale 30
+	scale 50
 	rotateOrigin leftTop
 
 \end_inset
@@ -225,10 +226,8 @@ Confronto tra i due schemi
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace defskip
-\end_inset
-
-
+È possibile notare che la reliability del secondo schema è migliore.
+ 
 \end_layout
 
 \end_body
