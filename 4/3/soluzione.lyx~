@@ -54,21 +54,9 @@ morecomment=[s]{--}
 
 \date{}
 \cfoot{}
-\usepackage{eso-pic,graphicx}
-\makeatletter
-\newcommand\BackgroundPicture[2]{
-\setlength{\unitlength}{1pt}
-\put(0,\strip@pt\paperheight){
-\parbox[t][\paperheight]{\paperwidth}{
-\vfill
-\centering\includegraphics[angle=#2]{#1}
-\vfill
-}
-}
-}
-\makeatother
 \end_preamble
 \use_default_options true
+\master Tesina.lyx
 \maintain_unincluded_children false
 \language italian
 \language_package default
@@ -78,7 +66,7 @@ morecomment=[s]{--}
 \font_sans "default" "default"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
-\font_default_family rmdefault
+\font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
@@ -91,7 +79,7 @@ morecomment=[s]{--}
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize 12
+\paperfontsize default
 \spacing single
 \use_hyperref false
 \papersize default
@@ -144,15 +132,33 @@ morecomment=[s]{--}
 
 \begin_body
 
-\begin_layout Standard
-
-\lang american
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Utilizzare questo file per generare il pdf completo
+\begin_layout Subsection
+Soluzione
 \end_layout
+
+\begin_layout Standard
+Per il tipo di rete in esame, ci chiediamo quando il sistema può dichiararsi
+ fallito.
+ La particolarità di tale rete è che un nodo fallito può essere bypassato:
+ il nodo raggiunto tramite il link alternativo dovrà necessariamente funzionare,
+ pena il fallimento dell'intero sistema.
+ Si può quindi dedurre che i fallimenti non devono riguardare nodi adiacenti.
+ Fatta questa assunzione, quanti fallimenti possono avvenire contemporaneamente?
+ Dati 8 nodi, il sistema continua a funzionare con al massimo 4 fallimenti,
+ limite oltre il quale essi saranno poi adiacenti.
+ 
+\end_layout
+
+\begin_layout Standard
+Lo schema è dunque un M-out-of-N System, in particolare un 4-out-of-8.
+ La reliability in questo caso può essere espressa nel seguente modo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{48}=\sum_{i=0}^{4}\left(_{i}^{4}\right)R_{m}^{8-i}(1-R_{m})^{i}
+\]
 
 \end_inset
 
@@ -160,47 +166,40 @@ Utilizzare questo file per generare il pdf completo
 \end_layout
 
 \begin_layout Standard
-
-\lang american
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-AddToShipoutPicture{
-\backslash
-BackgroundPicture{logo.png}{0}}
+Da questa sommatoria bisogna però escludere i fallimenti adiacenti.
 \end_layout
 
+\begin_layout Standard
+*FORMULA*
+\end_layout
+
+\begin_layout Standard
+Una volta fatto ciò è possibile calcolare 
+\begin_inset Formula $R_{48}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-\lang american
-\begin_inset CommandInset include
-LatexCommand input
-filename "traccia.lyx"
-
-\end_inset
-
-
+*FORMULA*
 \end_layout
 
 \begin_layout Standard
-
-\lang american
-\begin_inset CommandInset include
-LatexCommand input
-filename "soluzione.lyx"
-
+Tenendo conto che che 
+\begin_inset Formula $R_{m}$
 \end_inset
 
+ segue una legge di fallimento esponenziale tale che: 
+\begin_inset Formula $R_{m}=e^{-\lambda t}$
+\end_inset
 
+, con λ = 0.005, la reliability del sistema in un periodo di t = 48h risulterà
+ pari a:
+\end_layout
+
+\begin_layout Standard
+*FORMULA*
 \end_layout
 
 \end_body
