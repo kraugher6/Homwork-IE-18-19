@@ -3,7 +3,6 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include <time.h>
 #include <iostream>
 #include <fstream>
 #include <fcntl.h>
@@ -15,7 +14,7 @@
 using namespace std;
 
 #define NUM_ESPERIMENTI 30
-#define N 4
+#define N 3
 
 void initBufferWrite(long int);
 void initBuffe(void);

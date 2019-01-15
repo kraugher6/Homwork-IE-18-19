@@ -1,12 +1,12 @@
 #include "benchmark.hpp"
 
-std::ofstream ofs("/proc/sys/vm/drop_caches");
 void *bufferRead;
 void *bufferWrite;
 
 void termBuffer() {
 	termBufferRead();
 	termBufferWrite();
+	remove("file_prova.bin");
 }
 
 void termBufferRead() {
@@ -19,6 +19,7 @@ void termBufferWrite() {
 
 void initBufferWrite(long int bs) {
 	int errMemAlign = posix_memalign(&bufferWrite, 4096, bs);
+	system("sync; echo 3 > /proc/sys/vm/drop_caches");	
 	//cout << pathconf("file_prova.bin",_PC_REC_XFER_ALIGN) << endl;
 	if (errMemAlign!=0) {
 		cout << errMemAlign << endl;	
@@ -57,10 +58,6 @@ void analysisWrite(long int bs, long int num) {
 
 		//initialize buffer
 		initBufferWrite(bs);
-
-		//purge cache
-		sync();
-		ofs << "3" << std::endl;
 
 		//start timer
 		auto start_time = std::chrono::system_clock::now();
@@ -106,9 +103,6 @@ void analysisRead(long int bs, long int num) {
 	for(int i=num-1;i>=0;--i) {
 		//initialize buffer
 		initBufferRead(bs);
-
-		sync();
-		ofs << "3" << std::endl;
 
 		auto start_time = std::chrono::system_clock::now();
 
