@@ -137,90 +137,63 @@ Soluzione
 \end_layout
 
 \begin_layout Standard
-Per il tipo di rete in esame, ci chiediamo quando il sistema può dichiararsi
- fallito.
- La particolarità di tale rete è che un nodo fallito può essere bypassato:
- il nodo raggiunto tramite il link alternativo dovrà necessariamente funzionare,
- pena il fallimento dell'intero sistema.
- Si può quindi dedurre che i fallimenti non devono riguardare nodi adiacenti.
- Fatta questa assunzione, quanti fallimenti possono avvenire contemporaneamente?
- Dati 8 nodi, il sistema continua a funzionare con al massimo 4 fallimenti,
- limite oltre il quale essi saranno per forza di cose adiacenti.
+Dall'analisi del problema, si deduce che il sistema descritto è di tipo
+ m-out-of-n.
+ In particolare, affinché il sistema funzioni, è necessario il funzionamento
+ di almeno 3 processori.
+ L'obiettivo è di trovare il numero di processori per la configurazione
+ a costo minimo con reliability maggiore di 0.99.
+\end_layout
+
+\begin_layout Standard
+La reliability in questo tipo di sistema si calcola nel seguente modo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{MN}=\sum_{i=0}^{N-M}\left(_{i}^{N}\right)R_{m}^{N-i}(1-R_{m})^{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con 
+\begin_inset Formula $R_{m}$
+\end_inset
+
+ reliability del singolo processore, uguale per tutti i processori.
  
 \end_layout
 
 \begin_layout Standard
-Lo schema è dunque un M-out-of-N System, in particolare un 4-out-of-8.
- La reliability in questo caso può essere espressa nel seguente modo:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-R_{48}=\sum_{i=0}^{4}\left(_{i}^{8}\right)R_{m}^{8-i}(1-R_{m})^{i}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Dal coefficiente binomiale presente nella sommatoria, bisogna però escludere
- tutte le combinazioni non ammissibili di nodi.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-R_{48}=\sum_{i=0}^{4}(\left(_{i}^{8}\right)-e_{i})R_{m}^{8-i}(1-R_{m})^{i}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Dove 
-\begin_inset Formula $e_{i}$
-\end_inset
-
- rappresenta il numero di configurazioni da escludere.
+Al fine di trovoare la configurazione a costo minimo, è stato individuato
+ il costo di ogni processore al crescere della reliability.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
 placement H
-wide true
+wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="3">
+<lyxtabular version="3" rows="4" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
-<column alignment="center" valignment="top" width="0pt">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-i
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $e_{i}$
-\end_inset
-
-
+Reliability
 \end_layout
 
 \end_inset
@@ -229,7 +202,7 @@ i
 \begin_inset Text
 
 \begin_layout Plain Layout
-Nota
+Costo ($)
 \end_layout
 
 \end_inset
@@ -240,16 +213,7 @@ Nota
 \begin_inset Text
 
 \begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0
+0.8
 \end_layout
 
 \end_inset
@@ -258,8 +222,7 @@ Nota
 \begin_inset Text
 
 \begin_layout Plain Layout
-Tutte le configurazioni sono ammissibili in quanto non esistono nodi adiacenti
- che falliscono
+1000
 \end_layout
 
 \end_inset
@@ -270,16 +233,7 @@ Tutte le configurazioni sono ammissibili in quanto non esistono nodi adiacenti
 \begin_inset Text
 
 \begin_layout Plain Layout
-2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-8
+0.9
 \end_layout
 
 \end_inset
@@ -288,40 +242,7 @@ Tutte le configurazioni sono ammissibili in quanto non esistono nodi adiacenti
 \begin_inset Text
 
 \begin_layout Plain Layout
-Bisogna escludere tutte le coppie di nodi adiacenti che falliscono, che
- sono 8
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-40
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Bisogna escludere tutte le configurazioni in cui falliscono 3 nodi, di cui
- 2 adiacenti più un terzo che ruota (6*8=48 configurazioni).
- Da queste bisogna escludere però le ripetizioni di coppie di nodi che hanno
- un nodo in comune (8).
+1500
 \end_layout
 
 \end_inset
@@ -332,16 +253,7 @@ Bisogna escludere tutte le configurazioni in cui falliscono 3 nodi, di cui
 \begin_inset Text
 
 \begin_layout Plain Layout
-4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+1.0
 \end_layout
 
 \end_inset
@@ -350,7 +262,7 @@ Bisogna escludere tutte le configurazioni in cui falliscono 3 nodi, di cui
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+2000
 \end_layout
 
 \end_inset
@@ -367,7 +279,7 @@ Bisogna escludere tutte le configurazioni in cui falliscono 3 nodi, di cui
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Configurazioni
+Costi dei processori
 \end_layout
 
 \end_inset
@@ -385,32 +297,25 @@ Configurazioni
 \end_layout
 
 \begin_layout Standard
-Una volta fatto ciò è possibile calcolare 
-\begin_inset Formula $R_{48}$
-\end_inset
-
-
+Per ogni configurazione possibile, è stato valutato il numero minimo di
+ processori per garantire un’affidabilità superiore al 99%, grazie ad uno
+ script Matlab.
 \end_layout
 
 \begin_layout Standard
-*FORMULA*
+*LISTATO SCRIPT*
 \end_layout
 
 \begin_layout Standard
-Tenendo conto che che 
-\begin_inset Formula $R_{m}$
-\end_inset
-
- segue una legge di fallimento esponenziale tale che: 
-\begin_inset Formula $R_{m}=e^{-\lambda t}$
-\end_inset
-
-, con λ = 0.005, la reliability del sistema in un periodo di t = 48h risulterà
- pari a:
+I risultati sono riportati di seguito.
 \end_layout
 
 \begin_layout Standard
-*FORMULA*
+*TABELLA RISULTATI*
+\end_layout
+
+\begin_layout Standard
+La soluzione più economica è di utilizzare...?
 \end_layout
 
 \end_body
