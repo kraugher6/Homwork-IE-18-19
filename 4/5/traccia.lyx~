@@ -79,12 +79,56 @@
 
 \begin_body
 
-\begin_layout Section
+\begin_layout Subsection
 Traccia
 \end_layout
 
 \begin_layout Standard
-Trovare la R(t) e l'MTTF per il sistema di cui viene fornito
+Il sistema mostrato in figura è un sistema di elaborazione per un elicottero.
+ Il sistema ha una ridondanza duale sia per i processori che per le unità
+ di interfacciamento.
+ Vengono utilizzati due bus, ed ogni bus è replicato.
+ La parte interessante del sistema è l'equipaggiamento di navigazione.
+ Il velivolo può essere completamente guidato usato l'
+\begin_inset Quotes eld
+\end_inset
+
+Inertial Navigation System
+\begin_inset Quotes erd
+\end_inset
+
+ (INS).
+ Se tale INS fallisce, il velivolo può essere guidato attraverso una combinazion
+e di Doppler e AHRS (Altitude Heading Reference System).
+ Di quest'ultima unità, ne sono presenti 3, delle quali una sola è necessaria.
+ I dati dal Doppler e un AHRS possono essere usati in sostituzione del component
+e INS se esso fallisce.
+ A causa di altri sensori e strumentazioni, sono richiesti entrambi i bus
+ affinché il sistema funzioni in maniera appropriata, indipendentemente
+ dal sistema di navigazione utilizzato.
+\end_layout
+
+\begin_layout Enumerate
+Disegnare l'RBD del sistema
+\end_layout
+
+\begin_layout Enumerate
+Disegnare il Fault Tree del sistema ed analizzare i minimal cutset
+\end_layout
+
+\begin_layout Enumerate
+Calcolare la reliability per un'ora di volo utilizzando i valori di MTTF
+ in tabella.
+ Assumere che venga applicata la legge di fallimento esponenziale e che
+ la fault coverage sia perfetta
+\end_layout
+
+\begin_layout Enumerate
+Ripetere il punto precedente, ma stavolta incorporare un fattore di coverage
+ per la fault detection e riconfigurazione delle unità di elaborazione.
+ Usando gli stessi dati di fallimento, determinare il valore approssimativo
+ di fault coverage richiesto per ottenere (alla fine dell'ora) una reliability
+ di 0.99999
 \end_layout
 
 \end_body
