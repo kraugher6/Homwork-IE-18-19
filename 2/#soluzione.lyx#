@@ -763,7 +763,7 @@ Devianza Totale = Devianza Intra-Cluster + Devianza Inter-Cluster
 \end_layout
 
 \begin_layout Standard
-Per calcolare la devianza intra-cluster, a partire 
+Per calcolare la devianza intra-cluster  
 \end_layout
 
 \begin_layout Section
@@ -777,7 +777,7 @@ Costruzione del workload sintetico
 placement H
 wide false
 sideways true
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -817,7 +817,7 @@ Esempio di workload sintetico
 placement H
 wide false
 sideways true
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent

@@ -191,6 +191,115 @@ RBD del sistema
 
 \end_layout
 
+\begin_layout Subsubsection
+Punto 2
+\end_layout
+
+\begin_layout Standard
+Per costruire il fault tree bisogna considerare i fallimenti del sistema.
+ Si osserva dunque che il sistema fallisce in presenza di una delle seguenti
+ condizioni:
+\end_layout
+
+\begin_layout Itemize
+entrambi i bus di tipo A falliscono;
+\end_layout
+
+\begin_layout Itemize
+entrambi i bus di tipo B falliscono;
+\end_layout
+
+\begin_layout Itemize
+entrambe le CPU falliscono;
+\end_layout
+
+\begin_layout Itemize
+entrambi i terminali falliscono;
+\end_layout
+
+\begin_layout Itemize
+entrambi i sistemi di navigazione falliscono: ciò implica il fallimento
+ dell'INS e o del Doppler o di tutti e 3 gli AHRS.
+\end_layout
+
+\begin_layout Standard
+Date queste condizioni, è possibile ricavare la formula del fallimento:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(BusA1\land BusA2)\lor(BusB1\land BusB2)\lor(CPU1\land CPU2)\lor(Term1\land Term2)\lor(INS\land(Doppler\lor(AHRS1\land AHRS2\land AHRS3)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Da questa espressione booleana è possibile ricavare il fault tree.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/Fault Tree.png
+	scale 58
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fault Tree del sistema
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Analizzando la figura si individuano i seguenti minimal cutset: 
+\end_layout
+
+\begin_layout Itemize
+{Bus A1, Bus A2}
+\end_layout
+
+\begin_layout Itemize
+{Bus B1, Bus B2}
+\end_layout
+
+\begin_layout Itemize
+{CPU 1, CPU 2}
+\end_layout
+
+\begin_layout Itemize
+{Term 1, Term 2}
+\end_layout
+
+\begin_layout Itemize
+{INS, Doppler}
+\end_layout
+
+\begin_layout Itemize
+{INS, AHRS 1, AHRS 2, AHRS 3}
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open

@@ -386,19 +386,6 @@ errors
 \end_layout
 
 \begin_layout Standard
-Alle colonne già eliminate, si aggiunge la colonna 
-\shape italic
-slab
-\shape default
- che risulta essere non significativa ai fini dell'analisi in quanto, nonostante
- la varianza diversa da zero, contribuisce poco alla discriminazione dei
- punti rispetto alle altre feature.
-
-\shape italic
- 
-\end_layout
-
-\begin_layout Standard
 Un'ulteriore scrematura delle feature si può effettuare osservando colonne
  che presentano stessi valori.
  Ad occhio, le colonne 
@@ -499,7 +486,7 @@ Distribuzioni del risultato del confronto
 \end_layout
 
 \begin_layout Standard
-Il risultato di questa fase è una selezione di 18 feature a partire dalle
+Il risultato di questa fase è una selezione di 19 feature a partire dalle
  24 iniziali.
 \end_layout
 
@@ -571,7 +558,7 @@ Il tool genera una vista degli autovalori della matrice di correlazione
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -605,7 +592,7 @@ Autovalori della matrice di correlazione
 
 \begin_layout Standard
 Per rispondere all'obiettivo, si sceglie un numero di componenti principali
- pari a 6, rappresentativi del 96.764% della varianza totale.
+ pari a 6, rappresentativi del 95.437% della varianza totale.
 \end_layout
 
 \begin_layout Subsection
@@ -679,7 +666,7 @@ Inoltre il tool produce anche una tabella contenente, per ogni partizione,
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -713,61 +700,250 @@ Cronologia di clusterizzazione
 \end_layout
 
 \begin_layout Standard
-Al fine di scegliere il numero di cluster, non avendo informazioni sulla
- realtà sperimentale, né relative al budget disponibile per condurre gli
- esperimenti, si è optato per una consistente riduzione del dataset ad un
- numero di cluster pari a 7; tale valore è stato ottenuto andando ad analizzare
- i valori delle distanze fornite da JMP (mostrate nella figura 11) e notando
- che la differenza maggiore tra tali valori si riscontrava nel passaggio
- da 6 a 7 cluster.
-\end_layout
-
-\begin_layout Section
-Calcolo analitico della varianza persa
+Al fine di scegliere il numero di cluster si valuta, per ogni partizione,
+ la percentuale di varianza spiegata rispetto a quella ottenuta a valle
+ della PCA.
+ La varianza spiegata, in termini percentuali, è ottenuta tramite la formula:
 \end_layout
 
 \begin_layout Standard
-A questo punto si è proceduto al calcolo preciso della varianza persa a
- seguito prima della fase di PCA e poi di clusterizzazione.
- A tal fine, è stato utilizzato il tool di data analysis Knime.
- 
-\end_layout
+\begin_inset Formula 
+\[
+V_{TOT}=V_{PCA}-(V_{PCA}*\frac{D_{i}}{D_{t}})
+\]
 
-\begin_layout Subsection
-Devianza post-PCA
-\end_layout
+\end_inset
 
-\begin_layout Standard
-Per calcolare il valore di tale devianza sono stati dapprima ottenuti i
- valori di varianza per ogni componente principale, e successivamente sommati
- tra di loro.
- Il valore risultante, che sappiamo spiegare il 96.764% della varianza totale,
- è di 
-\series bold
-52148.055.
-\end_layout
 
-\begin_layout Subsection
-Devianza post-clustering
 \end_layout
 
 \begin_layout Standard
-La devianza post-clustering può essere espressa tramite la seguente somma:
+dove 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V_{PCA}$
+\end_inset
+
+è la percentuale di varianza spiegata a valle della PCA;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{i}$
+\end_inset
+
+è la distanza di Ward della i-esima partizione di cluster;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{t}$
+\end_inset
+
+è la distanza di Ward della partizione con un solo cluster.
 \end_layout
 
 \begin_layout Standard
+Di seguito sono state calcolate alcune percentuali di varianza corrispondenti
+ a partizioni significative, in quanto corrispondono a 
+\begin_inset Quotes eld
+\end_inset
+
+salti
+\begin_inset Quotes erd
+\end_inset
+
+ significativi di valori di distanza.
+\end_layout
+
+\begin_layout Standard
+\noindent
 \align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
 
-\shape smallcaps
-Devianza Totale = Devianza Intra-Cluster + Devianza Inter-Cluster
+\begin_layout Plain Layout
+
+\series bold
+Numero di cluster
 \end_layout
 
-\begin_layout Standard
-Per calcolare la devianza intra-cluster, a partire 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Varianza spiegata (%)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.014
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+25.167
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+48.339
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+66.201
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+75.589
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+82.215
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+25
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+86.730
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
-Costruzione del workload sintetico
+Conclusioni
+\end_layout
+
+\begin_layout Standard
+Per avere un buon trade-off tra numero di cluster e varianza spiegata, si
+ è scelto un numero di cluster pari a 15 corrispondente ad una varianza
+ spiegata pari al 75.589%.
+ Tramite una tecnica di campionamento casuale, è possibile costruire un
+ workload sintetico, che si riporta di seguito.
 \end_layout
 
 \begin_layout Standard
@@ -777,7 +953,7 @@ Costruzione del workload sintetico
 placement H
 wide false
 sideways true
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -817,7 +993,7 @@ Esempio di workload sintetico
 placement H
 wide false
 sideways true
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
