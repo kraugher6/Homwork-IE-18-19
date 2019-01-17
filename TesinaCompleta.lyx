@@ -385,13 +385,17 @@ esercizio01/Tesina.lyx ->esercizio02/Tesina.lyx e così via.
 \end_layout
 
 \begin_layout Chapter
-Esercizio 1
+Benchmark
+\end_layout
+
+\begin_layout Chapter
+PCA & Clustering
 \end_layout
 
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "1/Tesina.lyx"
+filename "2/Tesina.lyx"
 
 \end_inset
 
@@ -399,17 +403,85 @@ filename "1/Tesina.lyx"
 \end_layout
 
 \begin_layout Chapter
+Capacity Test
+\end_layout
+
+\begin_layout Chapter
+Dependability 
+\end_layout
+
+\begin_layout Section
+Esercizio 1
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "4/1/Tesina.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Esercizio 2
 \end_layout
 
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "esercizio01/Tesina.lyx"
+filename "4/2/Tesina.lyx"
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Esercizio 3
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "4/3/Tesina.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Esercizio 4
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "4/4/Tesina.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Esercizio 5
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "4/5/Tesina.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+FFDA
 \end_layout
 
 \begin_layout Standard
