@@ -579,6 +579,7 @@ status open
 \begin_inset Graphics
 	filename images/autovalori PCA.PNG
 	lyxscale 50
+	scale 40
 	rotateOrigin leftTop
 
 \end_inset
@@ -679,7 +680,7 @@ Inoltre il tool produce anche una tabella contenente, per ogni partizione,
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -763,11 +764,100 @@ Devianza Totale = Devianza Intra-Cluster + Devianza Inter-Cluster
 \end_layout
 
 \begin_layout Standard
-Per calcolare la devianza intra-cluster, a partire 
+Per calcolare la devianza intra-cluster, sono state isolate le istanze in
+ base al cluster di appartenenza.
+ Per ogni cluster si è proceduto nel seguente modo:
+\end_layout
+
+\begin_layout Itemize
+è stata calcolata la varianza per ogni componente principale (ogni colonna);
+\end_layout
+
+\begin_layout Itemize
+tali valori di varianza sono stati moltiplicati poi per N-1 (con N cardinalità
+ del cluster) per ottenere la devianza;
+\end_layout
+
+\begin_layout Itemize
+i valori di devianza ottenuti sono stati poi sommati per ottenere la devianza
+ complessiva 
+\shape italic
+intra-cluster
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+Per calcolare la devianza inter-cluster, si è dapprima ottenuta da JMP la
+ tabella contenente i centroidi dei cluster individuati; poi:
+\end_layout
+
+\begin_layout Itemize
+di ogni colonna, relativa alle componenti principali di tali punti, rappresentat
+ivi dei diversi cluster, è stata ottenuta la varianza;
+\end_layout
+
+\begin_layout Itemize
+tali valori di varianza sono stati poi sommati e moltiplicati per N-1 (con
+ N numero di cluster) per ottenere la devianza 
+\shape italic
+inter-cluster
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+Una volta ottenuti tali valori è stata ottenuta la devianza totale:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Dev_{TOT}=Dev_{intra}+Dev_{inter}=8715.526682054657+968.24685619697\backsimeq9683.78
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Conclusione
+\end_layout
+
+\begin_layout Standard
+Con i valori di devianza ottenuti è possibile a questo punto calcolare la
+ percentuale di varianza persa a valle della PCA e del clustering.
+\end_layout
+
+\begin_layout Standard
+Varianza Persa = Devianza Post Clustering / Devianza Post PCA 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Var_{persa}(\%)=\frac{9683.78}{52148.055}\cdot100=18.57\%
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Quindi, del 96.764% di varianza spiegata dalla PCA, il clustering ne fa perdere
+ il 18.57% (ne spiega quindi l'81.43%).
+ 
 \end_layout
 
 \begin_layout Section
 Costruzione del workload sintetico
+\end_layout
+
+\begin_layout Standard
+Un possibile workload a questo punto può essere ottenuto con un random sampling
+ dai cluster individuati.
 \end_layout
 
 \begin_layout Standard
