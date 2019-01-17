@@ -171,11 +171,11 @@ status collapsed
 
 \begin_layout Plain Layout
 \noindent
-\align left
+\align center
 \begin_inset Graphics
 	filename images/distribuzioni 1.PNG
 	lyxscale 50
-	scale 55
+	scale 50
 	rotateOrigin leftTop
 
 \end_inset
@@ -255,11 +255,11 @@ status collapsed
 
 \begin_layout Plain Layout
 \noindent
-\align left
+\align center
 \begin_inset Graphics
 	filename images/distribuzioni 3.PNG
 	lyxscale 50
-	scale 55
+	scale 50
 	rotateOrigin leftTop
 
 \end_inset
@@ -295,11 +295,11 @@ status collapsed
 
 \begin_layout Plain Layout
 \noindent
-\align left
+\align center
 \begin_inset Graphics
 	filename images/distribuzioni 4.PNG
 	lyxscale 50
-	scale 55
+	scale 50
 	rotateOrigin leftTop
 
 \end_inset
@@ -339,7 +339,7 @@ status collapsed
 \begin_inset Graphics
 	filename images/distribuzioni 5.PNG
 	lyxscale 50
-	scale 55
+	scale 50
 	rotateOrigin leftTop
 
 \end_inset
@@ -534,7 +534,7 @@ status collapsed
 \begin_inset Graphics
 	filename images/loading plot.png
 	lyxscale 50
-	scale 55
+	scale 48
 	rotateOrigin leftTop
 
 \end_inset
@@ -571,7 +571,7 @@ Il tool genera una vista degli autovalori della matrice di correlazione
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -634,8 +634,8 @@ Il risultato della fase di clustering è apprezzabile tramite il dendrogramma,
 \begin_inset Float figure
 placement H
 wide false
-sideways true
-status collapsed
+sideways false
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -643,7 +643,7 @@ status collapsed
 \begin_inset Graphics
 	filename images/Cluster gerarchico.png
 	lyxscale 50
-	scale 30
+	scale 45
 	rotateOrigin leftTop
 
 \end_inset
@@ -680,7 +680,7 @@ Inoltre il tool produce anche una tabella contenente, per ogni partizione,
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -688,7 +688,7 @@ status collapsed
 \begin_inset Graphics
 	filename images/cronologia di clusterizzazione.png
 	lyxscale 50
-	scale 80
+	scale 40
 	rotateOrigin leftTop
 
 \end_inset
@@ -831,6 +831,9 @@ Con i valori di devianza ottenuti è possibile a questo punto calcolare la
 \end_layout
 
 \begin_layout Standard
+\align center
+
+\shape smallcaps
 Varianza Persa = Devianza Post Clustering / Devianza Post PCA 
 \end_layout
 
@@ -861,12 +864,11 @@ Un possibile workload a questo punto può essere ottenuto con un random sampling
 \end_layout
 
 \begin_layout Standard
-\noindent
 \align center
 \begin_inset Float figure
 placement H
 wide false
-sideways true
+sideways false
 status open
 
 \begin_layout Plain Layout
@@ -875,7 +877,8 @@ status open
 \begin_inset Graphics
 	filename images/workload sintetico 1.png
 	lyxscale 50
-	scale 50
+	scale 45
+	scaleBeforeRotation
 	rotateOrigin leftTop
 
 \end_inset
@@ -906,7 +909,7 @@ Esempio di workload sintetico
 \begin_inset Float figure
 placement H
 wide false
-sideways true
+sideways false
 status open
 
 \begin_layout Plain Layout
@@ -915,7 +918,7 @@ status open
 \begin_inset Graphics
 	filename images/workload sintetico 2.png
 	lyxscale 50
-	scale 50
+	scale 45
 	rotateOrigin leftTop
 
 \end_inset

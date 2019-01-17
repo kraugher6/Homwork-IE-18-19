@@ -864,7 +864,6 @@ Un possibile workload a questo punto può essere ottenuto con un random sampling
 \end_layout
 
 \begin_layout Standard
-\noindent
 \align center
 \begin_inset Float figure
 placement H
@@ -879,7 +878,8 @@ status open
 	filename images/workload sintetico 1.png
 	lyxscale 50
 	scale 45
-	rotateOrigin leftTop
+	scaleBeforeRotation
+	rotateOrigin center
 
 \end_inset
 
