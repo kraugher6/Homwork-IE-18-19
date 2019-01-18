@@ -133,7 +133,11 @@ morecomment=[s]{--}
 \begin_body
 
 \begin_layout Subsection
-Soluzione
+Soluzione 
+\end_layout
+
+\begin_layout Subsubsection
+Punto 1
 \end_layout
 
 \begin_layout Standard
@@ -155,7 +159,7 @@ logstatistics.sh
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -448,7 +452,7 @@ Entries per i nodi di MercuryErrorLog
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -749,7 +753,81 @@ cizio precedente.
 \end_layout
 
 \begin_layout Standard
-*PLOT*
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/tupleCountMercury-nodes.png
+	lyxscale 50
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Count tuple nodi Mercury
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/tupleCountBLG-nodes.png
+	lyxscale 50
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Count tuple nodi BGL
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -830,7 +908,7 @@ tg-c401
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+240
 \end_layout
 
 \end_inset
@@ -839,7 +917,7 @@ tg-c401
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+48
 \end_layout
 
 \end_inset
@@ -872,7 +950,7 @@ tg-master
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+240
 \end_layout
 
 \end_inset
@@ -881,7 +959,7 @@ tg-master
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+59
 \end_layout
 
 \end_inset
@@ -914,7 +992,7 @@ tg-c572
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+30
 \end_layout
 
 \end_inset
@@ -923,7 +1001,7 @@ tg-c572
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+2
 \end_layout
 
 \end_inset
@@ -956,7 +1034,7 @@ tg-s044
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1000
 \end_layout
 
 \end_inset
@@ -965,7 +1043,7 @@ tg-s044
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+9
 \end_layout
 
 \end_inset
@@ -998,7 +1076,7 @@ tg-c238
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+600
 \end_layout
 
 \end_inset
@@ -1007,7 +1085,7 @@ tg-c238
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+6
 \end_layout
 
 \end_inset
@@ -1109,7 +1187,7 @@ R71-M0-N4
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+600
 \end_layout
 
 \end_inset
@@ -1118,7 +1196,7 @@ R71-M0-N4
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+71
 \end_layout
 
 \end_inset
@@ -1151,7 +1229,7 @@ R12-M0-N0
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+600
 \end_layout
 
 \end_inset
@@ -1160,7 +1238,7 @@ R12-M0-N0
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+73
 \end_layout
 
 \end_inset
@@ -1193,7 +1271,7 @@ R63-M0-N2
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+2500
 \end_layout
 
 \end_inset
@@ -1202,7 +1280,7 @@ R63-M0-N2
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+4
 \end_layout
 
 \end_inset
@@ -1235,7 +1313,7 @@ R03-M1-NF
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+3500
 \end_layout
 
 \end_inset
@@ -1244,7 +1322,7 @@ R03-M1-NF
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+6
 \end_layout
 
 \end_inset
@@ -1277,7 +1355,7 @@ R63-M0-N0
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+1000
 \end_layout
 
 \end_inset
@@ -1286,7 +1364,7 @@ R63-M0-N0
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+96
 \end_layout
 
 \end_inset
@@ -1333,6 +1411,88 @@ script tupling_with_CWIN.sh
 \shape default
  che prende in ingresso il log file e il valore scelto per la finestra.
  
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/cdfEmpiricaMercury-nodes.png
+	lyxscale 50
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reliability nodi Mercury
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/cdfEmpiricaBGL-nodes.png
+	lyxscale 50
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reliability nodi BGL
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+*commento reliability*
+\end_layout
+
+\begin_layout Subsubsection
+Punto 2
 \end_layout
 
 \end_body
