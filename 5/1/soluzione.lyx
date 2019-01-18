@@ -142,12 +142,50 @@ Al fine di scegliere l'ampiezza temporale per effettuare l'analisi del file
 \shape italic
 tupleCount_func_CWINpy.sh
 \shape default
- per entrambi i file.
+ che fornisce il numero di tuple per vari tentativi di ampiezza della finestra
+ di coalescenza.
  I risultati ottenuti sono riportati sui seguenti grafici.
 \end_layout
 
 \begin_layout Standard
-*GRAFICO MERCURY*
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/tupleCountMercury.png
+	lyxscale 50
+	scale 58
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Conteggio tuple MercuryErrorLog
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -155,7 +193,7 @@ Per quanto riguarda il file di log
 \shape italic
 MercuryErrorLog.txt
 \shape default
-, si può osservare che a curva presenta un ginocchio; la scelta dell'ampiezza
+, si può osservare che la curva presenta un ginocchio; la scelta dell'ampiezza
  della finestra è guidata dalla necessità di catturare il maggior numero
  di tuple che siano relative allo stesso fault con la minore ampiezza della
  finestra temporale possibile.
@@ -164,7 +202,40 @@ MercuryErrorLog.txt
 \end_layout
 
 \begin_layout Standard
-*GRAFICO BGL*
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/tupleCountBLG.png
+	lyxscale 50
+	scale 58
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Conteggio tuple BGL
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -188,21 +259,62 @@ tupling_with_CWIN.sh
  con parametro il log per cui raggruppare le tuple e il valore di ampiezza
  scelto.
  Dei vari output dello script, assume particolare importanza ai fini dell'analis
-i il file interarrivals.txt, che contiene i diversi tempi che intercorrono
- tra una tupla e la successiva.
+i il file 
+\shape italic
+interarrivals.txt
+\shape default
+, che contiene i diversi tempi che intercorrono tra una tupla e la successiva.
  Tali tempi rappresentano proprio il TTF 
 \begin_inset Quotes eld
 \end_inset
 
-sperimentale
+empirico
 \begin_inset Quotes erd
 \end_inset
 
-.
+, in quanto ottenuto esclusivamente a partire da delle osservazioni.
  A questo punto, si possono dunque ottenere le distribuzioni delle reliability
- empiriche tramite il seguente script MATLAB.
- Tale script, oltre a fornire la distribuzione di probabilità empirica (?),
- calcola anche il fit per i modelli esponenziale, iperesponenziale e weibull.
+ empiriche tramite MATLAB.
+ Tale script, oltre a fornire la distribuzione di probabilità empirica(
+ plot in alto a sinistra), calcola anche il fit per i modelli esponenziale,
+ iperesponenziale e weibull.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/ReliabilityEs1.png
+	lyxscale 50
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Conteggio tuple BGL
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

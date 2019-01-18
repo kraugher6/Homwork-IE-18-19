@@ -1114,8 +1114,7 @@ end{lstlisting}
 \end_layout
 
 \begin_layout Standard
-Risulta da tale implementazione che il valore minimo per il parametro c
- deve essere: 
+Il risultato è che il valore minimo per il parametro c deve essere: 
 \begin_inset Formula $c\backsimeq0.96606$
 \end_inset
 
