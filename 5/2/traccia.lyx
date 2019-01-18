@@ -80,66 +80,34 @@
 \begin_body
 
 \begin_layout Subsection
-Traccia
+Traccia 2
 \end_layout
 
 \begin_layout Standard
-Progettare una cella di un comparatore a maggioranza (magnitude comparator)
- ad 1 bit la cui tabella di verità è riportata in fig.
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Tabella-di-verità"
-
-\end_inset
-
-.
- La sintesi è basata sull'uso di una porta NXOR come mostrato in fig.
+Conducttheanalysistoaddressthefollowing questions/points
 \end_layout
 
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename images/traccia/tab-ver-bit-comparator.png
-	scale 50
-
-\end_inset
-
-
+\begin_layout Enumerate
+MercuryandBG/L:selectthetop-5entries-pronenodes, beforehand; determine CWIN
+ and tuple count for each node: • is the CWIN the same for all the nodes?
+ • there exist dependability-bottlenecks, i.e., nodes with a large number
+ of tuples when compared to the others? • plot the node-level reliability
+ for the nodes with a significantly large interarrival sample (>30)
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Tabella-di-verità"
-
-\end_inset
-
-Tabella di verità magnitude comparator
+\begin_layout Enumerate
+Mercury: for each error category (excluding OTH) determine CWIN, tuple count
+ and the reliability model: • what is the category with the largest number
+ of tuples? • what category is less/more reliable? BG/L:AnalyzetheJ18-U01andJ18-
+U11categories(tuple count and reliability).
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Descrivere il circuito in VHDL e simularlo nell'ambiente Xilinx ISE costruendo
- un ambiente di test per verificarne tutte le funzionalità e gli aspetti
- di tempificazione.
+\begin_layout Enumerate
+Mercury and BG/L: focus on similar functional nodes (e.g., tg-c in Mercury,
+ 2 BG/L IO nodes, etc) selected from the top entries-prone nodes: • Do the
+ nodes exhibit similar tuple counts / reliability parameters? • Mercury:extractt
+heerrortypesandthetop-contributing nodes to each type.
+ What it can be noted? • BG/L:Whatarethemostentries-proneracks/nodes?
 \end_layout
 
 \end_body

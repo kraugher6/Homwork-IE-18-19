@@ -138,8 +138,11 @@ Soluzione
 
 \begin_layout Standard
 Al fine di scegliere l'ampiezza temporale per effettuare l'analisi del file
- di log forniti, è stato eseguito lo script tupleCount_func_CWINpy.sh per
- entrambi i file.
+ di log forniti, è stato eseguito lo script 
+\shape italic
+tupleCount_func_CWINpy.sh
+\shape default
+ per entrambi i file.
  I risultati ottenuti sono riportati sui seguenti grafici.
 \end_layout
 
@@ -148,11 +151,14 @@ Al fine di scegliere l'ampiezza temporale per effettuare l'analisi del file
 \end_layout
 
 \begin_layout Standard
-Per quanto riguarda il file di log MercuryErrorLog.txt, si può osservare
- che a curva presenta un ginocchio; la scelta dell'ampiezza della finestra
- è guidata dalla necessità di catturare il maggior numero di tuple che siano
- relative allo stesso fault con la minore ampiezza della finestra temporale
- possibile.
+Per quanto riguarda il file di log 
+\shape italic
+MercuryErrorLog.txt
+\shape default
+, si può osservare che a curva presenta un ginocchio; la scelta dell'ampiezza
+ della finestra è guidata dalla necessità di catturare il maggior numero
+ di tuple che siano relative allo stesso fault con la minore ampiezza della
+ finestra temporale possibile.
  Dunque si è optato di scegliere un valore della finestra, prossimo al ginocchio
 , di 360 secondi che cattura 440 tuple.
 \end_layout
@@ -162,10 +168,60 @@ Per quanto riguarda il file di log MercuryErrorLog.txt, si può osservare
 \end_layout
 
 \begin_layout Standard
-Nel caso del file BGLErrorLog.txt, è possibile osservare come il ginocchio
- della curva sia meno definito; dunque si è optato di scegliere un valore
- della finestra che non fosse troppo elevato, in quanto è sempre preferibile
- avere 
+Nel caso del file 
+\shape italic
+BGLErrorLog.txt
+\shape default
+, è possibile osservare come il ginocchio della curva sia meno definito;
+ dunque si è optato di scegliere un valore della finestra che non fosse
+ troppo elevato, in quanto è sempre preferibile avere troncamenti piuttosto
+ che fallimenti.
+ Il valore scelto è di 420 secondi che cattura 369 tuple.
+\end_layout
+
+\begin_layout Standard
+Dopo aver scelto il valore di ampiezza per la finestra di coalescenza, viene
+ effettuato l’effettivo raggruppamento, lanciando lo script 
+\shape italic
+tupling_with_CWIN.sh
+\shape default
+ con parametro il log per cui raggruppare le tuple e il valore di ampiezza
+ scelto.
+ Lo script ha creato un file per ciascuna tupla creata raggruppando le entries
+ del log e tre file denominati 
+\shape italic
+startingPoints.txt
+\shape default
+, 
+\shape italic
+lengths.txt
+\shape default
+, 
+\shape italic
+interarrivals.txt
+\shape default
+ contenenti ciascuno un numero di righe pari al numero di tuple generato,
+ corrispondenti al timestamp relativo all’inizio della tupla (
+\shape italic
+startingPoints
+\shape default
+), alla lunghezza della tupla considerata (
+\shape italic
+lengths
+\shape default
+) e al tempo che inter- corre tra la tupla i-esima e la successiva (
+\shape italic
+interarrivals
+\shape default
+).
+ Proprio questi ultimi valori sono di interesse per calcolare la reliability
+ del sistema, in particolare considerando che il tempo tra una tupla e la
+ successiva altro non è che il TTF "sperimentale" (a meno di collisioni
+ e troncamenti).
+ Grazie al tool statistico di MATLAB, si possono ottenere le distribuzioni
+ di reliability empiriche: con la seguente funzione si effettua il calcolo
+ della CDF empirica e il fit per i modelli esponenziale, weibull ed iperesponenz
+iale:
 \end_layout
 
 \end_body

@@ -187,41 +187,22 @@ tupling_with_CWIN.sh
 \shape default
  con parametro il log per cui raggruppare le tuple e il valore di ampiezza
  scelto.
- Lo script ha creato un file per ciascuna tupla creata raggruppando le entries
- del log e tre file denominati 
-\shape italic
-startingPoints.txt
-\shape default
-, 
-\shape italic
-lengths.txt
-\shape default
-, 
-\shape italic
-interarrivals.txt
-\shape default
- contenenti ciascuno un numero di righe pari al numero di tuple generato,
- corrispondenti al timestamp relativo all’inizio della tupla (
-\shape italic
-startingPoints
-\shape default
-), alla lunghezza della tupla considerata (
-\shape italic
-lengths
-\shape default
-) e al tempo che inter- corre tra la tupla i-esima e la successiva (
-\shape italic
-interarrivals
-\shape default
-).
- Proprio questi ultimi valori sono di interesse per calcolare la reliability
- del sistema, in particolare considerando che il tempo tra una tupla e la
- successiva altro non è che il TTF "sperimentale" (a meno di collisioni
- e troncamenti).
- Grazie al tool statistico di MATLAB, si possono ottenere le distribuzioni
- di reliability empiriche: con la seguente funzione si effettua il calcolo
- della CDF empirica e il fit per i modelli esponenziale, weibull ed iperesponenz
-iale:
+ Dei vari output dello script, assume particolare importanza ai fini dell'analis
+i il file interarrivals.txt, che contiene i diversi tempi che intercorrono
+ tra una tupla e la successiva.
+ Tali tempi rappresentano proprio il TTF 
+\begin_inset Quotes eld
+\end_inset
+
+sperimentale
+\begin_inset Quotes erd
+\end_inset
+
+.
+ A questo punto, si possono dunque ottenere le distribuzioni delle reliability
+ empiriche tramite il seguente script MATLAB.
+ Tale script, oltre a fornire la distribuzione di probabilità empirica (?),
+ calcola anche il fit per i modelli esponenziale, iperesponenziale e weibull.
 \end_layout
 
 \end_body
