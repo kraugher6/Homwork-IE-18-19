@@ -763,7 +763,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/tupleCountMercury-nodes.png
+	filename C:/Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/tupleCountMercury-nodes.png
 	lyxscale 50
 	scale 60
 
@@ -800,7 +800,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/tupleCountBLG-nodes.png
+	filename C:/Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/tupleCountBLG-nodes.png
 	lyxscale 50
 	scale 60
 
@@ -1424,7 +1424,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/cdfEmpiricaMercury-nodes.png
+	filename C:/Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/cdfEmpiricaMercury-nodes.png
 	lyxscale 50
 	scale 60
 
@@ -1461,7 +1461,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/cdfEmpiricaBGL-nodes.png
+	filename C:/Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/cdfEmpiricaBGL-nodes.png
 	lyxscale 50
 	scale 60
 
@@ -1508,7 +1508,7 @@ Sulla falsa riga dell'esercizio precedente, si è condotta la stessa analisi
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1797,7 +1797,7 @@ Entries per categorie di MercuryErrorLog
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1941,12 +1941,12 @@ Sempre con lo stesso approccio, si sono filtrati i file di log secondo le
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/tupleCountMercury-cat.png
+	filename ../images/tupleCountMercury-cat.png
 	lyxscale 50
 	scale 60
 
@@ -1978,12 +1978,12 @@ Count tuple categorie Mercury
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/tupleCountBLG-cat.png
+	filename ../images/tupleCountBLG-cat.png
 	lyxscale 50
 	scale 60
 
@@ -2021,7 +2021,7 @@ A partire dai grafici ottenuti, sono stati scelti, per tutte le categorie
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2300,7 +2300,7 @@ CWIN per categorie del log Mercury
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2434,7 +2434,7 @@ J18-U11
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-CWIN per categorie del logBGL
+CWIN per categorie del log BGL
 \end_layout
 
 \end_inset
