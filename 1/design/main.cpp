@@ -3,8 +3,9 @@
 //long int filesize[N] = {10485760, 104857600, 1073741824, 10737418240};
 //long int blocksize[N] = {1024, 10240, 102400, 1048576};
 
-long int filesize[N] = {10485760, 104857600, 1073741824};
-long int blocksize[N] = {10240, 102400, 1048576};
+//long int filesize[N] = {1048576, 104857600, 1073741824};
+long int filesize[N] = {5*1048576, 2*10485760, 104857600};
+long int blocksize[N] = {5*10240, 2*102400, 1*1048576};
 
 int main() {
 	long int numInteraction = 0;
