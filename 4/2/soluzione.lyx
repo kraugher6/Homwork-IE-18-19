@@ -182,7 +182,7 @@ R_{SoP}=(1-(1-r)^{m})^{s}
 
 \begin_layout Standard
 Andando a settare s=m=3, si sono plottate le due funzioni con l'aiuto di
- MatLab; il risultato è il seguente.
+ MATLAB; il risultato è il seguente.
 \end_layout
 
 \begin_layout Standard

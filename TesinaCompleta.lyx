@@ -202,11 +202,7 @@ status open
 
 
 \backslash
-title{Tesina di Impianti di Elaborazione 
-\backslash
-
-\backslash
-Gruppo X} 
+title{Tesina di Impianti di Elaborazione} 
 \end_layout
 
 \end_inset
@@ -235,7 +231,7 @@ status open
 
 
 \backslash
-author{Studente 1 - Mat.
+author{Pafundi Vincenzo - Mat.
  XX/XXXX
 \end_layout
 
@@ -243,24 +239,16 @@ author{Studente 1 - Mat.
 
 
 \backslash
-and Studente 2 - Mat.
- XX/XXXX
+and Riccio Marco - Mat.
+ M63/760
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-and Studente 3 - Mat.
- XX/XXXX
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-and Studente 4 - Mat.
- XX/XXXX
+and Russo Davide - Mat.
+ M63/820
 \end_layout
 
 \begin_layout Plain Layout
@@ -364,20 +352,18 @@ begin{mainmatter}
 
 \end_layout
 
+\begin_layout Chapter
+Benchmark
+\end_layout
+
+\begin_layout Chapter
+PCA & Clustering
+\end_layout
+
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Copiare l'input per ogni esercizio svolto in modo da includerlo nel PDF
- della tesina.
- Modificare il path come di seguito:
-\end_layout
-
-\begin_layout Plain Layout
-esercizio01/Tesina.lyx ->esercizio02/Tesina.lyx e così via.
- 
-\end_layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "2/Tesina.lyx"
 
 \end_inset
 
@@ -385,13 +371,77 @@ esercizio01/Tesina.lyx ->esercizio02/Tesina.lyx e così via.
 \end_layout
 
 \begin_layout Chapter
+Capacity Test
+\end_layout
+
+\begin_layout Chapter
+Dependability 
+\end_layout
+
+\begin_layout Section
 Esercizio 1
 \end_layout
 
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "1/Tesina.lyx"
+filename "4/1/Tesina.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Esercizio 2
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "4/2/Tesina.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Esercizio 3
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "4/3/Tesina.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Esercizio 4
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "4/4/Tesina.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Esercizio 5
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "4/5/Tesina.lyx"
 
 \end_inset
 
@@ -399,17 +449,7 @@ filename "1/Tesina.lyx"
 \end_layout
 
 \begin_layout Chapter
-Esercizio 2
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "esercizio01/Tesina.lyx"
-
-\end_inset
-
-
+FFDA
 \end_layout
 
 \begin_layout Standard

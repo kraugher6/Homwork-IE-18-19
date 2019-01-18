@@ -1,0 +1,1125 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\usepackage{listings,xcolor,courier,bookmark}
+\usepackage{listingsutf8}
+\definecolor{darkblue}{named}{blue}
+\definecolor{darkred}{named}{red}
+\definecolor{grau}{named}{gray}
+\let\Righttorque\relax
+\lstset{
+captionpos=b,
+commentstyle=\color[rgb]{0.133,0.545,0.133},
+keywordstyle=\color{darkblue},
+stringstyle=\color{darkred},
+extendedchars=true,
+basicstyle=\small\ttfamily,
+showstringspaces=false,
+tabsize=2,
+numbers=left,
+numberstyle=\tiny,
+breakautoindent  = true,
+breakindent      = 2em,
+breaklines       = true,
+postbreak        = ,
+prebreak         = \raisebox{-.8ex}[0ex][0ex]{\Righttorque},
+showspaces=false, 
+showtabs=false, 
+showstringspaces=false,
+language=VHDL,
+frame=single,
+morecomment=[s]{--}
+}
+
+
+\renewcommand*{\lstlistingname}{Codice Componente}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\fancyhead{} 
+\fancyfoot{} 
+
+\fancyhead[RO,LE]{\bfseries \leftmark}
+\fancyfoot[LE,RO]{\thepage}
+\fancyfoot[LO,CE]{Tesina in Impianti di Elaborazione}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\date{}
+\cfoot{}
+\end_preamble
+\use_default_options true
+\master Tesina.lyx
+\maintain_unincluded_children false
+\language italian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2.5cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsection
+Soluzione
+\end_layout
+
+\begin_layout Subsubsection
+Punto 1
+\end_layout
+
+\begin_layout Standard
+Dalla descrizione fornita, è possibile dedurre come ciascuna unità funzionale
+ sia necessaria al corretto funzionamento del sistema.
+ L'RBD sarà pertanto composto da una serie di componenti.
+ In particolare, in corrispondenza di componenti replicati, all'interno
+ della serie essi saranno disposti in parallelo tra di loro.
+ Unica eccezione è fatta per il sistema di navigazione, in cui è necessario
+ il funzionamento dell'INS, o in alternativa del Doppler in coppia con un
+ AHRS.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/Helicopter.png
+	scale 37
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+RBD del sistema
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Punto 2
+\end_layout
+
+\begin_layout Standard
+Per costruire il fault tree bisogna considerare i fallimenti del sistema.
+ Si osserva dunque che il sistema fallisce in presenza di una delle seguenti
+ condizioni:
+\end_layout
+
+\begin_layout Itemize
+entrambi i bus di tipo A falliscono;
+\end_layout
+
+\begin_layout Itemize
+entrambi i bus di tipo B falliscono;
+\end_layout
+
+\begin_layout Itemize
+entrambe le CPU falliscono;
+\end_layout
+
+\begin_layout Itemize
+entrambi i terminali falliscono;
+\end_layout
+
+\begin_layout Itemize
+entrambi i sistemi di navigazione falliscono: ciò implica il fallimento
+ dell'INS e o del Doppler o di tutti e 3 gli AHRS.
+\end_layout
+
+\begin_layout Standard
+Date queste condizioni, è possibile ricavare la formula del fallimento:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(BusA1\land BusA2)\lor(BusB1\land BusB2)\lor(CPU1\land CPU2)\lor(Term1\land Term2)\lor(INS\land(Doppler\lor(AHRS1\land AHRS2\land AHRS3)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Da questa espressione booleana è possibile ricavare il fault tree.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/Fault Tree.png
+	scale 58
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fault Tree del sistema
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Analizzando la figura si individuano i seguenti minimal cutset: 
+\end_layout
+
+\begin_layout Itemize
+{Bus A1, Bus A2}
+\end_layout
+
+\begin_layout Itemize
+{Bus B1, Bus B2}
+\end_layout
+
+\begin_layout Itemize
+{CPU 1, CPU 2}
+\end_layout
+
+\begin_layout Itemize
+{Term 1, Term 2}
+\end_layout
+
+\begin_layout Itemize
+{INS, Doppler}
+\end_layout
+
+\begin_layout Itemize
+{INS, AHRS 1, AHRS 2, AHRS 3}
+\end_layout
+
+\begin_layout Subsubsection*
+0.0.2.3 Punto 3
+\end_layout
+
+\begin_layout Standard
+Si va adesso ad analizzare la reliability del sistema dopo un'ora di volo.
+ È possibile calcolarE tale valore a partire dalle reliability dei singoli
+ componenti; si inizia quindi a trovare il parametro λ relativo ad ogni
+ componente a partire dalla tabella con i diversi MTTF.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Equipement
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MTTF (hr)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+λ
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Processing Unit
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0002
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Remote Terminal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0004
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+AHRS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.001
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+INS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.001
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Doppler
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+300
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.003
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0001
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+MTTF dei componenti
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A questo punto è possibile esprimere le diverse reliability dei componenti
+ del sistema come:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{BUSAEQ}=1-(1-R_{BUS})^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{BUSBEQ}=1-(1-R_{BUS})^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Le quali rappresentano le reliability dei due sistemi formati dai paralleli
+ dei Bus A e B.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{CPUEQ}=1-(1-R_{CPU})^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{TermEQ}=1-(1-R_{BUS})^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{AHRSEQ}=1-(1-R_{AHRS})^{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Rappresentano gli altri sottosistemi formati dalla replicazioni di componenti
+ uguali in parallelo (CPU, Terminal, AHRS).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{ALT}=R_{Doppler}R_{AHRSEQ}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{CS}=1-(1-R_{INS})(1-R_{ALT})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Le precedenti due reliability rappresentano la serie tra il Doppler e il
+ parallelo dei tre componenti AHRS, quindi il sistema di controllo alternativo,
+ e il parallelo di tale sisema con il sistema INS, in maniera tale da ottenere
+ la reliability totale del sottosistema dedicato al controllo.
+ A questo punto è possibile calcolare la reliability totale del sistema
+ tramite la serie dei diversi sottosistemi sopra analizzati:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{sys}=R_{BUSAEQ}R_{BUSBEQ}R_{CPUEQ}R_{TermEQ}R_{CS}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il risultato è stato ottenuto tramite il seguente script MATLAB:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[language=Matlab,caption={Reliabilty totale del sistema}]
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+format long
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ycpu = 0.0002;
+\end_layout
+
+\begin_layout Plain Layout
+
+yterm = 0.0004;
+\end_layout
+
+\begin_layout Plain Layout
+
+yAHRS = 0.001;
+\end_layout
+
+\begin_layout Plain Layout
+
+yins = 0.001;
+\end_layout
+
+\begin_layout Plain Layout
+
+ydoppler = 0.003;
+\end_layout
+
+\begin_layout Plain Layout
+
+ybus = 0.0001;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+t = 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+    Rbus = exp(-(ybus.*t));
+\end_layout
+
+\begin_layout Plain Layout
+
+    Rcpu = exp(-(ycpu.*t));
+\end_layout
+
+\begin_layout Plain Layout
+
+    Rterm =exp(-(yterm.*t));
+\end_layout
+
+\begin_layout Plain Layout
+
+    R_AHRS = exp(-(yAHRS.*t));
+\end_layout
+
+\begin_layout Plain Layout
+
+    Rdoppler = exp(-(ydoppler.*t));
+\end_layout
+
+\begin_layout Plain Layout
+
+    Rins = exp(-(yins.*t));
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+    RbusA = 1-(1-Rbus).^2;
+\end_layout
+
+\begin_layout Plain Layout
+
+    RbusB = 1-(1-Rbus).^2;
+\end_layout
+
+\begin_layout Plain Layout
+
+    Rcpu_eq = 1-(1-Rcpu).^2;
+\end_layout
+
+\begin_layout Plain Layout
+
+    Rterm_eq = 1-(1-Rterm).^2;
+\end_layout
+
+\begin_layout Plain Layout
+
+    Ralt = Rdoppler.*(1-(1-R_AHRS).^3);
+\end_layout
+
+\begin_layout Plain Layout
+
+    R_cs = 1-(1-Rins).*(1-Ralt);
+\end_layout
+
+\begin_layout Plain Layout
+
+    Rsys = RbusA*RbusB*Rcpu_eq*Rterm_eq*R_cs;
+\end_layout
+
+\begin_layout Plain Layout
+
+    Rsys
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si ottiene quindi il valore della reliability totale del sistema 
+\begin_inset Formula $R_{sys}=0.999996786066414$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Punto 4
+\end_layout
+
+\begin_layout Standard
+Si supponga a questo punto di introdurre un circuito di detection per la
+ rilevazione del fallimento delle CPU.
+ La probabilità di tale circuito di rilevare un fallimento è indicata con
+ il parametro c:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{sys}=R_{1}+C(1-R_{1})R_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Quindi nel caso del sottosistema formato dalle due CPU in parallelo avremo
+ che:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+C=\frac{(R_{detection}-R_{CPU})}{R_{CPU}(1-R_{CPU})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si consideri adesso la reliability del sistema non includendo le CPU:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{sysNOCPU}=R_{BUSAEQ}R_{BUSBEQ}R_{TermEQ}R_{CS}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A tal proposito, si vuole trovare la probabilità c che ci permetta di avere
+ una reliability del sistema almeno pari a 0.99999; per farlo scriviamo la
+ relazione imponendo tale vincolo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+0.99999=R_{detection}R_{sysNOCPU}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{detection}=\frac{0.99999}{R_{sysNOCPU}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una volta trovato tale valore lo si sostituisce all'interno della formula
+ che esprime il valore di C.
+\end_layout
+
+\begin_layout Standard
+Il procedimento illustrato è stato implementato nel seguente script MATLAB:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[language=Matlab,caption={Reliabilty totale del sistema}]
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+format long
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ycpu = 0.0002;
+\end_layout
+
+\begin_layout Plain Layout
+
+yterm = 0.0004;
+\end_layout
+
+\begin_layout Plain Layout
+
+yAHRS = 0.001;
+\end_layout
+
+\begin_layout Plain Layout
+
+yins = 0.001;
+\end_layout
+
+\begin_layout Plain Layout
+
+ydoppler = 0.003;
+\end_layout
+
+\begin_layout Plain Layout
+
+ybus = 0.0001;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+t = 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+    Rbus = exp(-(ybus.*t));
+\end_layout
+
+\begin_layout Plain Layout
+
+    Rcpu = exp(-(ycpu.*t));
+\end_layout
+
+\begin_layout Plain Layout
+
+    Rterm =exp(-(yterm.*t));
+\end_layout
+
+\begin_layout Plain Layout
+
+    R_AHRS = exp(-(yAHRS.*t));
+\end_layout
+
+\begin_layout Plain Layout
+
+    Rdoppler = exp(-(ydoppler.*t));
+\end_layout
+
+\begin_layout Plain Layout
+
+    Rins = exp(-(yins.*t));
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+    RbusA = 1-(1-Rbus).^2;
+\end_layout
+
+\begin_layout Plain Layout
+
+    RbusB = 1-(1-Rbus).^2;
+\end_layout
+
+\begin_layout Plain Layout
+
+    Rcpu_eq = 1-(1-Rcpu).^2;
+\end_layout
+
+\begin_layout Plain Layout
+
+    Rterm_eq = 1-(1-Rterm).^2;
+\end_layout
+
+\begin_layout Plain Layout
+
+    Ralt = Rdoppler.*(1-(1-R_AHRS).^3);
+\end_layout
+
+\begin_layout Plain Layout
+
+    R_cs = 1-(1-Rins).*(1-Ralt);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+    Rsys_noCPU = RbusA*RbusB*Rterm_eq*R_cs;
+\end_layout
+
+\begin_layout Plain Layout
+
+    Rsys_noCPU
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+    Rcpu_detection = 0.99999/Rsys_noCPU;
+\end_layout
+
+\begin_layout Plain Layout
+
+    C = (Rcpu_detection - Rcpu)/(Rcpu*(1-Rcpu));
+\end_layout
+
+\begin_layout Plain Layout
+
+    C
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il risultato è che il valore minimo per il parametro c deve essere: 
+\begin_inset Formula $C\backsimeq0.96606$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
