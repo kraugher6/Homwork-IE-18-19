@@ -132,12 +132,197 @@ morecomment=[s]{--}
 
 \begin_body
 
-\begin_layout Subsection
-Soluzione 
+\begin_layout Section
+Soluzione
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Punto 1
+\end_layout
+
+\begin_layout Standard
+Al fine di scegliere l'ampiezza temporale per effettuare l'analisi del file
+ di log forniti, è stato eseguito lo script 
+\shape italic
+tupleCount_func_CWINpy.sh
+\shape default
+ che fornisce il numero di tuple per vari tentativi di ampiezza della finestra
+ di coalescenza.
+ I risultati ottenuti sono riportati sui seguenti grafici.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/tupleCountMercury.png
+	lyxscale 50
+	scale 58
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Conteggio tuple MercuryErrorLog
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Per quanto riguarda il file di log 
+\shape italic
+MercuryErrorLog.txt
+\shape default
+, si può osservare che la curva presenta un ginocchio; la scelta dell'ampiezza
+ della finestra è guidata dalla necessità di catturare il maggior numero
+ di tuple che siano relative allo stesso fault con la minore ampiezza della
+ finestra temporale possibile.
+ Dunque si è optato di scegliere un valore della finestra, prossimo al ginocchio
+, di 360 secondi che cattura 440 tuple.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/tupleCountBLG.png
+	lyxscale 50
+	scale 58
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Conteggio tuple BGL
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nel caso del file 
+\shape italic
+BGLErrorLog.txt
+\shape default
+, è possibile osservare come il ginocchio della curva sia meno definito;
+ dunque si è optato di scegliere un valore della finestra che non fosse
+ troppo elevato, in quanto è sempre preferibile avere troncamenti piuttosto
+ che fallimenti.
+ Il valore scelto è di 420 secondi che cattura 369 tuple.
+\end_layout
+
+\begin_layout Standard
+Dopo aver scelto il valore di ampiezza per la finestra di coalescenza, viene
+ effettuato l’effettivo raggruppamento, lanciando lo script 
+\shape italic
+tupling_with_CWIN.sh
+\shape default
+ con parametro il log per cui raggruppare le tuple e il valore di ampiezza
+ scelto.
+ Dei vari output dello script, assume particolare importanza ai fini dell'analis
+i il file 
+\shape italic
+interarrivals.txt
+\shape default
+, che contiene i diversi tempi che intercorrono tra una tupla e la successiva.
+ Tali tempi rappresentano proprio il TTF 
+\begin_inset Quotes eld
+\end_inset
+
+empirico
+\begin_inset Quotes erd
+\end_inset
+
+, in quanto ottenuto esclusivamente a partire da delle osservazioni.
+ A questo punto, si possono dunque ottenere le distribuzioni delle reliability
+ empiriche tramite MATLAB.
+ Tale script, oltre a fornire la distribuzione di probabilità empirica(
+ plot in alto a sinistra), calcola anche il fit per i modelli esponenziale,
+ iperesponenziale e weibull.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/ReliabilityEs1.png
+	lyxscale 50
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fit della reliability Mercury
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Punto 2
 \end_layout
 
 \begin_layout Standard
@@ -434,10 +619,6 @@ Entries per i nodi di MercuryErrorLog
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -758,12 +939,12 @@ cizio precedente.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/tupleCountMercury-nodes.png
+	filename images/tupleCountMercury-nodes.png
 	lyxscale 50
 	scale 60
 
@@ -795,12 +976,12 @@ Count tuple nodi Mercury
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/tupleCountBLG-nodes.png
+	filename images/tupleCountBLG-nodes.png
 	lyxscale 50
 	scale 60
 
@@ -818,10 +999,6 @@ Count tuple nodi BGL
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -1419,12 +1596,12 @@ script tupling_with_CWIN.sh
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/cdfEmpiricaMercury-nodes.png
+	filename images/cdfEmpiricaMercury-nodes.png
 	lyxscale 50
 	scale 60
 
@@ -1456,12 +1633,12 @@ Reliability nodi Mercury
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename C:/Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/cdfEmpiricaBGL-nodes.png
+	filename images/cdfEmpiricaBGL-nodes.png
 	lyxscale 50
 	scale 60
 
@@ -1491,8 +1668,8 @@ Reliability nodi BGL
 *commento reliability*
 \end_layout
 
-\begin_layout Subsubsection
-Punto 2
+\begin_layout Subsection
+Punto 3
 \end_layout
 
 \begin_layout Standard
@@ -1941,12 +2118,12 @@ Sempre con lo stesso approccio, si sono filtrati i file di log secondo le
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../images/tupleCountMercury-cat.png
+	filename images/tupleCountMercury-cat.png
 	lyxscale 50
 	scale 60
 
@@ -1978,12 +2155,12 @@ Count tuple categorie Mercury
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename ../images/tupleCountBLG-cat.png
+	filename images/tupleCountBLG-cat.png
 	lyxscale 50
 	scale 60
 
@@ -2435,6 +2612,85 @@ J18-U11
 
 \begin_layout Plain Layout
 CWIN per categorie del log BGL
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Infine, anche in questo caso sono state plottate le CDF della reliability
+ delle diverse categorie.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/cdfEmpiricaMercury-cat.png
+	lyxscale 50
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reliability categorie Mercury
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/cdfEmpiricaBLG-cat.png
+	lyxscale 50
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reliability categorie BGL
 \end_layout
 
 \end_inset
