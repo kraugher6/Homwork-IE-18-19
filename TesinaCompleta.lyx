@@ -392,6 +392,13 @@ filename "4/1/Tesina.lyx"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Esercizio 2
 \end_layout
@@ -401,6 +408,13 @@ Esercizio 2
 LatexCommand input
 filename "4/2/Tesina.lyx"
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -420,6 +434,13 @@ filename "4/3/Tesina.lyx"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Esercizio 4
 \end_layout
@@ -434,6 +455,13 @@ filename "4/4/Tesina.lyx"
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Esercizio 5
 \end_layout
@@ -443,6 +471,13 @@ Esercizio 5
 LatexCommand input
 filename "4/5/Tesina.lyx"
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
 \end_inset
 
 
