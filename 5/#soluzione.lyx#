@@ -2758,13 +2758,11 @@ Reliability categorie BGL
 
 \begin_layout Standard
 Per il file BGL, le distribuzioni di reliability confermano la somiglianza
- delle due categorie d'errore già notata durante il calcolo dell’ampiezza
- ottima di CWIN e pertanto non si individua una categoria d'errore maggiormente
- affidabile rispetto all'altra.
-\end_layout
-
-\begin_layout Subsection
-Punto 4
+ delle due categorie d vista durante il calcolo dell’ampiezza ottima di
+ CWIN.
+ Si può affermare che entrambe abbiano una distribuzione simile, e pertanto
+ che non esista, rispetto alle categorie d’errore, una preponder- anza dell’una
+ rispetto all’altra.
 \end_layout
 
 \end_body
