@@ -1,7 +1,9 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass book
 \begin_preamble
 \usepackage{listings,xcolor,courier,bookmark}
@@ -35,7 +37,7 @@ morecomment=[s]{--}
 }
 
 
-\renewcommand*{\lstlistingname}{Codice Componente}
+\renewcommand*{\lstlistingname}{Codice}
 
 
 \usepackage{fancyhdr}
@@ -60,16 +62,18 @@ morecomment=[s]{--}
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
-
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -80,16 +84,26 @@ morecomment=[s]{--}
 \use_hyperref false
 \papersize default
 \use_geometry true
-\use_amsmath 1
-\use_esint 1
-\use_mhchem 1
-\use_mathdots 1
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 1
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -102,7 +116,10 @@ morecomment=[s]{--}
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -119,13 +136,347 @@ morecomment=[s]{--}
 Soluzione
 \end_layout
 
+\begin_layout Subsection
+Introduzione al problema
+\end_layout
+
 \begin_layout Standard
-\begin_inset Note Note
+Si riportano nella tabella le caratteristiche hardware e software del calcolator
+e utilizzato per effettuare il benchmarking:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+placement H
+wide false
+sideways false
 status open
 
 \begin_layout Plain Layout
-Descrivere la soluzione relizzata per mezzo di schematici e riportare il
- codice dei soli componenti significativi.
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="12" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Marca
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lenovo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Serie
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+YOGA 55-14IBD
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fattore di forma
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Portable
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Marchio processore
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Intel
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Tipo processore
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Core i3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Velocità Processore
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2 GHz
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Numero Processori
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Dimensioni RAM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4 GB
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tipologia di memoria
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GDDR3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Dimensioni memoria secondaria
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+500 GB
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Descrizione memoria secondaria
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HDD
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+S
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+istema Operativo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ubuntu 18.04
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Descrizione tecnica del calcolatore utilizzato
 \end_layout
 
 \end_inset
@@ -133,8 +484,9 @@ Descrivere la soluzione relizzata per mezzo di schematici e riportare il
 
 \end_layout
 
-\begin_layout Subsection
-Schematici
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -142,41 +494,7 @@ Codice
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
 
-\begin_layout Plain Layout
-Nell'eventialità in cui alcuni componenti sia stati utilizzati in altri
- esercizi inserire solo un riferimento (es.
- Multiplexer Generico - traccia n° 1)
-\end_layout
-
-\begin_layout Plain Layout
-Segue un esempio di inclusione di codice
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Bit String Comparator
-\end_layout
-
-\begin_layout Standard
-Il componente Top Module è ottenuto con costrutto 
-\emph on
-Generate
-\emph default
- e le connessioni sono fatte sfruttando tre array monodimensionali (aGT,
- aLT, aEQ).
-\end_layout
-
-\begin_layout Standard
-I valori MSB di questi array sono posti a (0,0,1) rispettivamente per garantire
- che sui bit più significativi della stringa in ingresso sia fatta una comparazi
-one assoluta, e non relativa.
 \end_layout
 
 \begin_layout Standard
@@ -187,18 +505,12 @@ status open
 
 
 \backslash
-begin{lstlisting}[language=VHDL,caption={Definizione del componente Bit
- String Comparator Generic}] 
+begin{lstlisting}[language=C++,caption={main.cpp}] 
 \end_layout
 
 \begin_layout Plain Layout
 
-library IEEE;
-\end_layout
-
-\begin_layout Plain Layout
-
-use IEEE.STD_LOGIC_1164.ALL;
+#include "benchmark.hpp"
 \end_layout
 
 \begin_layout Plain Layout
@@ -207,42 +519,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 \begin_layout Plain Layout
 
-entity bit_string_comparator is
+long int filesize[N] = {5*1048576, 2*10485760, 104857600};
 \end_layout
 
 \begin_layout Plain Layout
 
-GENERIC(N: Integer:=4);
-\end_layout
-
-\begin_layout Plain Layout
-
-    Port ( a : in  STD_LOGIC_VECTOR (N-1 downto 0);
-\end_layout
-
-\begin_layout Plain Layout
-
-           b : in  STD_LOGIC_VECTOR (N-1 downto 0);
-\end_layout
-
-\begin_layout Plain Layout
-
-           aGTb : out  STD_LOGIC;
-\end_layout
-
-\begin_layout Plain Layout
-
-           aEQb : out  STD_LOGIC;
-\end_layout
-
-\begin_layout Plain Layout
-
-           aLTb : out  STD_LOGIC);
-\end_layout
-
-\begin_layout Plain Layout
-
-end bit_string_comparator;
+long int blocksize[N] = {5*10240, 2*102400, 1*1048576};
 \end_layout
 
 \begin_layout Plain Layout
@@ -251,7 +533,17 @@ end bit_string_comparator;
 
 \begin_layout Plain Layout
 
-architecture Structural of bit_string_comparator is
+int main() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	long int numInteraction = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+	unsigned int ex = 0, rep = 0;
 \end_layout
 
 \begin_layout Plain Layout
@@ -260,91 +552,78 @@ architecture Structural of bit_string_comparator is
 
 \begin_layout Plain Layout
 
-component bit_comparator_comp
+	for(int i=0;i<N;i++) {
 \end_layout
 
 \begin_layout Plain Layout
 
-    Port ( a : in  STD_LOGIC;
+		for(int j=N-1;j>=0;j--) {
 \end_layout
 
 \begin_layout Plain Layout
 
-           b : in  STD_LOGIC;
+			numInteraction = filesize[i]/blocksize[j];
 \end_layout
 
 \begin_layout Plain Layout
 
-           aEQ_INb : in  STD_LOGIC;
+			cout << "RESULTS OF EXPERIMENT NUMBER: " << ++ex << endl;
 \end_layout
 
 \begin_layout Plain Layout
 
-           aLT_INb : in  STD_LOGIC;
+			cout << "FILESIZE: " << filesize[i] << " BLOCKSIZE: " << blocksize[j]
+ << " NUMINTERACTION: " << numInteraction << endl;			
 \end_layout
 
 \begin_layout Plain Layout
 
-           aGT_INb : in  STD_LOGIC;
+			for(int k=NUM_ESPERIMENTI;k>0;--k) {
 \end_layout
 
 \begin_layout Plain Layout
 
-           aEQb : out  STD_LOGIC;
+				cout << rep++%30 << ";";
 \end_layout
 
 \begin_layout Plain Layout
 
-           aLTb : out  STD_LOGIC;
+				analysisWrite(blocksize[j], numInteraction);
 \end_layout
 
 \begin_layout Plain Layout
 
-           aGTb : out  STD_LOGIC);
+				//checkFileSize(filesize[i]);
 \end_layout
 
 \begin_layout Plain Layout
 
-end component bit_comparator_comp;
+				analysisRead(blocksize[j], numInteraction);
 \end_layout
 
 \begin_layout Plain Layout
 
+			}
 \end_layout
 
 \begin_layout Plain Layout
 
-for all: bit_comparator_comp use entity WORK.bit_comparator(Dataflow);
+		}
 \end_layout
 
 \begin_layout Plain Layout
 
+	}
 \end_layout
 
 \begin_layout Plain Layout
 
-signal aGT, aLT, aEQ: STD_LOGIC_VECTOR(N downto 0); --Array di GT, LT ed
- EQ per la propagazione
+	return 0;
 \end_layout
 
 \begin_layout Plain Layout
 
-begin
-\end_layout
-
-\begin_layout Plain Layout
-
-aGT(N)<='0';
-\end_layout
-
-\begin_layout Plain Layout
-
-aLT(N)<='0';
-\end_layout
-
-\begin_layout Plain Layout
-
-aEQ(N)<='1'; --Altrimenti non vengono riconosciute mai come uguali!!!
+}
 \end_layout
 
 \begin_layout Plain Layout
@@ -353,37 +632,35 @@ aEQ(N)<='1'; --Altrimenti non vengono riconosciute mai come uguali!!!
 
 \begin_layout Plain Layout
 
-aGTb<=aGT(0);
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[language=C++,caption={benchmark.hpp}] 
 \end_layout
 
 \begin_layout Plain Layout
 
-aEQb<=aEQ(0);
+#ifndef _BENCHMARK_H_
 \end_layout
 
 \begin_layout Plain Layout
 
-aLTb<=aLT(0);
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-one_bcc: for i in N-1 downto 0 GENERATE begin
-\end_layout
-
-\begin_layout Plain Layout
-
-	bit_comparator: bit_comparator_comp port map(a(i), b(i), aEQ(i+1), aLT(i+1),
- aGT(i+1),aEQ(i), aLT(i), aGT(i));
-\end_layout
-
-\begin_layout Plain Layout
-
-end GENERATE one_bcc;
+#define _BENCHMARK_H_
 \end_layout
 
 \begin_layout Plain Layout
@@ -392,11 +669,852 @@ end GENERATE one_bcc;
 
 \begin_layout Plain Layout
 
-end Structural;
+#include <stdlib.h>
 \end_layout
 
 \begin_layout Plain Layout
 
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+#include <iostream>
+\end_layout
+
+\begin_layout Plain Layout
+
+#include <fstream>
+\end_layout
+
+\begin_layout Plain Layout
+
+#include <fcntl.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+#include <unistd.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+#include <sys/random.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+#include <chrono>
+\end_layout
+
+\begin_layout Plain Layout
+
+#include <errno.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+using namespace std;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#define NUM_ESPERIMENTI 30
+\end_layout
+
+\begin_layout Plain Layout
+
+#define N 3
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void initBufferWrite(long int);
+\end_layout
+
+\begin_layout Plain Layout
+
+void initBuffe(void);
+\end_layout
+
+\begin_layout Plain Layout
+
+void initBufferRead(void);
+\end_layout
+
+\begin_layout Plain Layout
+
+void termBufferWrite(void);
+\end_layout
+
+\begin_layout Plain Layout
+
+void termBufferRead(void);
+\end_layout
+
+\begin_layout Plain Layout
+
+void analysisWrite(long int, long int);
+\end_layout
+
+\begin_layout Plain Layout
+
+void analysisRead(long int, long int);
+\end_layout
+
+\begin_layout Plain Layout
+
+long int fileSize();
+\end_layout
+
+\begin_layout Plain Layout
+
+void checkFileSize(long int);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#endif //_BENCHMARK_H_
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[language=C++,caption={function.cpp}] 
+\end_layout
+
+\begin_layout Plain Layout
+
+#include "benchmark.hpp"
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void *bufferRead;
+\end_layout
+
+\begin_layout Plain Layout
+
+void *bufferWrite;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void termBuffer() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	termBufferRead();
+\end_layout
+
+\begin_layout Plain Layout
+
+	termBufferWrite();
+\end_layout
+
+\begin_layout Plain Layout
+
+	remove("file_prova.bin");
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void termBufferRead() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	free(bufferRead);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void termBufferWrite() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	free(bufferWrite);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void initBufferWrite(long int bs) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	int errMemAlign = posix_memalign(&bufferWrite, 4096, bs);
+\end_layout
+
+\begin_layout Plain Layout
+
+	system("sync; echo 3 > /proc/sys/vm/drop_caches");	
+\end_layout
+
+\begin_layout Plain Layout
+
+	//cout << pathconf("file_prova.bin",_PC_REC_XFER_ALIGN) << endl;
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (errMemAlign!=0) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		cout << errMemAlign << endl;	
+\end_layout
+
+\begin_layout Plain Layout
+
+		exit(0);	
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (getrandom(bufferWrite, bs, GRND_NONBLOCK)==-1) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		perror("get random error");
+\end_layout
+
+\begin_layout Plain Layout
+
+		termBuffer();
+\end_layout
+
+\begin_layout Plain Layout
+
+		exit(0);
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void initBufferRead(long int bs) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	int errMemAlign = posix_memalign(&bufferRead, 4096, bs);
+\end_layout
+
+\begin_layout Plain Layout
+
+	//cout << pathconf("file_prova.bin",_PC_REC_XFER_ALIGN) << endl;
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (errMemAlign!=0) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		cout << errMemAlign << endl;	
+\end_layout
+
+\begin_layout Plain Layout
+
+		exit(0);	
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void analysisWrite(long int bs, long int num) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	std::chrono::duration<double> elapsedAccumulatorWrite;
+\end_layout
+
+\begin_layout Plain Layout
+
+	elapsedAccumulatorWrite.zero();
+\end_layout
+
+\begin_layout Plain Layout
+
+	int writeSuccessful = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	//open file and control
+\end_layout
+
+\begin_layout Plain Layout
+
+	int fd = open("file_prova.bin", O_CREAT|O_TRUNC|O_WRONLY|O_APPEND|O_DIRECT|O_SYN
+C, S_IRWXU);
+\end_layout
+
+\begin_layout Plain Layout
+
+	if(fd==-1) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		perror("open file error");
+\end_layout
+
+\begin_layout Plain Layout
+
+		termBuffer();
+\end_layout
+
+\begin_layout Plain Layout
+
+		exit(0);
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	for(int i=num-1;i>=0;--i) {
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		//initialize buffer
+\end_layout
+
+\begin_layout Plain Layout
+
+		initBufferWrite(bs);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		//start timer
+\end_layout
+
+\begin_layout Plain Layout
+
+		auto start_time = std::chrono::system_clock::now();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		//write buffer
+\end_layout
+
+\begin_layout Plain Layout
+
+		writeSuccessful = write(fd, bufferWrite, bs);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+		//end timer
+\end_layout
+
+\begin_layout Plain Layout
+
+		auto end_time = std::chrono::system_clock::now();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		//control write
+\end_layout
+
+\begin_layout Plain Layout
+
+		if (writeSuccessful != bs) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			perror("write error");
+\end_layout
+
+\begin_layout Plain Layout
+
+			termBuffer();
+\end_layout
+
+\begin_layout Plain Layout
+
+			exit(0);
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		//free memory buffer
+\end_layout
+
+\begin_layout Plain Layout
+
+		termBufferWrite();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		//update accumulator
+\end_layout
+
+\begin_layout Plain Layout
+
+		elapsedAccumulatorWrite += end_time-start_time;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+	//close file
+\end_layout
+
+\begin_layout Plain Layout
+
+	close(fd);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	//print write time
+\end_layout
+
+\begin_layout Plain Layout
+
+	cout << elapsedAccumulatorWrite.count() << ";";
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void analysisRead(long int bs, long int num) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	std::chrono::duration<double> elapsedAccumulatorRead;
+\end_layout
+
+\begin_layout Plain Layout
+
+	elapsedAccumulatorRead.zero();
+\end_layout
+
+\begin_layout Plain Layout
+
+	int readSuccessful = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+	int fd = open("file_prova.bin", O_RDONLY|O_DIRECT|O_SYNC, S_IRWXU);
+\end_layout
+
+\begin_layout Plain Layout
+
+	if(fd==-1) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		perror("open file error");
+\end_layout
+
+\begin_layout Plain Layout
+
+		termBuffer();
+\end_layout
+
+\begin_layout Plain Layout
+
+		exit(0);
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	for(int i=num-1;i>=0;--i) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		//initialize buffer
+\end_layout
+
+\begin_layout Plain Layout
+
+		initBufferRead(bs);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		auto start_time = std::chrono::system_clock::now();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		readSuccessful = read(fd, bufferRead, bs);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		auto end_time = std::chrono::system_clock::now();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		if (readSuccessful != bs) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			perror("read error");
+\end_layout
+
+\begin_layout Plain Layout
+
+			termBuffer();
+\end_layout
+
+\begin_layout Plain Layout
+
+			exit(0);
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		termBufferRead();		
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\end_layout
+
+\begin_layout Plain Layout
+
+		elapsedAccumulatorRead += end_time-start_time;
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	close(fd);
+\end_layout
+
+\begin_layout Plain Layout
+
+	cout << elapsedAccumulatorRead.count() << ";" << endl;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+long int fileSize() {
+\end_layout
+
+\begin_layout Plain Layout
+
+  streampos begin, end;
+\end_layout
+
+\begin_layout Plain Layout
+
+  ifstream fd ("file_prova.bin", ios::binary);
+\end_layout
+
+\begin_layout Plain Layout
+
+  begin = fd.tellg();
+\end_layout
+
+\begin_layout Plain Layout
+
+  fd.seekg (0, ios::end);
+\end_layout
+
+\begin_layout Plain Layout
+
+  end = fd.tellg();
+\end_layout
+
+\begin_layout Plain Layout
+
+  fd.close();
+\end_layout
+
+\begin_layout Plain Layout
+
+  return end-begin;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void checkFileSize(long int fs) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	if(fileSize()<fs) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		cout << endl <<"File size mismatch" << endl;
+\end_layout
+
+\begin_layout Plain Layout
+
+		cout << fileSize() << " " << fs << endl;
+\end_layout
+
+\begin_layout Plain Layout
+
+		exit(0);
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
 \begin_layout Plain Layout
