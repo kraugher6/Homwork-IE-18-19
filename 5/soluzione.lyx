@@ -162,7 +162,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/tupleCountMercury.png
+	filename images/tupleCountMercury.png
 	lyxscale 50
 	scale 58
 
@@ -216,7 +216,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/tupleCountBLG.png
+	filename images/tupleCountBLG.png
 	lyxscale 50
 	scale 58
 
@@ -290,12 +290,12 @@ enziale e weibull.
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename /Users/marcoriccio/Documents/Gruppo15/Homework-IE-18-19/5/images/ReliabilityEs1.png
+	filename images/ReliabilityEs1.png
 	lyxscale 50
 	scale 60
 
@@ -340,13 +340,13 @@ status open
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="7">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0pt">
-<column alignment="center" valignment="middle" width="8col%">
-<column alignment="center" valignment="middle" width="20col%">
-<column alignment="center" valignment="top" width="25col%">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top" width="6pheight%">
+<column alignment="center" valignment="middle" width="14text%">
+<column alignment="center" valignment="middle" width="10text%">
+<column alignment="center" valignment="middle" width="12.5text%">
+<column alignment="center" valignment="middle" width="23text%">
+<column alignment="center" valignment="middle">
+<column alignment="center" valignment="middle">
+<column alignment="center" valignment="middle" width="15text%">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -413,7 +413,7 @@ Goodness of fit
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -422,7 +422,7 @@ Esponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -434,7 +434,7 @@ Esponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -453,7 +453,7 @@ Esponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -467,12 +467,12 @@ Esponenziale
 \begin_inset Formula $b\in(-8.746e-05,-8.221e-05)$
 \end_inset
 
-
+ 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -481,7 +481,7 @@ Esponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -490,7 +490,7 @@ Esponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -513,7 +513,7 @@ RMSE: 0.05117
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -522,7 +522,7 @@ Iperesponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -534,7 +534,7 @@ Iperesponenziale
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -548,7 +548,10 @@ Iperesponenziale
 \begin_inset Formula $b=-0.0008358$
 \end_inset
 
- 
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Formula $c=-0.0008358$
 \end_inset
 
@@ -564,7 +567,7 @@ Iperesponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -597,7 +600,7 @@ Iperesponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -606,7 +609,7 @@ Iperesponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -615,7 +618,7 @@ Iperesponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -627,14 +630,18 @@ R-square: 0.996
 \end_layout
 
 \begin_layout Plain Layout
-Adjusted R-square: 0.996 RMSE: 0.01857
+Adjusted R-square: 0.996
+\end_layout
+
+\begin_layout Plain Layout
+RMSE: 0.01857
 \end_layout
 
 \end_inset
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -643,7 +650,7 @@ Weibull
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -655,7 +662,7 @@ Weibull
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -674,7 +681,7 @@ Weibull
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -693,7 +700,7 @@ Weibull
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -702,7 +709,7 @@ Weibull
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -711,7 +718,7 @@ Weibull
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -723,7 +730,11 @@ R-square: 0.9895
 \end_layout
 
 \begin_layout Plain Layout
-Adjusted R-square: 0.9895 RMSE: 0.02988
+Adjusted R-square: 0.9895
+\end_layout
+
+\begin_layout Plain Layout
+RMSE: 0.02988
 \end_layout
 
 \end_inset
@@ -1378,7 +1389,7 @@ cizio precedente.
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1457,7 +1468,7 @@ A partire dai grafici ottenuti, molto diversi tra di loro, è stata fatta
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2058,7 +2069,7 @@ script tupling_with_CWIN.sh
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2103,7 +2114,7 @@ Per quanto riguarda il file Mercury, si evince come i due nodi individuati
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2591,7 +2602,7 @@ Sempre con lo stesso approccio, si sono filtrati i file di log secondo le
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2628,7 +2639,7 @@ Count tuple categorie Mercury
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2671,7 +2682,7 @@ A partire dai grafici ottenuti, sono stati scelti, per tutte le categorie
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2956,7 +2967,7 @@ ity, in quanto con un valore di CWIN pressocché uguale a tutti gli altri
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3121,7 +3132,7 @@ Anche in questo caso sono state plottate le CDF empiriche delle reliability
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3164,7 +3175,7 @@ L'analisi del grafico mostra come, per il file Mercury, la categoria DEV
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3225,7 +3236,7 @@ Per quanto riguarda i nodi che più contribuiscono a ciascuna categoria di
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center

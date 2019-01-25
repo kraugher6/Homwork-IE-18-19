@@ -356,6 +356,16 @@ begin{mainmatter}
 Benchmark
 \end_layout
 
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "1/Tesina.lyx"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 PCA & Clustering
 \end_layout
