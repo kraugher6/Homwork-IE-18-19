@@ -324,7 +324,22 @@ Fit della reliability Mercury
 \begin_layout Standard
 Al fine di valutare la bontà dei risultati ottenuti, si è effettuato il
  test di Kolmogorov-Smirnov.
- 
+ Per effettuare il test si è utilizzata la funzione MATLAB kstest2 i cui
+ risultati sono mostrati nella tabella sottostante.
+ Si verifica subito che nel caso dell'esponenziale l'ipotesi nulla è rigettata
+ (H = 1).
+ Questo ci consente di dire che la nostra distribuzione non può essere descritta
+ da un'esponenziale semplice.
+ L'ipotesi nulla del test non è invece rigettata per i modelli dell'iperesponenz
+iale e per la Weibull (H=0); per scegliere tra questi due modelli si vanno
+ quindi a valutare altri parametri quali p-value, SSE, R-square.
+ Questi favoriscono tutti l'iperesponenziale rispetto alla Weibull infatti
+ il valore del p-value della Weibull è più vicino alla soglia (0.05) per
+ il rigetto dell'ipotesi nulla, per quanto riguarda la devianza dell'errore
+ di regressione e l'R-square, avremo anche in questo caso valori migliori
+ per l'iperesponenziale rispetto alla Weibull.
+ Si può dunque concludere che il modello iperesponenziale è, tra quelli
+ proposti, il migliore per rappresentare la nostra distribuzione.
 \end_layout
 
 \begin_layout Standard
@@ -340,13 +355,13 @@ status open
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="7">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0pt">
-<column alignment="center" valignment="middle" width="8col%">
-<column alignment="center" valignment="middle" width="20col%">
-<column alignment="center" valignment="top" width="25col%">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top" width="6pheight%">
+<column alignment="center" valignment="middle" width="14text%">
+<column alignment="center" valignment="middle" width="10text%">
+<column alignment="center" valignment="middle" width="12.5text%">
+<column alignment="center" valignment="middle" width="23text%">
+<column alignment="center" valignment="middle">
+<column alignment="center" valignment="middle">
+<column alignment="center" valignment="middle" width="15text%">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -413,7 +428,7 @@ Goodness of fit
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -422,7 +437,7 @@ Esponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -434,7 +449,7 @@ Esponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -453,7 +468,7 @@ Esponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -467,12 +482,12 @@ Esponenziale
 \begin_inset Formula $b\in(-8.746e-05,-8.221e-05)$
 \end_inset
 
-
+ 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -481,7 +496,7 @@ Esponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -490,7 +505,7 @@ Esponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -513,7 +528,7 @@ RMSE: 0.05117
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -522,7 +537,7 @@ Iperesponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -534,7 +549,7 @@ Iperesponenziale
 
 \end_inset
 </cell>
-<cell multirow="3" alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -548,7 +563,10 @@ Iperesponenziale
 \begin_inset Formula $b=-0.0008358$
 \end_inset
 
- 
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Formula $c=-0.0008358$
 \end_inset
 
@@ -564,7 +582,7 @@ Iperesponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -597,7 +615,7 @@ Iperesponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -606,7 +624,7 @@ Iperesponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -615,395 +633,7 @@ Iperesponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-SSE: 0.1417
-\end_layout
-
-\begin_layout Plain Layout
-R-square: 0.996
-\end_layout
-
-\begin_layout Plain Layout
-Adjusted R-square: 0.996 RMSE: 0.01857
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Weibull
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $e^{-(lx)^{a}}$
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $a=0.7066$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula $l=9.427e-05$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $a\in(0.6952,0.718)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula $l\in(9.274e-05,9.581e-05)$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.0833
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-SSE: 0.3687
-\end_layout
-
-\begin_layout Plain Layout
-R-square: 0.9895
-\end_layout
-
-\begin_layout Plain Layout
-Adjusted R-square: 0.9895 RMSE: 0.02988
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="7">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="12text%">
-<column alignment="center" valignment="top" width="12text%">
-<column alignment="center" valignment="top" width="15text%">
-<column alignment="center" valignment="top" width="26text%">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top" width="23text%">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Modello
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Funzione
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Parametri
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Intervalli di confidenza al 95%
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-H
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-P
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Goodness of fit
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Esponenziale
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $a\cdot e^{bx}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $a=0.9011$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula $b=-8.484e-05$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $a\in(0.891,0.9112)$
-\end_inset
-
-
-\begin_inset Formula $b\in(-8.746e-05,-8.221e-05)$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.002
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-SSE: 1.081
-\end_layout
-
-\begin_layout Plain Layout
-R-square: 0.9693
-\end_layout
-
-\begin_layout Plain Layout
-Adjusted R-square: 0.9693
-\end_layout
-
-\begin_layout Plain Layout
-RMSE: 0.05117
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Iperesponenziale
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $a\cdot e^{bx}+c\cdot e^{dx}$
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $a=0.4125$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula $b=-0.0008358$
-\end_inset
-
- 
-\begin_inset Formula $c=-0.0008358$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Formula $d=-5.883e-05$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $a\in(0.3978,0.4272)$
-\end_inset
-
-
-\begin_inset Formula $b\in(-0.0008995,-0.0007721)$
-\end_inset
-
-
-\begin_inset Formula $c\in(0.6976,0.7205)$
-\end_inset
-
-
-\begin_inset Formula $d\in(0.6976,0.7205)$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.71206
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1026,7 +656,7 @@ RMSE: 0.01857
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1035,7 +665,7 @@ Weibull
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1047,7 +677,7 @@ Weibull
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1066,7 +696,7 @@ Weibull
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1074,6 +704,9 @@ Weibull
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Formula $l\in(9.274e-05,9.581e-05)$
 \end_inset
 
@@ -1082,7 +715,7 @@ Weibull
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1091,7 +724,7 @@ Weibull
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1100,7 +733,7 @@ Weibull
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
