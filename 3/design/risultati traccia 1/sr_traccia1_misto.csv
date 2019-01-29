@@ -1,7 +1,0 @@
-Label,# Samples,Average,Min,Max,Std. Dev.,Error %,Throughput,Received KB/sec,Sent KB/sec,Avg. Bytes
-Thread Group traccia1 misto:HTTP Request small1,463,96,8,2168,"237,80","0,000%","1,54514","38,20","0,19","25314,0"
-Thread Group traccia1 misto:HTTP Request small2,479,585,260,2246,"204,11","0,000%","1,59396","156,14","0,19","100309,0"
-Thread Group traccia1 misto:HTTP Request medium1,434,2927,909,4059,"289,77","0,000%","1,43906","703,04","0,18","500266,0"
-Thread Group traccia1 misto:HTTP Request medium2,427,5903,2106,7112,"511,57","0,000%","1,40963","1401,60","0,17","1018167,0"
-Thread Group traccia1 misto:HTTP Request big1,401,11822,4212,14115,"1135,10","0,000%","1,31862","2621,73","0,16","2035951,0"
-TOTAL,2204,4018,8,14115,"4256,48","0,000%","7,24704","4906,69","0,88","693311,0"
