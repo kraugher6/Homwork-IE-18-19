@@ -879,7 +879,7 @@ status open
 	lyxscale 50
 	scale 45
 	scaleBeforeRotation
-	rotateOrigin leftTop
+	rotateOrigin center
 
 \end_inset
 
