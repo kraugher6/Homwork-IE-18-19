@@ -1407,7 +1407,7 @@ status open
 \begin_inset Graphics
 	filename images/workload sintetico 1.png
 	lyxscale 50
-	scale 55
+	scale 50
 
 \end_inset
 
@@ -1440,7 +1440,7 @@ status open
 \begin_inset Graphics
 	filename images/workload sintetico 2.png
 	lyxscale 50
-	scale 55
+	scale 50
 
 \end_inset
 

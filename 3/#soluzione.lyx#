@@ -1391,77 +1391,7 @@ Quindi, del 95.515% di varianza spiegata dalla PCA, il clustering ne fa perdere
 \end_layout
 
 \begin_layout Standard
-In conclusione, si riporta un esempio di workload sintetico:
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename images/workload sintetico 1.png
-	lyxscale 50
-	scale 55
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Esempio di workload sintetico
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename images/workload sintetico 2.png
-	lyxscale 50
-	scale 55
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Esempio di workload sintetico
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
+In conclusione, si riporta un esempio di workload sintetico
 \end_layout
 
 \end_body
