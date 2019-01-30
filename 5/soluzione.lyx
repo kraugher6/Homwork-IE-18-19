@@ -324,7 +324,23 @@ Fit della reliability Mercury
 \begin_layout Standard
 Al fine di valutare la bontà dei risultati ottenuti, si è effettuato il
  test di Kolmogorov-Smirnov.
- 
+ Per effettuare il test si è utilizzata la funzione MATLAB kstest2 i cui
+ risultati sono mostrati nella tabella sottostante.
+ Si verifica subito che nel caso dell'esponenziale l'ipotesi nulla è rigettata
+ (H = 1).
+ Questo ci consente di dire che la nostra distribuzione non può essere descritta
+ da un'esponenziale semplice.
+ L'ipotesi nulla del test non è invece rigettata per i modelli dell'iperesponenz
+iale e per la Weibull (H=0); per scegliere tra questi due modelli si vanno
+ quindi a valutare altri parametri quali p-value, SSE, R-square.
+ Questi favoriscono tutti l'iperesponenziale rispetto alla Weibull, infatti
+ il valore del p-value della Weibull è più vicino alla soglia (0.05) per
+ il rigetto dell'ipotesi nulla.
+ Per quanto riguarda la devianza dell'errore di regressione e l'R-square,
+ avremo anche in questo caso valori migliori per l'iperesponenziale rispetto
+ alla Weibull.
+ Si può dunque concludere che il modello iperesponenziale è, tra quelli
+ proposti, il migliore per rappresentare la distribuzione.
 \end_layout
 
 \begin_layout Standard
