@@ -940,7 +940,7 @@ Risulta interessante notare un altro comportamento del sistema che riguarda
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1204,7 +1204,7 @@ A questo punto si è potuti passare all'analisi delle componenti principali
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1237,7 +1237,7 @@ Scatter Plot e Loading Plot della PCA
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1285,7 +1285,7 @@ A questo punto è stata effettuata la clusterizzazione considerando le component
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1322,7 +1322,7 @@ Dendrogramma
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1391,7 +1391,139 @@ Quindi, del 95.515% di varianza spiegata dalla PCA, il clustering ne fa perdere
 \end_layout
 
 \begin_layout Standard
-In conclusione, si riporta un esempio di workload sintetico
+In conclusione, si riporta un esempio di workload sintetico:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/workload sintetico 1.png
+	lyxscale 50
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esempio di workload sintetico
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/workload sintetico 2.png
+	lyxscale 50
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esempio di workload sintetico
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Capacity Test
+\end_layout
+
+\begin_layout Standard
+Sulla base della caratterizzazione del workload eseguita, in questa sezione
+ verranno riportati i risultati del capacity test del sistema descritto.
+ In particolare, il capacity test è stato effettuato considerando un caso
+ il più possibile vicino ad un contesto reale, caratterizzato da un'eterogeneità
+ delle richieste.
+\end_layout
+
+\begin_layout Standard
+Ai fini di aumentare il carico, il capacity test è stato condotto facendo
+ variare il numero di thread, ognuno dei quali settato per fare 10 richieste
+ al minuto; così facendo, è stato possibile far variare il numero di richieste
+ totali inoltrate al server.
+ I risultati del test si riportano in figura:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/capacity_misto.png
+	lyxscale 50
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Capacity test su pagine miste
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La knee capacity risulta essere di 3.33 req/s, mentre la usable capacity
+ di 5.833 req/s.
 \end_layout
 
 \end_body
