@@ -1,0 +1,4 @@
+Label,# Samples,Average,Min,Max,Std. Dev.,Error %,Throughput,Received KB/sec,Sent KB/sec,Avg. Bytes
+50 thread:small1 205 thread,1261,348,21,3455,"218,18","0,000%","4,19522","103,71","0,53","25314,0"
+50 thread:small2 205 thread,1289,789,42,3550,"198,63","0,000%","4,28446","419,70","0,54","100309,0"
+TOTAL,2550,571,21,3550,"303,34","0,000%","8,47582","523,31","1,07","63223,2"
