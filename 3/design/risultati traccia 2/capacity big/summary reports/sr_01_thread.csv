@@ -1,0 +1,4 @@
+Label,# Samples,Average,Min,Max,Std. Dev.,Error %,Throughput,Received KB/sec,Sent KB/sec,Avg. Bytes
+1 thread:big1 1 thread,30,387,362,620,"50,55","0,000%",",09993","198,67","0,01","2035951,0"
+1 thread:big2 1 thread,21,869,852,902,"10,65","0,000%",",07424","360,88","0,01","4977620,0"
+TOTAL,51,585,362,902,"240,41","0,000%",",16987","538,69","0,02","3247226,5"
