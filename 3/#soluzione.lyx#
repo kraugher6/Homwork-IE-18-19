@@ -1526,5 +1526,30 @@ La knee capacity risulta essere di 3.33 req/s, mentre la usable capacity
  di 5.833 req/s.
 \end_layout
 
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A questo punto, il capacity test è stato condotto separatamente in base
+ alle dimensioni delle pagine richieste.
+ VogI risultati sono discussi nelle seguenti sezioni.
+\end_layout
+
+\begin_layout Subsubsection
+Capacity test pagine small
+\end_layout
+
+\begin_layout Subsubsection
+Capacity test pagine medium
+\end_layout
+
+\begin_layout Subsubsection
+Capacity test pagine big
+\end_layout
+
 \end_body
 \end_document
