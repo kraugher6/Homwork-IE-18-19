@@ -136,10 +136,6 @@ morecomment=[s]{--}
 Soluzione
 \end_layout
 
-\begin_layout Subsection
-Introduzione al problema
-\end_layout
-
 \begin_layout Standard
 Si riportano nella tabella le caratteristiche hardware e software del calcolator
 e utilizzato per effettuare il benchmarking:
@@ -151,7 +147,7 @@ e utilizzato per effettuare il benchmarking:
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -487,6 +483,94 @@ Descrizione tecnica del calcolatore utilizzato
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Il primo passo è stato quello di effettuare un'analisi preliminare, con
+ 7 osservazioni per ogni possibile combinazione dei fattori FileSize e BlockSize
+, per ottenere una prima stima dei tempi di read e write.
+ Tali tempi sono stati utilizzati per calcolare la dimensione di ogni campione,
+ e quindi il numero minimo di osservazioni necessarie affinchè potesse essere
+ garantito un determinato grado di accuratezza ed una determinata confidenza;
+ la formula per ricavare tale numero minimo è la seguente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+n=\left(\frac{100\cdot z\cdot s}{r\cdot\bar{x}}\right)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I parametri per ogni campione da considerare sono:
+\end_layout
+
+\begin_layout Itemize
+z, livello di confidenza;
+\end_layout
+
+\begin_layout Itemize
+s, deviazione standard;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\bar{x}$
+\end_inset
+
+, media campionaria;
+\end_layout
+
+\begin_layout Itemize
+r, percentuale di accuratezza.
+\end_layout
+
+\begin_layout Standard
+L'analisi effettuata prevede, dopo aver calcolato per ogni combinazione
+ media e deviazione standard, una scelta approriata di accuratezza e confidenza
+ in maniera tale da trovare un compromesso tra numero di esperimenti e complessi
+tà computazionale per condurli.
+ A tal fine, è stata realizzata una funzione MATLAB che implementa la formula
+ mostrata prendendo in ingresso media, deviazione standard e z-quantile.
+ Per quanto riguarda il valore di accuratezza, bisogna fare alcune considerazion
+i: ogni campione è caratterizzato da una media e una deviazione standard;
+ la scelta di r non può essere vincolata semplicemente alla media, ma deve
+ tenere in considerazione anche come i valori si distribuiscono attorno
+ ad essa.
+ Se così non fosse, il numero di osservazioni per alcuni campioni risulterebbe
+ eccessivo da calcolare, mentre per altri sarebbe molto basso.
+ 
+\end_layout
+
+\begin_layout Standard
+*FIGURE*
+\end_layout
+
+\begin_layout Standard
+Sulla base di tali considerazioni, per il calcolo di r è stato quindi tenuto
+ conto per ogni campione non il valore della media, bensì il coefficiente
+ di variazione (COV), scegliendo il valore di r proprio pari a 1/4 di quest'ulti
+mo.
+ Considerando come confidenza il 99%, si è ottenuto come risultato un numero
+ di esperimenti per ogni campione pari a 49, che si è stimato possibili
+ eseguire in un tempo complessivo di circa 4 ore.
+ 
+\end_layout
+
+\begin_layout Standard
+*SCRIPT*
+\end_layout
+
+\begin_layout Standard
+Com'è possibile notare dai risultati dello script, la peggiore accuracy
+ che si ottiene per le scritture è del 20%, mentre per le letture è di circa
+ il 6%.
+ Tali valori sono isolati a pochi campioni, il che ci permette di affermare
+ che in generale le scelte effettuate siano comunque accurate.
 \end_layout
 
 \begin_layout Subsection
