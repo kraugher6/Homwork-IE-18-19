@@ -14,6 +14,7 @@
 using namespace std;
 
 #define NUM_ESPERIMENTI_PRELIMINARI 7
+#define NUM_ESPERIMENTI 49
 #define N 3
 
 void initBufferWrite(long int);
