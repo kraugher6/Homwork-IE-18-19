@@ -573,6 +573,34 @@ Com'è possibile notare dai risultati dello script, la peggiore accuracy
  che in generale le scelte effettuate siano comunque accurate.
 \end_layout
 
+\begin_layout Standard
+Dopo aver estratto 9 campioni da 49 osservazioni ognuno, sono stati messi
+ a confronto i campioni relativi alle diverse configurazioni di block size
+ per medesimo file size.
+ Sono state applicate in maniera preliminare delle statistiche per verificare
+ che i campioni appartenenti a configurazioni diverse di block size appartengano
+ effettivamente a popolazioni differenti tra loro.
+ Per la verifica è stato utilizzato il t-test e per avere un'ulteriore conferma
+ è stato applicato anche il test non parametrico di Wilcoxon.
+\end_layout
+
+\begin_layout Standard
+*IMMAGINE*
+\end_layout
+
+\begin_layout Standard
+Verificato ciò sono state quindi calcolate le medie campionarie e gli intervalli
+ di confidenza per ogni campione.
+ Per il Teorema del Limite Centrale ci è possibile dire che le nostre medie
+ campionarie stimano con una confidenza del 95% la media della popolazione
+ da cui provengono.
+ Questo vale in quanto i campioni considerati hanno una numerosità maggiore
+ di 30 (49).
+ Essendo quindi significativamente diversi i risultati è possibile infine
+ effettuare una valutazione, fissato ogni file size, riguardo a quale block
+ size garantisca tempi medi di lettura e scrittua migliori.
+\end_layout
+
 \begin_layout Subsection
 Codice
 \end_layout
