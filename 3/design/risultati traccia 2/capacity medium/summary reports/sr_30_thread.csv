@@ -1,0 +1,4 @@
+Label,# Samples,Average,Min,Max,Std. Dev.,Error %,Throughput,Received KB/sec,Sent KB/sec,Avg. Bytes
+30 thread:medium1 30 thread,767,2828,2489,3003,"83,61","0,000%","2,53146","1236,72","0,32","500266,0"
+30 thread:medium2 30 thread,763,4185,3520,4724,"254,33","0,000%","2,50830","2494,01","0,32","1018167,0"
+TOTAL,1530,3505,2489,4724,"704,09","0,000%","5,02975","3725,84","0,64","758539,5"

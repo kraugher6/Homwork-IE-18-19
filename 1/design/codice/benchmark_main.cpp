@@ -6,7 +6,6 @@
 //long int filesize[N] = {1048576, 104857600, 1073741824};
 long int filesize[N] = {6*1048576, 24*10485760, 96*10485760};
 long int blocksize[N] = {5*102400, 1048576, 3*1048576};
-int n[N][N] = {0};
 
 int main() {
 	system("echo 3 > /proc/sys/vm/drop_caches");
@@ -17,9 +16,9 @@ int main() {
 		for(int j=N-1;j>=0;j--) {
 			numIteraction = filesize[i]/blocksize[j];
 			cout << "RESULTS OF COMBINATION NUMBER: " << ++ex << endl;
-			cout << "FILESIZE: " << filesize[i] << " BLOCKSIZE: " << blocksize[j] << " NUM OF ITERACTION: " << numIteraction << " NUM OF EXPERIMENT: " << n[i][j] << endl;			
-			for(int k=n[i][j];k>0;--k) {
-				cout << rep++%n[i][j] << ";";
+			cout << "FILESIZE: " << filesize[i] << " BLOCKSIZE: " << blocksize[j] << " NUM OF ITERACTION: " << numIteraction << endl;			
+			for(int k=NUM_ESPERIMENTI;k>0;--k) {
+				cout << rep++%NUM_ESPERIMENTI << ";";
 				analysisWrite(blocksize[j], numIteraction);
 				//checkFileSize(filesize[i]);
 				analysisRead(blocksize[j], numIteraction);
