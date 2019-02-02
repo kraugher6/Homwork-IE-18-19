@@ -154,9 +154,8 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="2">
+<lyxtabular version="3" rows="6" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -165,7 +164,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Marca e modello
+Marca
 \end_layout
 
 \end_inset
@@ -194,7 +193,27 @@ CPU
 \begin_inset Text
 
 \begin_layout Plain Layout
-Intel Intel Core i3-5005U 2 GHz 2 core fisici
+Intel Intel Core i3-5005U 2 GHz
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Numero processori fisici
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
 \end_layout
 
 \end_inset
@@ -330,12 +349,11 @@ server (SUT):
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
-\align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="2">
+<lyxtabular version="3" rows="10" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -344,7 +362,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Marca e modello
+Marca
 \end_layout
 
 \end_inset
@@ -353,7 +371,7 @@ Marca e modello
 \begin_inset Text
 
 \begin_layout Plain Layout
-Raspberry Pi B+
+Lenovo
 \end_layout
 
 \end_inset
@@ -364,7 +382,7 @@ Raspberry Pi B+
 \begin_inset Text
 
 \begin_layout Plain Layout
-CPU
+Serie
 \end_layout
 
 \end_inset
@@ -373,7 +391,100 @@ CPU
 \begin_inset Text
 
 \begin_layout Plain Layout
-ARM ARM710 700 MHz 1 core fisico
+YOGA 55-14IBD
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Processore
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Intel
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Tipo processore
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Core i3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Velocità Processore
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2 GHz
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Numero Processori
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
 \end_layout
 
 \end_inset
@@ -406,7 +517,7 @@ RAM
 \begin_inset Text
 
 \begin_layout Plain Layout
-512 MB
+4 GB GDDR3
 \end_layout
 
 \end_inset
@@ -430,7 +541,7 @@ RAM
 \uwave off
 \noun off
 \color none
-Memoria secondaria
+Dimensioni memoria secondaria
 \end_layout
 
 \end_inset
@@ -439,7 +550,27 @@ Memoria secondaria
 \begin_inset Text
 
 \begin_layout Plain Layout
-8 GB SD
+500 GB
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Descrizione memoria secondaria
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HDD
 \end_layout
 
 \end_inset
@@ -485,7 +616,7 @@ istema Operativo
 \begin_inset Text
 
 \begin_layout Plain Layout
-Linux Raspbian
+Ubuntu 18.04
 \end_layout
 
 \end_inset
@@ -1186,7 +1317,7 @@ Ai fini di aumentare il carico, il capacity test è stato condotto facendo
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1245,7 +1376,7 @@ Capacity test pagine small
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1286,7 +1417,7 @@ Capacity test pagine medium
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1327,7 +1458,7 @@ Capacity test pagine big
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1578,17 +1709,6 @@ Valori di knee e usable capacity in sintesi
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection
-Design of experiment
-\end_layout
-
-\begin_layout Standard
-I dati di knee capacity e usable capacity medi, recuperati nella sezione
- precedente sono stati utilizzati per effetuare un design of experiment
- (DOE), al fine di valutare l'importanza e la significatività dei fattori
- page type e request rate rispetto alle variazioni del response time.
 \end_layout
 
 \end_body

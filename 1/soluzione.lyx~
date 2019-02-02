@@ -147,12 +147,12 @@ e utilizzato per effettuare il benchmarking:
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="12" columns="2">
+<lyxtabular version="3" rows="5" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -170,7 +170,7 @@ Marca
 \begin_inset Text
 
 \begin_layout Plain Layout
-Lenovo
+Lenovo YOGA 55-14IBD
 \end_layout
 
 \end_inset
@@ -181,7 +181,7 @@ Lenovo
 \begin_inset Text
 
 \begin_layout Plain Layout
-Serie
+CPU
 \end_layout
 
 \end_inset
@@ -190,47 +190,7 @@ Serie
 \begin_inset Text
 
 \begin_layout Plain Layout
-YOGA 55-14IBD
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Fattore di forma
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Portable
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Marchio processore
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Intel
+Intel Intel Core i3-5005U 2 GHz 2 core fisici
 \end_layout
 
 \end_inset
@@ -254,7 +214,7 @@ Intel
 \uwave off
 \noun off
 \color none
-Tipo processore
+RAM
 \end_layout
 
 \end_inset
@@ -263,47 +223,7 @@ Tipo processore
 \begin_inset Text
 
 \begin_layout Plain Layout
-Core i3
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Velocità Processore
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2 GHz
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Numero Processori
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2
+4 GB GDDR3
 \end_layout
 
 \end_inset
@@ -327,7 +247,7 @@ Numero Processori
 \uwave off
 \noun off
 \color none
-Dimensioni RAM
+Memoria secondaria
 \end_layout
 
 \end_inset
@@ -336,80 +256,7 @@ Dimensioni RAM
 \begin_inset Text
 
 \begin_layout Plain Layout
-4 GB
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Tipologia di memoria
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-GDDR3
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-Dimensioni memoria secondaria
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-500 GB
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Descrizione memoria secondaria
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-HDD
+500 GB HDD
 \end_layout
 
 \end_inset
@@ -446,7 +293,7 @@ S
 \uwave default
 \noun default
 \color inherit
-istema Operativo
+istema operativo
 \end_layout
 
 \end_inset
@@ -462,18 +309,6 @@ Ubuntu 18.04
 </cell>
 </row>
 </lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Descrizione tecnica del calcolatore utilizzato
-\end_layout
 
 \end_inset
 
@@ -571,6 +406,38 @@ Com'è possibile notare dai risultati dello script, la peggiore accuracy
  il 6%.
  Tali valori sono isolati a pochi campioni, il che ci permette di affermare
  che in generale le scelte effettuate siano comunque accurate.
+\end_layout
+
+\begin_layout Standard
+Dopo aver estratto 9 campioni da 49 osservazioni ognuno, sono stati messi
+ a confronto i campioni relativi alle diverse configurazioni di block size
+ per medesimo file size.
+ Sono state applicate in maniera preliminare delle statistiche per verificare
+ che i campioni appartenenti a configurazioni diverse di block size appartengano
+ effettivamente a popolazioni differenti tra loro.
+ Per la verifica è stato utilizzato il t-test
+\end_layout
+
+\begin_layout Standard
+*IMMAGINE*
+\end_layout
+
+\begin_layout Standard
+Verificato ciò sono state quindi calcolate le medie campionarie e gli intervalli
+ di confidenza per ogni campione.
+\end_layout
+
+\begin_layout Standard
+*TABELLA*
+\end_layout
+
+\begin_layout Standard
+Per il Teorema del Limite Centrale, essendo la numerosità campionaria maggiore
+ di 30 (49), è possibile dire che le medie campionarie stimano con una confidenz
+a del 95% la media della popolazione da cui provengono.
+ Essendo quindi significativamente diversi i risultati è possibile infine
+ effettuare una valutazione, fissato ogni file size, riguardo a quale block
+ size garantisca tempi medi di lettura e scrittua migliori.
 \end_layout
 
 \begin_layout Subsection
