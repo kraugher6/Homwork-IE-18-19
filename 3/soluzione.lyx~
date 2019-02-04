@@ -1656,14 +1656,14 @@ Distribuzioni response time dei diversi trattamenti
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename images/Distribuzioni DOE 2.png
 	lyxscale 50
-	scale 60
+	scale 40
 
 \end_inset
 
@@ -2140,6 +2140,81 @@ Per la maggior parte delle distribuzioni, come è possibile osservare, è
  Ciò non si è però verificato per le distribuzioni con intensità maggiore
  relative a pagine di tipo small e medium1, per le quali si è dunque optato
  per la mediana.
+\end_layout
+
+\begin_layout Standard
+A questo punto si è proceduto a costruire il modello regressivo considerando
+ tali punti.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/Regressione 1.png
+	lyxscale 50
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Risultati della regressione
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/Regressione 2.png
+	lyxscale 50
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Risultati della regressione
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
