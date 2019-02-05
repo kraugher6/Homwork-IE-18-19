@@ -197,10 +197,10 @@ Per quanto riguarda il file di log
 \shape italic
 MercuryErrorLog.txt
 \shape default
-, si può osservare che la curva presenta un ginocchio; la scelta dell'ampiezza
- della finestra è guidata dalla necessità di catturare il maggior numero
- di tuple che siano relative allo stesso fault con la minore ampiezza della
- finestra temporale possibile.
+, si può osservare che la curva presenta un ginocchio abbastanza definito;
+ la scelta dell'ampiezza della finestra è guidata dalla necessità di catturare
+ il maggior numero di tuple che siano relative allo stesso fault con la
+ minore ampiezza della finestra temporale possibile.
  Dunque si è optato di scegliere un valore della finestra, prossimo al ginocchio
 , di 360 secondi che cattura 440 tuple.
 \end_layout
@@ -326,21 +326,7 @@ Al fine di valutare la bontà dei risultati ottenuti, si è effettuato il
  test di Kolmogorov-Smirnov.
  Per effettuare il test si è utilizzata la funzione MATLAB kstest2 i cui
  risultati sono mostrati nella tabella sottostante.
- Si verifica subito che nel caso dell'esponenziale l'ipotesi nulla è rigettata
- (H = 1).
- Questo ci consente di dire che la nostra distribuzione non può essere descritta
- da un'esponenziale semplice.
- L'ipotesi nulla del test non è invece rigettata per i modelli dell'iperesponenz
-iale e per la Weibull (H=0); per scegliere tra questi due modelli si vanno
- quindi a valutare altri parametri quali p-value, SSE, R-square.
- Questi favoriscono tutti l'iperesponenziale rispetto alla Weibull, infatti
- il valore del p-value della Weibull è più vicino alla soglia (0.05) per
- il rigetto dell'ipotesi nulla.
- Per quanto riguarda la devianza dell'errore di regressione e l'R-square,
- avremo anche in questo caso valori migliori per l'iperesponenziale rispetto
- alla Weibull.
- Si può dunque concludere che il modello iperesponenziale è, tra quelli
- proposti, il migliore per rappresentare la distribuzione.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -349,17 +335,17 @@ iale e per la Weibull (H=0); per scegliere tra questi due modelli si vanno
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="7">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="12text%">
+<column alignment="center" valignment="middle" width="17text%">
 <column alignment="center" valignment="top" width="10text%">
 <column alignment="center" valignment="top" width="12text%">
-<column alignment="center" valignment="top" width="22text%">
+<column alignment="center" valignment="top" width="25text%">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top" width="15text%">
@@ -778,10 +764,28 @@ Risultati fitting Mercury
 \end_layout
 
 \begin_layout Standard
-Dai risultati, è possibile notare che l'unico modello che rigetta l'ipotesi
- nulla è quello esponenziale.
- La scelta del miglior fit ricade dunque sui restanti due modelli.
- L'iperesponenziale ha un p-value di 0.71206
+Si verifica subito che nel caso dell'esponenziale l'ipotesi nulla è rigettata
+ (H = 1).
+ Questo ci consente di dire che la nostra distribuzione non può essere descritta
+ da un'esponenziale semplice.
+ L'ipotesi nulla del test non è invece rigettata per i modelli dell'iperesponenz
+iale e per la Weibull (H = 0); per scegliere tra questi due modelli si vanno
+ quindi a valutare altri parametri quali p-value, SSE, R-square.
+ Questi favoriscono tutti l'iperesponenziale rispetto alla Weibull, infatti
+ il valore del p-value della Weibull è più vicino alla soglia (0.05) per
+ il rigetto dell'ipotesi nulla.
+ Per quanto riguarda la devianza dell'errore di regressione e l'R-square,
+ avremo anche in questo caso valori migliori per l'iperesponenziale rispetto
+ alla Weibull.
+ Si può dunque concludere che il modello iperesponenziale è, tra quelli
+ proposti, il migliore per rappresentare la distribuzione.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2085,7 +2089,7 @@ status collapsed
 \begin_inset Graphics
 	filename images/cdfEmpiricaMercury-nodes.png
 	lyxscale 50
-	scale 60
+	scale 58
 
 \end_inset
 
@@ -2110,8 +2114,8 @@ Reliability nodi Mercury
 \end_layout
 
 \begin_layout Standard
-Per quanto riguarda il file Mercury, si evince come i due nodi individuati
- come i più critici abbiano una bassa reliability: ma in particolare è la
+Per quanto riguarda il file Mercury, si evince che i due nodi individuati
+ come più critici abbiano una bassa reliability: ma in particolare è la
  reliability del nodo master che crolla a picco, il che conferma la deduzione
  fatta in precedenza riguardo al suo essere un collo di bottiglia per la
  dependability del sistema.
@@ -2130,7 +2134,7 @@ status collapsed
 \begin_inset Graphics
 	filename images/cdfEmpiricaBGL-nodes.png
 	lyxscale 50
-	scale 60
+	scale 58
 
 \end_inset
 
@@ -2159,6 +2163,13 @@ Per il file BGL, i tre nodi hanno reliability sperimentali molto simili
  tra loro, nonostante ci sia una curva (relativa al nodo R63-M0-N0) che
  presenta una pendenza più ripida e raggiunge il fallimento prima delle
  altre.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -3220,6 +3231,13 @@ Per il file BGL, le distribuzioni di reliability confermano la somiglianza
  delle due categorie d'errore già notata durante il calcolo dell’ampiezza
  ottima di CWIN e pertanto non si individua una categoria d'errore maggiormente
  affidabile rispetto all'altra.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection

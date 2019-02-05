@@ -167,7 +167,7 @@ L'analisi preliminare prevede, dopo aver importato il file nel tool, di
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -211,15 +211,15 @@ Distribuzioni delle feature
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
-\align left
+\align center
 \begin_inset Graphics
 	filename images/distribuzioni 2.PNG
 	lyxscale 50
-	scale 55
+	scale 50
 	rotateOrigin leftTop
 
 \end_inset
@@ -251,7 +251,7 @@ Distribuzioni delle feature
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -291,7 +291,7 @@ Distribuzioni delle feature
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -331,11 +331,11 @@ Distribuzioni delle feature
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
-\align left
+\align center
 \begin_inset Graphics
 	filename images/distribuzioni 5.PNG
 	lyxscale 50
@@ -421,7 +421,7 @@ writeback
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -765,6 +765,13 @@ La devianza post-clustering può essere espressa tramite la seguente somma:
 
 \shape smallcaps
 Devianza Totale = Devianza Intra-Cluster + Devianza Inter-Cluster
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard

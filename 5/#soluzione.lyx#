@@ -197,10 +197,10 @@ Per quanto riguarda il file di log
 \shape italic
 MercuryErrorLog.txt
 \shape default
-, si può osservare che la curva presenta un ginocchio; la scelta dell'ampiezza
- della finestra è guidata dalla necessità di catturare il maggior numero
- di tuple che siano relative allo stesso fault con la minore ampiezza della
- finestra temporale possibile.
+, si può osservare che la curva presenta un ginocchio abbastanza definito;
+ la scelta dell'ampiezza della finestra è guidata dalla necessità di catturare
+ il maggior numero di tuple che siano relative allo stesso fault con la
+ minore ampiezza della finestra temporale possibile.
  Dunque si è optato di scegliere un valore della finestra, prossimo al ginocchio
 , di 360 secondi che cattura 440 tuple.
 \end_layout
@@ -326,20 +326,7 @@ Al fine di valutare la bontà dei risultati ottenuti, si è effettuato il
  test di Kolmogorov-Smirnov.
  Per effettuare il test si è utilizzata la funzione MATLAB kstest2 i cui
  risultati sono mostrati nella tabella sottostante.
- Si verifica subito che nel caso dell'esponenziale l'ipotesi nulla è rigettata
- (H = 1).
- Questo ci consente di dire che la nostra distribuzione non può essere descritta
- da un'esponenziale semplice.
- L'ipotesi nulla del test non è invece rigettata per i modelli dell'iperesponenz
-iale e per la Weibull (H=0); per scegliere tra questi due modelli si vanno
- quindi a valutare altri parametri quali p-value, SSE, R-square.
- Questi favoriscono tutti l'iperesponenziale rispetto alla Weibull infatti
- il valore del p-value della Weibull è più vicino alla soglia (0.05) per
- il rigetto dell'ipotesi nulla, per quanto riguarda la devianza dell'errore
- di regressione e l'R-square, avremo anche in questo caso valori migliori
- per l'iperesponenziale rispetto alla Weibull.
- Si può dunque concludere che il modello iperesponenziale è, tra quelli
- proposti, il migliore per rappresentare la nostra distribuzione.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -348,20 +335,20 @@ iale e per la Weibull (H=0); per scegliere tra questi due modelli si vanno
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="7">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="middle" width="14text%">
-<column alignment="center" valignment="middle" width="10text%">
-<column alignment="center" valignment="middle" width="12.5text%">
-<column alignment="center" valignment="middle" width="23text%">
-<column alignment="center" valignment="middle">
-<column alignment="center" valignment="middle">
-<column alignment="center" valignment="middle" width="15text%">
+<column alignment="center" valignment="middle" width="17text%">
+<column alignment="center" valignment="top" width="10text%">
+<column alignment="center" valignment="top" width="12text%">
+<column alignment="center" valignment="top" width="25text%">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="15text%">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -428,7 +415,7 @@ Goodness of fit
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -437,7 +424,7 @@ Esponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -449,7 +436,7 @@ Esponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -468,7 +455,7 @@ Esponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -482,12 +469,12 @@ Esponenziale
 \begin_inset Formula $b\in(-8.746e-05,-8.221e-05)$
 \end_inset
 
- 
+
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -496,7 +483,7 @@ Esponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -505,7 +492,7 @@ Esponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -528,7 +515,7 @@ RMSE: 0.05117
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -537,7 +524,7 @@ Iperesponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -549,7 +536,7 @@ Iperesponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -563,10 +550,7 @@ Iperesponenziale
 \begin_inset Formula $b=-0.0008358$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
+ 
 \begin_inset Formula $c=-0.0008358$
 \end_inset
 
@@ -582,7 +566,7 @@ Iperesponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -615,7 +599,7 @@ Iperesponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -624,7 +608,7 @@ Iperesponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -633,7 +617,7 @@ Iperesponenziale
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -656,7 +640,7 @@ RMSE: 0.01857
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -665,7 +649,7 @@ Weibull
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -677,7 +661,7 @@ Weibull
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -696,7 +680,7 @@ Weibull
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -715,7 +699,7 @@ Weibull
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -724,7 +708,7 @@ Weibull
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -733,7 +717,7 @@ Weibull
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -780,10 +764,28 @@ Risultati fitting Mercury
 \end_layout
 
 \begin_layout Standard
-Dai risultati, è possibile notare che l'unico modello che rigetta l'ipotesi
- nulla è quello esponenziale.
- La scelta del miglior fit ricade dunque sui restanti due modelli.
- L'iperesponenziale ha un p-value di 0.71206
+Si verifica subito che nel caso dell'esponenziale l'ipotesi nulla è rigettata
+ (H = 1).
+ Questo ci consente di dire che la nostra distribuzione non può essere descritta
+ da un'esponenziale semplice.
+ L'ipotesi nulla del test non è invece rigettata per i modelli dell'iperesponenz
+iale e per la Weibull (H = 0); per scegliere tra questi due modelli si vanno
+ quindi a valutare altri parametri quali p-value, SSE, R-square.
+ Questi favoriscono tutti l'iperesponenziale rispetto alla Weibull, infatti
+ il valore del p-value della Weibull è più vicino alla soglia (0.05) per
+ il rigetto dell'ipotesi nulla.
+ Per quanto riguarda la devianza dell'errore di regressione e l'R-square,
+ avremo anche in questo caso valori migliori per l'iperesponenziale rispetto
+ alla Weibull.
+ Si può dunque concludere che il modello iperesponenziale è, tra quelli
+ proposti, il migliore per rappresentare la distribuzione.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2036,10 +2038,6 @@ CWIN per i nodi del logBGL
 \end_layout
 
 \begin_layout Standard
-*commento su grafico strano*
-\end_layout
-
-\begin_layout Standard
 Si può osservare che esistono per entrambi i log file dei nodi particolarmente
  critici per la dependability:
 \end_layout
@@ -2165,6 +2163,13 @@ Per il file BGL, i tre nodi hanno reliability sperimentali molto simili
  tra loro, nonostante ci sia una curva (relativa al nodo R63-M0-N0) che
  presenta una pendenza più ripida e raggiunge il fallimento prima delle
  altre.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -3228,6 +3233,13 @@ Per il file BGL, le distribuzioni di reliability confermano la somiglianza
  affidabile rispetto all'altra.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Punto 4
 \end_layout
@@ -3759,7 +3771,8 @@ Conteggio rack BGLErrorLog
 Visivamente, si può notare come i rack più critici siano quelli la cui occorrenz
 a è superiore al 2% del conteggio totale delle entries.
  In particolare, il rack R63 è quello che presenta da solo il 6% degli errori
- totali
+ totali, cosa che dall'analisi iniziale non emergeva in quanto fatta considerand
+o i singoli nodi e non l'intero rack.
 \end_layout
 
 \end_body

@@ -166,7 +166,7 @@ blocchi
 
  in serie, ognuno dei quali costituito dal parallelo di m componenti.
  Ci troviamo quindi di fronte ad un sistema serie di paralleli, la cui espressio
-ne della reliabiltiy è la seguente:
+ne della reliability è la seguente:
 \end_layout
 
 \begin_layout Standard
@@ -226,7 +226,8 @@ Confronto tra i due schemi
 \end_layout
 
 \begin_layout Standard
-È possibile notare che la reliability del secondo schema è migliore.
+Com'è possibile notare, la reliability del secondo schema risulta essere
+ più alta.
  
 \end_layout
 

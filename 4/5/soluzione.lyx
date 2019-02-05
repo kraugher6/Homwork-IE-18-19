@@ -234,6 +234,13 @@ Date queste condizioni, è possibile ricavare la formula del fallimento:
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Da questa espressione booleana è possibile ricavare il fault tree.
 \end_layout
 
@@ -300,13 +307,13 @@ Analizzando la figura si individuano i seguenti minimal cutset:
 {INS, AHRS 1, AHRS 2, AHRS 3}
 \end_layout
 
-\begin_layout Subsubsection*
-0.0.2.3 Punto 3
+\begin_layout Subsubsection
+Punto 3
 \end_layout
 
 \begin_layout Standard
 Si va adesso ad analizzare la reliability del sistema dopo un'ora di volo.
- È possibile calcolarE tale valore a partire dalle reliability dei singoli
+ È possibile calcolare tale valore a partire dalle reliability dei singoli
  componenti; si inizia quindi a trovare il parametro λ relativo ad ogni
  componente a partire dalla tabella con i diversi MTTF.
 \end_layout
@@ -688,15 +695,6 @@ begin{lstlisting}[language=Matlab,caption={Reliabilty totale del sistema}]
 
 \begin_layout Plain Layout
 
-format long
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
 ycpu = 0.0002;
 \end_layout
 
@@ -740,37 +738,32 @@ t = 1;
 
 \begin_layout Plain Layout
 
-    
+Rbus = exp(-(ybus.*t));
 \end_layout
 
 \begin_layout Plain Layout
 
-    Rbus = exp(-(ybus.*t));
+Rcpu = exp(-(ycpu.*t));
 \end_layout
 
 \begin_layout Plain Layout
 
-    Rcpu = exp(-(ycpu.*t));
+Rterm =exp(-(yterm.*t));
 \end_layout
 
 \begin_layout Plain Layout
 
-    Rterm =exp(-(yterm.*t));
+R_AHRS = exp(-(yAHRS.*t));
 \end_layout
 
 \begin_layout Plain Layout
 
-    R_AHRS = exp(-(yAHRS.*t));
+Rdoppler = exp(-(ydoppler.*t));
 \end_layout
 
 \begin_layout Plain Layout
 
-    Rdoppler = exp(-(ydoppler.*t));
-\end_layout
-
-\begin_layout Plain Layout
-
-    Rins = exp(-(yins.*t));
+Rins = exp(-(yins.*t));
 \end_layout
 
 \begin_layout Plain Layout
@@ -780,42 +773,37 @@ t = 1;
 
 \begin_layout Plain Layout
 
-    RbusA = 1-(1-Rbus).^2;
+RbusA = 1-(1-Rbus).^2;
 \end_layout
 
 \begin_layout Plain Layout
 
-    RbusB = 1-(1-Rbus).^2;
+RbusB = 1-(1-Rbus).^2;
 \end_layout
 
 \begin_layout Plain Layout
 
-    Rcpu_eq = 1-(1-Rcpu).^2;
+Rcpu_eq = 1-(1-Rcpu).^2;
 \end_layout
 
 \begin_layout Plain Layout
 
-    Rterm_eq = 1-(1-Rterm).^2;
+Rterm_eq = 1-(1-Rterm).^2;
 \end_layout
 
 \begin_layout Plain Layout
 
-    Ralt = Rdoppler.*(1-(1-R_AHRS).^3);
+Ralt = Rdoppler.*(1-(1-R_AHRS).^3);
 \end_layout
 
 \begin_layout Plain Layout
 
-    R_cs = 1-(1-Rins).*(1-Ralt);
+R_cs = 1-(1-Rins).*(1-Ralt);
 \end_layout
 
 \begin_layout Plain Layout
 
-    Rsys = RbusA*RbusB*Rcpu_eq*Rterm_eq*R_cs;
-\end_layout
-
-\begin_layout Plain Layout
-
-    Rsys
+Rsys = RbusA*RbusB*Rcpu_eq*Rterm_eq*R_cs
 \end_layout
 
 \begin_layout Plain Layout
@@ -846,7 +834,7 @@ Punto 4
 Si supponga a questo punto di introdurre un circuito di detection per la
  rilevazione del fallimento delle CPU.
  La probabilità di tale circuito di rilevare un fallimento è indicata con
- il parametro c:
+ il parametro C:
 \end_layout
 
 \begin_layout Standard
@@ -892,7 +880,7 @@ R_{sysNOCPU}=R_{BUSAEQ}R_{BUSBEQ}R_{TermEQ}R_{CS}
 \end_layout
 
 \begin_layout Standard
-A tal proposito, si vuole trovare la probabilità c che ci permetta di avere
+A tal proposito, si vuole trovare la probabilità C che ci permetta di avere
  una reliability del sistema almeno pari a 0.99999; per farlo scriviamo la
  relazione imponendo tale vincolo:
 \end_layout
@@ -911,7 +899,7 @@ A tal proposito, si vuole trovare la probabilità c che ci permetta di avere
 \begin_layout Standard
 \begin_inset Formula 
 \[
-R_{detection}=\frac{0.99999}{R_{sysNOCPU}}
+\implies R_{detection}=\frac{0.99999}{R_{sysNOCPU}}
 \]
 
 \end_inset
@@ -938,15 +926,6 @@ status open
 \backslash
 begin{lstlisting}[language=Matlab,caption={Reliabilty totale del sistema}]
  
-\end_layout
-
-\begin_layout Plain Layout
-
-format long
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -990,6 +969,37 @@ t = 1;
 
 \begin_layout Plain Layout
 
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+Rbus = exp(-(ybus.*t));
+\end_layout
+
+\begin_layout Plain Layout
+
+Rcpu = exp(-(ycpu.*t));
+\end_layout
+
+\begin_layout Plain Layout
+
+Rterm =exp(-(yterm.*t));
+\end_layout
+
+\begin_layout Plain Layout
+
+R_AHRS = exp(-(yAHRS.*t));
+\end_layout
+
+\begin_layout Plain Layout
+
+Rdoppler = exp(-(ydoppler.*t));
+\end_layout
+
+\begin_layout Plain Layout
+
+Rins = exp(-(yins.*t));
 \end_layout
 
 \begin_layout Plain Layout
@@ -999,67 +1009,42 @@ t = 1;
 
 \begin_layout Plain Layout
 
-    Rbus = exp(-(ybus.*t));
+RbusA = 1-(1-Rbus).^2;
 \end_layout
 
 \begin_layout Plain Layout
 
-    Rcpu = exp(-(ycpu.*t));
+RbusB = 1-(1-Rbus).^2;
 \end_layout
 
 \begin_layout Plain Layout
 
-    Rterm =exp(-(yterm.*t));
+Rcpu_eq = 1-(1-Rcpu).^2;
 \end_layout
 
 \begin_layout Plain Layout
 
-    R_AHRS = exp(-(yAHRS.*t));
+Rterm_eq = 1-(1-Rterm).^2;
 \end_layout
 
 \begin_layout Plain Layout
 
-    Rdoppler = exp(-(ydoppler.*t));
+Ralt = Rdoppler.*(1-(1-R_AHRS).^3);
 \end_layout
 
 \begin_layout Plain Layout
 
-    Rins = exp(-(yins.*t));
+R_cs = 1-(1-Rins).*(1-Ralt);
 \end_layout
 
 \begin_layout Plain Layout
 
-    
+   
 \end_layout
 
 \begin_layout Plain Layout
 
-    RbusA = 1-(1-Rbus).^2;
-\end_layout
-
-\begin_layout Plain Layout
-
-    RbusB = 1-(1-Rbus).^2;
-\end_layout
-
-\begin_layout Plain Layout
-
-    Rcpu_eq = 1-(1-Rcpu).^2;
-\end_layout
-
-\begin_layout Plain Layout
-
-    Rterm_eq = 1-(1-Rterm).^2;
-\end_layout
-
-\begin_layout Plain Layout
-
-    Ralt = Rdoppler.*(1-(1-R_AHRS).^3);
-\end_layout
-
-\begin_layout Plain Layout
-
-    R_cs = 1-(1-Rins).*(1-Ralt);
+Rsys_noCPU = RbusA*RbusB*Rterm_eq*R_cs
 \end_layout
 
 \begin_layout Plain Layout
@@ -1069,36 +1054,12 @@ t = 1;
 
 \begin_layout Plain Layout
 
-    Rsys_noCPU = RbusA*RbusB*Rterm_eq*R_cs;
+Rcpu_detection = 0.99999/Rsys_noCPU;
 \end_layout
 
 \begin_layout Plain Layout
 
-    Rsys_noCPU
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\end_layout
-
-\begin_layout Plain Layout
-
-    Rcpu_detection = 0.99999/Rsys_noCPU;
-\end_layout
-
-\begin_layout Plain Layout
-
-    C = (Rcpu_detection - Rcpu)/(Rcpu*(1-Rcpu));
-\end_layout
-
-\begin_layout Plain Layout
-
-    C
-\end_layout
-
-\begin_layout Plain Layout
-
+C = (Rcpu_detection - Rcpu)/(Rcpu*(1-Rcpu))
 \end_layout
 
 \begin_layout Plain Layout

@@ -167,7 +167,7 @@ L'analisi preliminare prevede, dopo aver importato il file nel tool, di
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -211,15 +211,15 @@ Distribuzioni delle feature
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
-\align left
+\align center
 \begin_inset Graphics
 	filename images/distribuzioni 2.PNG
 	lyxscale 50
-	scale 55
+	scale 50
 	rotateOrigin leftTop
 
 \end_inset
@@ -251,7 +251,7 @@ Distribuzioni delle feature
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -291,7 +291,7 @@ Distribuzioni delle feature
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -331,11 +331,11 @@ Distribuzioni delle feature
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
-\align left
+\align center
 \begin_inset Graphics
 	filename images/distribuzioni 5.PNG
 	lyxscale 50
@@ -421,7 +421,7 @@ writeback
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \noindent
@@ -606,7 +606,11 @@ Autovalori della matrice di correlazione
 
 \begin_layout Standard
 Per rispondere all'obiettivo, si sceglie un numero di componenti principali
- pari a 6, rappresentativi del 96.764% della varianza totale.
+ pari a 6, rappresentativi del 
+\series bold
+96.764%
+\series default
+ della varianza totale.
 \end_layout
 
 \begin_layout Subsection
@@ -635,7 +639,7 @@ Il risultato della fase di clustering è apprezzabile tramite il dendrogramma,
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -680,7 +684,7 @@ Inoltre il tool produce anche una tabella contenente, per ogni partizione,
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -741,7 +745,7 @@ Devianza post-PCA
 \begin_layout Standard
 Per calcolare il valore di tale devianza sono stati dapprima ottenuti i
  valori di varianza per ogni componente principale, e successivamente sommati
- tra di loro.
+ tra di loro e moltiplicati per il numero di gradi di libertà.
  Il valore risultante, che sappiamo spiegare il 96.764% della varianza totale,
  è di 
 \series bold
@@ -761,6 +765,13 @@ La devianza post-clustering può essere espressa tramite la seguente somma:
 
 \shape smallcaps
 Devianza Totale = Devianza Intra-Cluster + Devianza Inter-Cluster
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -813,7 +824,7 @@ Una volta ottenuti tali valori è stata ottenuta la devianza totale:
 \begin_layout Standard
 \begin_inset Formula 
 \[
-Dev_{TOT}=Dev_{intra}+Dev_{inter}=8715.526682054657+968.24685619697\backsimeq9683.78
+Dev_{TOT}=Dev_{intra}+Dev_{inter}=8715.527+968.247\backsimeq9683.78
 \]
 
 \end_inset
@@ -827,20 +838,20 @@ Conclusione
 
 \begin_layout Standard
 Con i valori di devianza ottenuti è possibile a questo punto calcolare la
- percentuale di varianza persa a valle della PCA e del clustering.
+ percentuale di varianza persa a valle della PCA e del clustering:
 \end_layout
 
 \begin_layout Standard
 \align center
 
 \shape smallcaps
-Varianza Persa = Devianza Post Clustering / Devianza Post PCA 
+Varianza Persa = Devianza Intra-Cluster / Devianza Post PCA 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-Var_{persa}(\%)=\frac{9683.78}{52148.055}\cdot100=18.57\%
+Var_{persa}(\%)=\frac{8715.527}{52148.055}\cdot100=16.71\%
 \]
 
 \end_inset
@@ -850,7 +861,33 @@ Var_{persa}(\%)=\frac{9683.78}{52148.055}\cdot100=18.57\%
 
 \begin_layout Standard
 Quindi, del 96.764% di varianza spiegata dalla PCA, il clustering ne fa perdere
- il 18.57% (ne spiega quindi l'81.43%).
+ il 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+16.71
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+% (ne spiega quindi l'80.59%).
  
 \end_layout
 
@@ -869,7 +906,7 @@ Un possibile workload a questo punto può essere ottenuto con un random sampling
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -910,7 +947,7 @@ Esempio di workload sintetico
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
