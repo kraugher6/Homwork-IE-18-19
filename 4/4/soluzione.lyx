@@ -1930,9 +1930,10 @@ Risultati costi
 \end_layout
 
 \begin_layout Standard
-La soluzione che garantisce il costo minimo e affidabilità maggiore del
- 99% è quella con numero di processori pari a 7, ognuno con reliability
- di 0.8.
+Risulta evidente che, utilizzando processori con maggiore reliability, la
+ quantità necessaria al superamento della soglia diminuisce; tuttavia la
+ soluzione che garantisce il costo minimo e affidabilità maggiore del 99%
+ è quella con numero di processori pari a 7, ognuno con reliability di 0.8.
  Il sistema complessivo presenta reliability pari a 0.99532801 con costo
  pari a 7000$.
 \end_layout

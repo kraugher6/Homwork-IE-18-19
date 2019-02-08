@@ -234,6 +234,35 @@ Date queste condizioni, è possibile ricavare la formula del fallimento:
 \end_layout
 
 \begin_layout Standard
+Analizzando l'espressione logica in forma DNF si sono individuati i seguenti
+ minimal cutset: 
+\end_layout
+
+\begin_layout Itemize
+{Bus A1, Bus A2}
+\end_layout
+
+\begin_layout Itemize
+{Bus B1, Bus B2}
+\end_layout
+
+\begin_layout Itemize
+{CPU 1, CPU 2}
+\end_layout
+
+\begin_layout Itemize
+{Term 1, Term 2}
+\end_layout
+
+\begin_layout Itemize
+{INS, Doppler}
+\end_layout
+
+\begin_layout Itemize
+{INS, AHRS 1, AHRS 2, AHRS 3}
+\end_layout
+
+\begin_layout Standard
 \begin_inset VSpace defskip
 \end_inset
 
@@ -241,7 +270,7 @@ Date queste condizioni, è possibile ricavare la formula del fallimento:
 \end_layout
 
 \begin_layout Standard
-Da questa espressione booleana è possibile ricavare il fault tree.
+Il relativo fault tree è mostrato di seguito:
 \end_layout
 
 \begin_layout Standard
@@ -277,34 +306,6 @@ Fault Tree del sistema
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Analizzando la figura si individuano i seguenti minimal cutset: 
-\end_layout
-
-\begin_layout Itemize
-{Bus A1, Bus A2}
-\end_layout
-
-\begin_layout Itemize
-{Bus B1, Bus B2}
-\end_layout
-
-\begin_layout Itemize
-{CPU 1, CPU 2}
-\end_layout
-
-\begin_layout Itemize
-{Term 1, Term 2}
-\end_layout
-
-\begin_layout Itemize
-{INS, Doppler}
-\end_layout
-
-\begin_layout Itemize
-{INS, AHRS 1, AHRS 2, AHRS 3}
 \end_layout
 
 \begin_layout Subsubsection
@@ -856,7 +857,18 @@ Quindi nel caso del sottosistema formato dalle due CPU in parallelo avremo
 \begin_layout Standard
 \begin_inset Formula 
 \[
-C=\frac{(R_{detection}-R_{CPU})}{R_{CPU}(1-R_{CPU})}
+R_{detection}=R_{CPU}+C(1-R_{CPU})R_{CPU}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\implies C=\frac{(R_{detection}-R_{CPU})}{R_{CPU}(1-R_{CPU})}
 \]
 
 \end_inset
@@ -984,7 +996,7 @@ Rcpu = exp(-(ycpu.*t));
 
 \begin_layout Plain Layout
 
-Rterm =exp(-(yterm.*t));
+Rterm = exp(-(yterm.*t));
 \end_layout
 
 \begin_layout Plain Layout

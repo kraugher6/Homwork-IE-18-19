@@ -335,7 +335,7 @@ Al fine di valutare la bontà dei risultati ottenuti, si è effettuato il
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -766,17 +766,26 @@ Risultati fitting Mercury
 \begin_layout Standard
 Si verifica subito che nel caso dell'esponenziale l'ipotesi nulla è rigettata
  (H = 1).
- Questo ci consente di dire che la nostra distribuzione non può essere descritta
- da un'esponenziale semplice.
+ Questo permette di concludere, con una confidenza del 99.8%, che la distribuzion
+e 
+\begin_inset Quotes eld
+\end_inset
+
+empirica
+\begin_inset Quotes erd
+\end_inset
+
+ di reliability ottenuta non può essere approssimata da un'esponenziale
+ semplice.
  L'ipotesi nulla del test non è invece rigettata per i modelli dell'iperesponenz
-iale e per la Weibull (H=0); per scegliere tra questi due modelli si vanno
- quindi a valutare altri parametri quali p-value, SSE, R-square.
+iale e per la Weibull (H = 0); per scegliere tra questi due modelli si sono
+ valutati altri parametri quali p-value, SSE, R-square.
  Questi favoriscono tutti l'iperesponenziale rispetto alla Weibull, infatti
  il valore del p-value della Weibull è più vicino alla soglia (0.05) per
  il rigetto dell'ipotesi nulla.
  Per quanto riguarda la devianza dell'errore di regressione e l'R-square,
- avremo anche in questo caso valori migliori per l'iperesponenziale rispetto
- alla Weibull.
+ si sono avuti anche in questo caso valori migliori per l'iperesponenziale
+ rispetto alla Weibull.
  Si può dunque concludere che il modello iperesponenziale è, tra quelli
  proposti, il migliore per rappresentare la distribuzione.
 \end_layout
@@ -2089,7 +2098,7 @@ status collapsed
 \begin_inset Graphics
 	filename images/cdfEmpiricaMercury-nodes.png
 	lyxscale 50
-	scale 60
+	scale 58
 
 \end_inset
 
@@ -2114,8 +2123,8 @@ Reliability nodi Mercury
 \end_layout
 
 \begin_layout Standard
-Per quanto riguarda il file Mercury, si evince come i due nodi individuati
- come i più critici abbiano una bassa reliability: ma in particolare è la
+Per quanto riguarda il file Mercury, si evince che i due nodi individuati
+ come più critici abbiano una bassa reliability: ma in particolare è la
  reliability del nodo master che crolla a picco, il che conferma la deduzione
  fatta in precedenza riguardo al suo essere un collo di bottiglia per la
  dependability del sistema.
@@ -2134,7 +2143,7 @@ status collapsed
 \begin_inset Graphics
 	filename images/cdfEmpiricaBGL-nodes.png
 	lyxscale 50
-	scale 60
+	scale 58
 
 \end_inset
 

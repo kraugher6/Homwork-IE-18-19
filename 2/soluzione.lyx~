@@ -393,9 +393,8 @@ slab
  che risulta essere non significativa ai fini dell'analisi in quanto, nonostante
  la varianza diversa da zero, contribuisce poco alla discriminazione dei
  punti rispetto alle altre feature.
-
-\shape italic
- 
+ In particolare, tale colonna assume valore diverso da 0 soltanto per una
+ riga, costituendo di fatto un outlier.
 \end_layout
 
 \begin_layout Standard
@@ -887,8 +886,64 @@ Quindi, del 96.764% di varianza spiegata dalla PCA, il clustering ne fa perdere
 \uwave default
 \noun default
 \color inherit
-% (ne spiega quindi l'80.59%).
- 
+% (quindi ne spiega l'83.29%).
+ La varianza totale spiegata, a valle di entrambe le fasi, risulta quindi
+ l'80.59%.
+\end_layout
+
+\begin_layout Standard
+In ultima analisi, si riporta come le istanze sono state distribuite nei
+ vari cluster:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename images/distribuzione cluster.png
+	lyxscale 50
+	scale 45
+	rotateOrigin leftTop
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Distribuzione cluster
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+L'outlier individuato nella feature 
+\shape italic
+slab
+\shape default
+ viene inserito nel cluster 2, che è quello meno numeroso.
+ Dato che il dominio applicativo del workload non è noto, potrebbero essere
+ dunque necessarie ulteriori analisi che spieghino la presenza di outlier.
 \end_layout
 
 \begin_layout Section
