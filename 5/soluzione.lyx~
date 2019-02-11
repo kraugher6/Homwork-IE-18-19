@@ -148,7 +148,11 @@ tupleCount_func_CWINpy.sh
 \shape default
  che fornisce il numero di tuple per vari tentativi di ampiezza della finestra
  di coalescenza.
- I risultati ottenuti sono riportati sui seguenti grafici.
+ I risultati ottenuti sono riportati nelle seguenti sezioni.
+\end_layout
+
+\begin_layout Subsubsection
+Mercury
 \end_layout
 
 \begin_layout Standard
@@ -206,55 +210,6 @@ MercuryErrorLog.txt
 \end_layout
 
 \begin_layout Standard
-\align center
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename images/tupleCountBLG.png
-	lyxscale 50
-	scale 58
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Conteggio tuple BGL
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Nel caso del file 
-\shape italic
-BGLErrorLog.txt
-\shape default
-, è possibile osservare come il ginocchio della curva sia meno definito;
- dunque si è optato di scegliere un valore della finestra che non fosse
- troppo elevato, in quanto è sempre preferibile avere troncamenti piuttosto
- che collisioni.
- Il valore scelto è di 420 secondi che cattura 369 tuple.
-\end_layout
-
-\begin_layout Standard
 Dopo aver scelto il valore di ampiezza per la finestra di coalescenza, viene
  effettuato l’effettivo raggruppamento, lanciando lo script 
 \shape italic
@@ -295,7 +250,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename images/ReliabilityEs1.png
+	filename images/ReliabilityEs1mercury.png
 	lyxscale 50
 	scale 60
 
@@ -612,7 +567,7 @@ Iperesponenziale
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.71206
+0.7106
 \end_layout
 
 \end_inset
@@ -786,8 +741,550 @@ iale e per la Weibull (H = 0); per scegliere tra questi due modelli si sono
  Per quanto riguarda la devianza dell'errore di regressione e l'R-square,
  si sono avuti anche in questo caso valori migliori per l'iperesponenziale
  rispetto alla Weibull.
- Si può dunque concludere che il modello iperesponenziale è, tra quelli
- proposti, il migliore per rappresentare la distribuzione.
+ Si può dunqueconcludere che il modello iperesponenziale è, tra quelli proposti,
+ il migliore per rappresentare la distribuzione.
+\end_layout
+
+\begin_layout Subsubsection
+BGL
+\end_layout
+
+\begin_layout Standard
+L'analisi condotta per il file di log 
+\shape slanted
+BGLErrorLog.txt
+\shape default
+ è uguale a quella condotta precedentemente.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/tupleCountBLG.png
+	lyxscale 50
+	scale 58
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Conteggio tuple BGL
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In questo caso, è possibile osservare come il ginocchio della curva sia
+ meno definito; dunque si è optato di scegliere un valore della finestra
+ che non fosse troppo elevato, in quanto è sempre preferibile avere troncamenti
+ piuttosto che collisioni.
+ Il valore scelto è di 420 secondi che cattura 369 tuple.
+\end_layout
+
+\begin_layout Standard
+Tramite lo stesso script utilizzato precedentemente, si è effettuato il
+ plot della distribuzione empirica di reliability attraverso il file 
+\shape italic
+interarrivals.txt.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/ReliabilityEs1bgl.png
+	lyxscale 50
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fit della reliability Mercury
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Anche in questo caso è stato scelto il modello che meglio approssima la
+ distribuzione empirica, attravarso il K-S test.
+ I risultati sono riportati in tabella.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="17text%">
+<column alignment="center" valignment="top" width="10text%">
+<column alignment="center" valignment="top" width="12text%">
+<column alignment="center" valignment="top" width="25text%">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="15text%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Modello
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Funzione
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parametri
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Intervalli di confidenza al 95%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+H
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+P
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Goodness of fit
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Esponenziale
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a\cdot e^{bx}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a=0.8825$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $b=-5.387e-05$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a\in(0.8718,0.8931)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $b\in(-5.568e-05,-5.306e-05)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0053
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SSE: 0.9629
+\end_layout
+
+\begin_layout Plain Layout
+R-square: 0.9677
+\end_layout
+
+\begin_layout Plain Layout
+Adjusted R-square: 0.9677
+\end_layout
+
+\begin_layout Plain Layout
+RMSE: 0.05158
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Iperesponenziale
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a\cdot e^{bx}+c\cdot e^{dx}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a=0.3799$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $b=-0.0003572$
+\end_inset
+
+ 
+\begin_inset Formula $c=-0.6468$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $d=-3.442e-05$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a\in(0.3735,0.3862)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $b\in(-0.0003701,-0.0003443)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $c\in(0.6399,0.6536)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $d\in(-3.492e-05,-3.393e-05)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.9958
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SSE: 0.02482
+\end_layout
+
+\begin_layout Plain Layout
+R-square: 0.9992
+\end_layout
+
+\begin_layout Plain Layout
+Adjusted R-square: 0.9992
+\end_layout
+
+\begin_layout Plain Layout
+RMSE: 0.008303
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Weibull
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e^{-(lx)^{a}}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a=0.6773$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $l=6.279e-05$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a\in(0.6693,0.6854)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $l\in(6.202e-05,6.356e-05)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.2224
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SSE: 0.1588
+\end_layout
+
+\begin_layout Plain Layout
+R-square: 0.9947
+\end_layout
+
+\begin_layout Plain Layout
+Adjusted R-square: 0.9947
+\end_layout
+
+\begin_layout Plain Layout
+RMSE: 0.02094
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Risultati fitting Mercury
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3745,12 +4242,12 @@ Tale file è stato poi importato in JMP, dove sono state analizzate le occorrenz
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename images/Rack con più errori.png
+	filename images/Rack con più errori.png
 	lyxscale 50
 	scale 40
 

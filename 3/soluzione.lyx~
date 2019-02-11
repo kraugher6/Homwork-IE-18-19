@@ -1851,7 +1851,7 @@ Small
 \uwave off
 \noun off
 \color none
-1381,9
+236,5
 \end_layout
 
 \end_inset
@@ -1893,7 +1893,7 @@ Medium1
 \uwave off
 \noun off
 \color none
-1735,8
+1381,9
 \end_layout
 
 \end_inset
@@ -1935,7 +1935,7 @@ Medium1
 \uwave off
 \noun off
 \color none
-236,5
+916
 \end_layout
 
 \end_inset
@@ -1977,7 +1977,7 @@ Medium2
 \uwave off
 \noun off
 \color none
-916
+1735,8
 \end_layout
 
 \end_inset
@@ -2292,7 +2292,7 @@ Page Type
 \begin_inset Text
 
 \begin_layout Plain Layout
-10281859
+11633133
 \end_layout
 
 \end_inset
@@ -2301,7 +2301,7 @@ Page Type
 \begin_inset Text
 
 \begin_layout Plain Layout
-94.25
+(94.65) 99
 \end_layout
 
 \end_inset
@@ -2321,7 +2321,7 @@ Request Rate
 \begin_inset Text
 
 \begin_layout Plain Layout
-26232
+161767
 \end_layout
 
 \end_inset
@@ -2330,7 +2330,7 @@ Request Rate
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.24
+(1.32) 0.24
 \end_layout
 
 \end_inset
@@ -2350,7 +2350,7 @@ Error
 \begin_inset Text
 
 \begin_layout Plain Layout
-601247
+494664
 \end_layout
 
 \end_inset
@@ -2359,7 +2359,7 @@ Error
 \begin_inset Text
 
 \begin_layout Plain Layout
-5.51
+(4.02) 0.76
 \end_layout
 
 \end_inset
@@ -2443,7 +2443,7 @@ Risultati del test di Shapiro-Wilk
 \end_layout
 
 \begin_layout Standard
-Com'è possibile notare la normalità risulta verificata, avendo un p-value
+Com'è possibile notare, la normalità risulta verificata, avendo un p-value
  maggiore di 0.05.
 \end_layout
 

@@ -250,7 +250,7 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename images/ReliabilityEs1.png
+	filename images/ReliabilityEs1mercury.png
 	lyxscale 50
 	scale 60
 
@@ -567,7 +567,7 @@ Iperesponenziale
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.71206
+0.7106
 \end_layout
 
 \end_inset
@@ -759,6 +759,7 @@ BGLErrorLog.txt
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Float figure
 placement H
 wide false
@@ -815,7 +816,7 @@ interarrivals.txt.
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -963,14 +964,14 @@ Esponenziale
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $a=0.9011$
+\begin_inset Formula $a=0.8825$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula $b=-8.484e-05$
+\begin_inset Formula $b=-5.387e-05$
 \end_inset
 
 
@@ -982,14 +983,14 @@ Esponenziale
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $a\in(0.891,0.9112)$
+\begin_inset Formula $a\in(0.8718,0.8931)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula $b\in(-8.746e-05,-8.221e-05)$
+\begin_inset Formula $b\in(-5.568e-05,-5.306e-05)$
 \end_inset
 
 
@@ -1010,7 +1011,7 @@ Esponenziale
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.002
+0.0053
 \end_layout
 
 \end_inset
@@ -1019,19 +1020,19 @@ Esponenziale
 \begin_inset Text
 
 \begin_layout Plain Layout
-SSE: 1.081
+SSE: 0.9629
 \end_layout
 
 \begin_layout Plain Layout
-R-square: 0.9693
+R-square: 0.9677
 \end_layout
 
 \begin_layout Plain Layout
-Adjusted R-square: 0.9693
+Adjusted R-square: 0.9677
 \end_layout
 
 \begin_layout Plain Layout
-RMSE: 0.05117
+RMSE: 0.05158
 \end_layout
 
 \end_inset
@@ -1063,25 +1064,25 @@ Iperesponenziale
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $a=0.4125$
+\begin_inset Formula $a=0.3799$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula $b=-0.0008358$
+\begin_inset Formula $b=-0.0003572$
 \end_inset
 
  
-\begin_inset Formula $c=-0.0008358$
+\begin_inset Formula $c=-0.6468$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula $d=-5.883e-05$
+\begin_inset Formula $d=-3.442e-05$
 \end_inset
 
 
@@ -1093,28 +1094,28 @@ Iperesponenziale
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $a\in(0.3978,0.4272)$
+\begin_inset Formula $a\in(0.3735,0.3862)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula $b\in(-0.0008995,-0.0007721)$
+\begin_inset Formula $b\in(-0.0003701,-0.0003443)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula $c\in(0.6976,0.7205)$
+\begin_inset Formula $c\in(0.6399,0.6536)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula $d\in(0.6976,0.7205)$
+\begin_inset Formula $d\in(-3.492e-05,-3.393e-05)$
 \end_inset
 
 
@@ -1135,7 +1136,7 @@ Iperesponenziale
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.71206
+0.9958
 \end_layout
 
 \end_inset
@@ -1144,19 +1145,19 @@ Iperesponenziale
 \begin_inset Text
 
 \begin_layout Plain Layout
-SSE: 0.1417
+SSE: 0.02482
 \end_layout
 
 \begin_layout Plain Layout
-R-square: 0.996
+R-square: 0.9992
 \end_layout
 
 \begin_layout Plain Layout
-Adjusted R-square: 0.996
+Adjusted R-square: 0.9992
 \end_layout
 
 \begin_layout Plain Layout
-RMSE: 0.01857
+RMSE: 0.008303
 \end_layout
 
 \end_inset
@@ -1188,14 +1189,14 @@ Weibull
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $a=0.7066$
+\begin_inset Formula $a=0.6773$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula $l=9.427e-05$
+\begin_inset Formula $l=6.279e-05$
 \end_inset
 
 
@@ -1207,14 +1208,14 @@ Weibull
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $a\in(0.6952,0.718)$
+\begin_inset Formula $a\in(0.6693,0.6854)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula $l\in(9.274e-05,9.581e-05)$
+\begin_inset Formula $l\in(6.202e-05,6.356e-05)$
 \end_inset
 
 
@@ -1235,7 +1236,7 @@ Weibull
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.0833
+0.2224
 \end_layout
 
 \end_inset
@@ -1244,19 +1245,19 @@ Weibull
 \begin_inset Text
 
 \begin_layout Plain Layout
-SSE: 0.3687
+SSE: 0.1588
 \end_layout
 
 \begin_layout Plain Layout
-R-square: 0.9895
+R-square: 0.9947
 \end_layout
 
 \begin_layout Plain Layout
-Adjusted R-square: 0.9895
+Adjusted R-square: 0.9947
 \end_layout
 
 \begin_layout Plain Layout
-RMSE: 0.02988
+RMSE: 0.02094
 \end_layout
 
 \end_inset
@@ -4241,12 +4242,12 @@ Tale file è stato poi importato in JMP, dove sono state analizzate le occorrenz
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename images/Rack con più errori.png
+	filename images/Rack con più errori.png
 	lyxscale 50
 	scale 40
 
