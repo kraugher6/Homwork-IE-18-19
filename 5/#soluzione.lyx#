@@ -290,14 +290,13 @@ Al fine di valutare la bontà dei risultati ottenuti, si è effettuato il
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="7">
+<lyxtabular version="3" rows="4" columns="6">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="middle" width="17text%">
 <column alignment="center" valignment="top" width="10text%">
 <column alignment="center" valignment="top" width="12text%">
 <column alignment="center" valignment="top" width="25text%">
@@ -305,15 +304,6 @@ status collapsed
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top" width="15text%">
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Modello
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -370,15 +360,6 @@ Goodness of fit
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Esponenziale
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -470,15 +451,6 @@ RMSE: 0.05117
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Iperesponenziale
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -595,15 +567,6 @@ RMSE: 0.01857
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Weibull
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -849,7 +812,7 @@ Fit della reliability Mercury
 
 \begin_layout Standard
 Anche in questo caso è stato scelto il modello che meglio approssima la
- distribuzione empirica, attravarso il K-S test.
+ distribuzione empirica, attraverso il K-S test.
  I risultati sono riportati in tabella.
 \end_layout
 
@@ -864,9 +827,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="7">
+<lyxtabular version="3" rows="4" columns="6">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="middle" width="17text%">
 <column alignment="center" valignment="top" width="10text%">
 <column alignment="center" valignment="top" width="12text%">
 <column alignment="center" valignment="top" width="25text%">
@@ -874,15 +836,6 @@ status open
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top" width="15text%">
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Modello
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -939,15 +892,6 @@ Goodness of fit
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Esponenziale
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -1039,15 +983,6 @@ RMSE: 0.05158
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Iperesponenziale
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -1168,15 +1103,6 @@ RMSE: 0.008303
 \begin_inset Text
 
 \begin_layout Plain Layout
-Weibull
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 \begin_inset Formula $e^{-(lx)^{a}}$
 \end_inset
 
@@ -1274,7 +1200,7 @@ RMSE: 0.02094
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Risultati fitting Mercury
+Risultati fitting BGL
 \end_layout
 
 \end_inset
