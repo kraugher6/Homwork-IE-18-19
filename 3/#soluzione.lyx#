@@ -558,16 +558,27 @@ Per poter effettuare la workload characterization, sono stati richiesti
 \end_layout
 
 \begin_layout Itemize
-Thread name, per analizzare quale utente ha effettuato una determinata richiesta
-;
+
+\shape italic
+Thread name
+\shape default
+, per analizzare quale utente ha effettuato una determinata richiesta;
 \end_layout
 
 \begin_layout Itemize
-Page, ad indicare quale pagina è stata richiesta;
+
+\shape italic
+Page
+\shape default
+, ad indicare quale pagina è stata richiesta;
 \end_layout
 
 \begin_layout Itemize
-Bytecount, che rappresenta la dimensione della richiesta.
+
+\shape italic
+Bytecount
+\shape default
+, che rappresenta la dimensione della richiesta.
 \end_layout
 
 \begin_layout Standard
@@ -676,7 +687,11 @@ Sul grafico è stata plottata la latenza media in relazione alle pagine richiest
 
 \begin_layout Standard
 Analizzando la matrice di correlazione è possibile notare come ci siano
- due parametri altamente correlati, ovvero bytes ed elapsed time.
+ due parametri altamente correlati, ovvero 
+\shape italic
+bytes
+\shape default
+ ed elapsed time.
 \end_layout
 
 \begin_layout Standard
@@ -726,8 +741,9 @@ Caratterizzazione dei parametri di basso livello
 \end_layout
 
 \begin_layout Standard
-Al fine di caratterizzare i parametri di basso livello, essendo questi valori
- numerici, si è optato per un'analisi attraverso la PCA e la clusterizzazione.
+Al fine di caratterizzare i parametri di basso livello e trovare dei punti
+ che rappresentino al meglio i possibili stati in cui il server può trovarsi,
+ si è optato per un'analisi attraverso la PCA e la clusterizzazione.
  Si è partito dall'analisi delle distribuzioni, non considerando quelle
  con coefficiente di variazione (COV) nullo.
  
@@ -853,7 +869,9 @@ b
 \shape italic
 swpd
 \shape default
-, totale della memoria virtuale utilizzata;
+, totale della memoria virtuale utilizzata, coerente con il fatto che il
+ dispositivo ha ancora memoria libera da poter utilizzare per il processo
+ Apache e quindi non ha bisogno della memoria virtuale;
 \end_layout
 
 \begin_layout Itemize
@@ -890,7 +908,7 @@ rubati
 \end_layout
 
 \begin_layout Standard
-A questo punto si è potuti passare all'analisi delle componenti principali
+A questo punto si è potuto passare all'analisi delle componenti principali
  sulle feature selezionate.
 \end_layout
 
@@ -1588,8 +1606,15 @@ Design of experiment
 I dati di knee capacity e usable capacity medi, recuperati nella sezione
  precedente sono stati utilizzati per effettuare un design of experiment
  (DOE), al fine di valutare l'importanza e la significatività dei fattori
- controllabili page type e request rate rispetto alle variazioni del response
- time.
+ controllabili 
+\shape italic
+page type
+\shape default
+ e 
+\shape italic
+request rate
+\shape default
+ rispetto alle variazioni del response time.
  Il fattore page type è stato considerato su 4 livelli, mentre il request
  rate (o intensity) su 2 livelli:
 \end_layout
@@ -1612,7 +1637,40 @@ Data l'esiguità delle possibili combinazioni dei diversi livelli dei fattori
 \end_layout
 
 \begin_layout Standard
-*IMMAGINE*
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/DOE.png
+	lyxscale 50
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Configurazione del piano
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1629,7 +1687,7 @@ o.
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1662,7 +1720,7 @@ Risultati della regressione
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1910,7 +1968,7 @@ status open
 \begin_inset Graphics
 	filename images/Shapiro Wilk.png
 	lyxscale 50
-	scale 60
+	scale 40
 
 \end_inset
 
@@ -1943,7 +2001,7 @@ Com’è possibile notare, la normalità non risulta verificata, avendo un p-val
 L’altra proprietà da verificare per scegliere il test ANOVA sarebbe quella
  di omoschedasticità.
  In realtà, data la non normalità dei residui, a prescindere dalla loro
- omoschedasticità il test che utilizzeremo è quello di Kruskal-Wallis, cue
+ omoschedasticità il test che utilizzeremo è quello di Kruskal-Wallis, che
  è un test di tipo non parametrico.
 \end_layout
 
@@ -1958,9 +2016,9 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename images/Shapiro Wilk.png
+	filename images/Kruskal.png
 	lyxscale 50
-	scale 60
+	scale 40
 
 \end_inset
 
@@ -1971,7 +2029,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Risultati del test di Shapiro-Wilk
+Risultati del test di Kruskal-Wallis
 \end_layout
 
 \end_inset
@@ -1986,8 +2044,11 @@ Risultati del test di Shapiro-Wilk
 
 \begin_layout Standard
 Da tale test, possiamo dedurre che solo il parametro PageType presenta un
- valore di p-value sufficientemente basso per una significatività alfa pari
- a 0.05.
+ valore di p-value sufficientemente basso per una significatività 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ pari a 0.05.
  Mentre per quanto riguarda il parametro Request Rate non può essere affermato
  lo stesso, dato che il p-value è grande.
  Dunque, concludiamo affermando che solo il parametro PageType è significativo.

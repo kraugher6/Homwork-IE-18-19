@@ -558,16 +558,27 @@ Per poter effettuare la workload characterization, sono stati richiesti
 \end_layout
 
 \begin_layout Itemize
-Thread name, per analizzare quale utente ha effettuato una determinata richiesta
-;
+
+\shape italic
+Thread name
+\shape default
+, per analizzare quale utente ha effettuato una determinata richiesta;
 \end_layout
 
 \begin_layout Itemize
-Page, ad indicare quale pagina è stata richiesta;
+
+\shape italic
+Page
+\shape default
+, ad indicare quale pagina è stata richiesta;
 \end_layout
 
 \begin_layout Itemize
-Bytecount, che rappresenta la dimensione della richiesta.
+
+\shape italic
+Bytecount
+\shape default
+, che rappresenta la dimensione della richiesta.
 \end_layout
 
 \begin_layout Standard
@@ -676,7 +687,11 @@ Sul grafico è stata plottata la latenza media in relazione alle pagine richiest
 
 \begin_layout Standard
 Analizzando la matrice di correlazione è possibile notare come ci siano
- due parametri altamente correlati, ovvero bytes ed elapsed time.
+ due parametri altamente correlati, ovvero 
+\shape italic
+bytes
+\shape default
+ ed elapsed time.
 \end_layout
 
 \begin_layout Standard
@@ -726,8 +741,9 @@ Caratterizzazione dei parametri di basso livello
 \end_layout
 
 \begin_layout Standard
-Al fine di caratterizzare i parametri di basso livello, essendo questi valori
- numerici, si è optato per un'analisi attraverso la PCA e la clusterizzazione.
+Al fine di caratterizzare i parametri di basso livello e trovare dei punti
+ che rappresentino al meglio i possibili stati in cui il server può trovarsi,
+ si è optato per un'analisi attraverso la PCA e la clusterizzazione.
  Si è partito dall'analisi delle distribuzioni, non considerando quelle
  con coefficiente di variazione (COV) nullo.
  
@@ -853,7 +869,9 @@ b
 \shape italic
 swpd
 \shape default
-, totale della memoria virtuale utilizzata;
+, totale della memoria virtuale utilizzata, coerente con il fatto che il
+ dispositivo ha ancora memoria libera da poter utilizzare per il processo
+ Apache e quindi non ha bisogno della memoria virtuale;
 \end_layout
 
 \begin_layout Itemize
@@ -890,7 +908,7 @@ rubati
 \end_layout
 
 \begin_layout Standard
-A questo punto si è potuti passare all'analisi delle componenti principali
+A questo punto si è potuto passare all'analisi delle componenti principali
  sulle feature selezionate.
 \end_layout
 
@@ -1588,8 +1606,15 @@ Design of experiment
 I dati di knee capacity e usable capacity medi, recuperati nella sezione
  precedente sono stati utilizzati per effettuare un design of experiment
  (DOE), al fine di valutare l'importanza e la significatività dei fattori
- controllabili page type e request rate rispetto alle variazioni del response
- time.
+ controllabili 
+\shape italic
+page type
+\shape default
+ e 
+\shape italic
+request rate
+\shape default
+ rispetto alle variazioni del response time.
  Il fattore page type è stato considerato su 4 livelli, mentre il request
  rate (o intensity) su 2 livelli:
 \end_layout
@@ -1608,9 +1633,7 @@ request rate: 3.7 req/s, 14.8 req/s, due diversi livelli di intensità ottenuti
 Data l'esiguità delle possibili combinazioni dei diversi livelli dei fattori
  in gioco, si è optato per un design full factorial, considerando tutte
  le 8 combinazioni.
- Inoltre, come da traccia, ogni trattamento è stato ripetuto 10 volte, ed
- è stato considerato come response time un punto caratteristico della distribuzi
-one dei valori ottenuti per ognuno di essi.
+ Inoltre, come da traccia, ogni trattamento è stato ripetuto 10 volte.
 \end_layout
 
 \begin_layout Standard
@@ -1624,9 +1647,9 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename images/Distribuzioni DOE 1.png
+	filename images/DOE.png
 	lyxscale 50
-	scale 36
+	scale 60
 
 \end_inset
 
@@ -1637,7 +1660,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Distribuzioni response time dei diversi trattamenti
+Configurazione del piano
 \end_layout
 
 \end_inset
@@ -1648,6 +1671,14 @@ Distribuzioni response time dei diversi trattamenti
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Definito il piano di test, si è provveduto a riempire la tabella generata
+ dal tool con le osservazioni dei response time del sistema in esame.
+ A questo punto è stato poi possibile procedere a costruire il modello regressiv
+o.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1656,504 +1687,7 @@ Distribuzioni response time dei diversi trattamenti
 placement H
 wide false
 sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename images/Distribuzioni DOE 2.png
-	lyxscale 50
-	scale 36
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Distribuzioni response time dei diversi trattamenti
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename images/Distribuzioni DOE 3.png
-	lyxscale 50
-	scale 36
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Distribuzioni response time dei diversi trattamenti
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-I valori scelti sono i seguenti:
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Float table
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="9" columns="3">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Page Type
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Intensity (req/s)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Response Time
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Small
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3.7
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-237,3
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Small
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-14.8
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-236,5
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Medium1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3.7
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-1381,9
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Medium1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-14.8
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-916
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Medium2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3.7
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-1735,8
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Medium2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-14.8
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-1719,1
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Big
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3.7
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-3411,4
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Big
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-14.8
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\xout off
-\uuline off
-\uwave off
-\noun off
-\color none
-3436,7
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Punti caratteristici scelti per ogni trattamento
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Per la maggior parte delle distribuzioni, come è possibile osservare, è
- stato possibile scegliere la media come valore rappresentativo di ogni
- trattamento, in quanto si è osservata una distribuzione normale dei punti.
- Ciò non si è però verificato per le distribuzioni con intensità maggiore
- relative a pagine di tipo small e medium1, per le quali si è dunque optato
- per la mediana.
-\end_layout
-
-\begin_layout Standard
-A questo punto si è proceduto a costruire il modello regressivo considerando
- tali punti.
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2186,7 +1720,7 @@ Risultati della regressione
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2224,7 +1758,19 @@ L’alto valore di
 
  ottenuto conferma la bontà del modello nello spiegare un’alta percentuale
  di varianza dei dati.
- A partire dai valori ottenuti dalla stima, possiamo inoltre valutare l’
+ 
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Importanza
+\series default
+ dei fattori
+\end_layout
+
+\begin_layout Standard
+A partire dai valori ottenuti dalla stima, possiamo inoltre valutare l’
 \series bold
 importanza
 \series default
@@ -2292,7 +1838,7 @@ Page Type
 \begin_inset Text
 
 \begin_layout Plain Layout
-11633133
+107746484
 \end_layout
 
 \end_inset
@@ -2301,7 +1847,7 @@ Page Type
 \begin_inset Text
 
 \begin_layout Plain Layout
-(94.65) 99
+98.99
 \end_layout
 
 \end_inset
@@ -2321,7 +1867,7 @@ Request Rate
 \begin_inset Text
 
 \begin_layout Plain Layout
-161767
+218928
 \end_layout
 
 \end_inset
@@ -2330,7 +1876,7 @@ Request Rate
 \begin_inset Text
 
 \begin_layout Plain Layout
-(1.32) 0.24
+0.2
 \end_layout
 
 \end_inset
@@ -2350,7 +1896,7 @@ Error
 \begin_inset Text
 
 \begin_layout Plain Layout
-494664
+877481
 \end_layout
 
 \end_inset
@@ -2359,7 +1905,7 @@ Error
 \begin_inset Text
 
 \begin_layout Plain Layout
-(4.02) 0.76
+0.8
 \end_layout
 
 \end_inset
@@ -2394,6 +1940,10 @@ Com'è possibile notare dai risultati ottenuti il fattore che risulta più
  importante è Page Type.
 \end_layout
 
+\begin_layout Subsubsection
+Significatività dei fattori
+\end_layout
+
 \begin_layout Standard
 A questo punto si è proceduto ad un'analisi della significatività dei fattori.
  A tal fine è stato eseguito un appropriato test ANOVA.
@@ -2418,7 +1968,7 @@ status open
 \begin_inset Graphics
 	filename images/Shapiro Wilk.png
 	lyxscale 50
-	scale 60
+	scale 40
 
 \end_inset
 
@@ -2443,14 +1993,62 @@ Risultati del test di Shapiro-Wilk
 \end_layout
 
 \begin_layout Standard
-Com'è possibile notare, la normalità risulta verificata, avendo un p-value
- maggiore di 0.05.
+Com’è possibile notare, la normalità non risulta verificata, avendo un p-value
+ minore di 0.05.
 \end_layout
 
 \begin_layout Standard
-L'altra proprietà da verificare per scegliere il test ANOVA è quella di
- omoschedasticità, verificata attraverso il test di Levene, e di cui si
- riportano i risultati di seguito:
+L’altra proprietà da verificare per scegliere il test ANOVA sarebbe quella
+ di omoschedasticità.
+ In realtà, data la non normalità dei residui, a prescindere dalla loro
+ omoschedasticità il test che utilizzeremo è quello di Kruskal-Wallis, cue
+ è un test di tipo non parametrico.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/Kruskal.png
+	lyxscale 50
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Risultati del test di Kruskal-Wallis
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Da tale test, possiamo dedurre che solo il parametro PageType presenta un
+ valore di p-value sufficientemente basso per una significatività alfa pari
+ a 0.05.
+ Mentre per quanto riguarda il parametro Request Rate non può essere affermato
+ lo stesso, dato che il p-value è grande.
+ Dunque, concludiamo affermando che solo il parametro PageType è significativo.
 \end_layout
 
 \end_body

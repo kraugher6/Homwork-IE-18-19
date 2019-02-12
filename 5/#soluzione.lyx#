@@ -295,9 +295,8 @@ status collapsed
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="7">
+<lyxtabular version="3" rows="4" columns="6">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="middle" width="17text%">
 <column alignment="center" valignment="top" width="10text%">
 <column alignment="center" valignment="top" width="12text%">
 <column alignment="center" valignment="top" width="25text%">
@@ -305,15 +304,6 @@ status collapsed
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top" width="15text%">
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Modello
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -370,15 +360,6 @@ Goodness of fit
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Esponenziale
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -470,15 +451,6 @@ RMSE: 0.05117
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Iperesponenziale
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -595,15 +567,6 @@ RMSE: 0.01857
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Weibull
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -849,7 +812,7 @@ Fit della reliability Mercury
 
 \begin_layout Standard
 Anche in questo caso è stato scelto il modello che meglio approssima la
- distribuzione empirica, attravarso il K-S test.
+ distribuzione empirica, attraverso il K-S test.
  I risultati sono riportati in tabella.
 \end_layout
 
@@ -859,14 +822,13 @@ Anche in questo caso è stato scelto il modello che meglio approssima la
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="7">
+<lyxtabular version="3" rows="4" columns="6">
 <features tabularvalignment="middle">
-<column alignment="center" valignment="middle" width="17text%">
 <column alignment="center" valignment="top" width="10text%">
 <column alignment="center" valignment="top" width="12text%">
 <column alignment="center" valignment="top" width="25text%">
@@ -874,15 +836,6 @@ status open
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top" width="15text%">
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Modello
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -939,15 +892,6 @@ Goodness of fit
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Esponenziale
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -1039,15 +983,6 @@ RMSE: 0.05158
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Iperesponenziale
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -1168,15 +1103,6 @@ RMSE: 0.008303
 \begin_inset Text
 
 \begin_layout Plain Layout
-Weibull
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 \begin_inset Formula $e^{-(lx)^{a}}$
 \end_inset
 
@@ -1274,7 +1200,7 @@ RMSE: 0.02094
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Risultati fitting Mercury
+Risultati fitting BGL
 \end_layout
 
 \end_inset
@@ -1285,6 +1211,11 @@ Risultati fitting Mercury
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Come si può osservare, anche per il file di log BGL, il miglior fit si ottiene
+ con un modello iperesponenziale.
 \end_layout
 
 \begin_layout Standard
@@ -1895,7 +1826,7 @@ Una volta individuati tali nodi si è poi proceduto a filtrare i file di
 mente estratti.
  A tale scopo è stato utilizzato lo script 
 \shape italic
-filtering.sh
+filter.sh
 \shape default
 .
 \end_layout
@@ -1949,7 +1880,7 @@ Count tuple nodi Mercury
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2622,7 +2553,7 @@ Reliability nodi Mercury
 \begin_layout Standard
 Per quanto riguarda il file Mercury, si evince che i due nodi individuati
  come più critici abbiano una bassa reliability: ma in particolare è la
- reliability del nodo master che crolla a picco, il che conferma la deduzione
+ reliability del nodo tg-master che crolla a picco, il che conferma la deduzione
  fatta in precedenza riguardo al suo essere un collo di bottiglia per la
  dependability del sistema.
 \end_layout
@@ -3757,8 +3688,18 @@ Mercury
 \begin_layout Standard
 Per quanto riguarda i nodi che più contribuiscono a ciascuna categoria di
  errore, si riportano in tabella (per ogni categoria considerata) il numero
- di entries nel log e, per ogni categoria, i cinque nodi con il più alto
- numero di entries.
+ di entries nel log e, per ogni categoria, i cinque nodi ordinati secondo
+ il più alto numero di entries.
+ Tali valori sono stati ottenuti dapprima filtrando i log tramite l'apposito
+ script 
+\shape italic
+filter.sh
+\shape default
+, e poi ottenendo il numero di entries relative ai nodi tramite 
+\shape italic
+logStatistics.h
+\shape default
+.
  Nella cella di ogni nodo, si riporta anche la sua percentuale di contribuzione
  alla categoria.
 \end_layout
@@ -4205,8 +4146,9 @@ Si può notare come le categorie che presentano più errori siano DEV e MEM.
  stessi fault.
  Un'ulteriore particolarità è che per la categoria NET il nodo tg-master
  rappresenta la quasi totalità degli errori.
- Inoltre, la categoria I-O è l'unica a riguardare nodi di tipo tg-s e login,
- contrariamente alle altre, relative principalmente a nodi di tipo tg-c.
+ Inoltre, la categoria I-O è l'unica a riguardare nodi di tipo tg-s e login;
+ contrariamente alle altre (come ci si poteva aspettare), tale categoria
+ non contempla errori nei nodi di compute.
  
 \end_layout
 
@@ -4242,7 +4184,7 @@ Tale file è stato poi importato in JMP, dove sono state analizzate le occorrenz
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
