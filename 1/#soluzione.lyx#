@@ -678,20 +678,246 @@ Per poter confrontare le diverse distribuzioni temporali (sempre a parità
 \end_layout
 
 \begin_layout Standard
-*IMMAGINI VISIVE*
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/PlotTempiFS1_W.PNG
+	lyxscale 50
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modello regressivo e smoothing per la write al variare dei block size per
+ FS1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-*COMMENTO IMMAGINI VISIVE*
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/PlotTempiFS1_R.PNG
+	lyxscale 50
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modello regressivo e smoothing per la read al variare dei block size per
+ FS1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Sono state applicate in maniera preliminare delle statistiche per verificare
- che i campioni appartenenti a configurazioni diverse di block size appartengano
- effettivamente a popolazioni differenti tra loro.
- Per la verifica si potrebbe utilizzare il T-test nel caso in cui i campioni
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/PlotTempiFS2_W.PNG
+	lyxscale 50
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modello regressivo e smoothing per la write al variare dei block size per
+ FS2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/PlotTempiFS2_R.PNG
+	lyxscale 50
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modello regressivo e smoothing per la read al variare dei block size per
+ FS2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/PlotTempiFS3_W.PNG
+	lyxscale 50
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modello regressivo e smoothing per la write al variare dei block size per
+ FS3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/PlotTempiFS3_R.PNG
+	lyxscale 50
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modello regressivo e smoothing per la read al variare dei block size per
+ FS3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Come si può osservare da questi plot, per alcune configurazioni si ha una
+ sovrapposizione degli intervalli di confidenza: questo potrebbe essere
+ indice di una non significatività statistica dei risultati osservati.
+ Vale a dire, i dati osservati provengono dalla stessa popolazione.
+ Per scongiurare quest'ipotesi sono stati effettuati dei test statistici
+ al fine di verificare che i campioni afferenti a configurazioni diverse
+ di block size (a parità di file size) appartengano effettivamente a popolazioni
+ differenti tra loro.
+ Per la verifica si potrebbe utilizzare il t-test nel caso in cui i campioni
  siano distribuiti normalmente.
- A tal fine è stato eseguito il test di Shapiro-Wilk sulle diverse distribuzioni.
+ Per verificare dunque la loro normalità è stato eseguito il test di Shapiro-Wil
+k sulle diverse distribuzioni.
 \end_layout
 
 \begin_layout Standard
@@ -718,7 +944,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Write: 50 KB - 5 MB, 200 KB - 5 MB, 1 MB - 5 MB
+Distribuzioni e test di Shapiro-Wilk per la write al variare dei block size
+ per FS1 
 \end_layout
 
 \end_inset
@@ -755,7 +982,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Write: 50 KB - 20 MB, 200 KB - 20 MB, 1 MB - 20 MB
+Distribuzioni e test di Shapiro-Wilk per la write al variare dei block size
+ per FS2
 \end_layout
 
 \end_inset
@@ -792,7 +1020,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Write: 50 KB - 100 MB, 200 KB - 100 MB, 1 MB - 100 MB
+Distribuzioni e test di Shapiro-Wilk per la write al variare dei block size
+ per FS3
 \end_layout
 
 \end_inset
@@ -829,7 +1058,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Read: 50 KB - 5 MB, 200 KB - 5 MB, 1 MB - 5 MB
+Distribuzioni e test di Shapiro-Wilk per la read al variare dei block size
+ per FS1 
 \end_layout
 
 \end_inset
@@ -866,7 +1096,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Read: 50 KB - 20 MB, 200 KB - 20 MB, 1 MB - 20 MB
+Distribuzioni e test di Shapiro-Wilk per la read al variare dei block size
+ per FS2
 \end_layout
 
 \end_inset
@@ -903,7 +1134,8 @@ status collapsed
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Read: 50 KB - 100 MB, 200 KB - 100 MB, 1 MB - 100 MB
+Distribuzioni e test di Shapiro-Wilk per la read al variare dei block size
+ per FS3
 \end_layout
 
 \end_inset
@@ -923,15 +1155,10 @@ I risultati del test di Shapiro-Wilk confermano un'evidenza già nota dopo
 \end_layout
 
 \begin_layout Standard
-In particolare si osserva che, all'aumentare dei bytes della pagina richiesta,
- l'elapsed time cresce conseguentemente in maniera lineare.
-\end_layout
-
-\begin_layout Standard
-I risultati del test evidenziano che Si è optato quindi di utilizzare, per
+I risultati del test evidenziano dunque la necessità di utilizzare, per
  verificare la significatività statistica dei diversi campioni, il test
- non-parametrico di Wilcoxon essendo che tale test non fa assunzioni stringenti
- riguardo la normalità delle distribuzioni considerate.
+ non-parametrico di Wilcoxon; tale test infa fa assunzioni stringenti riguardo
+ la normalità delle distribuzioni considerate.
 \end_layout
 
 \begin_layout Standard
