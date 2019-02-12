@@ -1204,7 +1204,7 @@ Ai fini di aumentare il carico, il capacity test è stato condotto facendo
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1263,7 +1263,7 @@ Capacity test pagine small
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1304,7 +1304,7 @@ Capacity test pagine medium
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1345,7 +1345,7 @@ Capacity test pagine big
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1386,7 +1386,7 @@ In sintesi i valori ottenuti, compresi di media, sono riportati in tabella
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1439,7 +1439,7 @@ Misto
 \begin_inset Text
 
 \begin_layout Plain Layout
-2.5
+3.33
 \end_layout
 
 \end_inset
@@ -1468,7 +1468,7 @@ Small
 \begin_inset Text
 
 \begin_layout Plain Layout
-16.67
+45.83
 \end_layout
 
 \end_inset
@@ -1497,7 +1497,7 @@ Medium
 \begin_inset Text
 
 \begin_layout Plain Layout
-5
+6.667
 \end_layout
 
 \end_inset
@@ -1526,7 +1526,7 @@ Big
 \begin_inset Text
 
 \begin_layout Plain Layout
-5
+7.5
 \end_layout
 
 \end_inset
@@ -1555,7 +1555,7 @@ Valori medi
 \begin_inset Text
 
 \begin_layout Plain Layout
-7.29
+15.83
 \end_layout
 
 \end_inset
@@ -1586,10 +1586,6 @@ Valori di knee e usable capacity in sintesi
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -1632,7 +1628,7 @@ request rate: 3.7 req/s, 14.8 req/s, due diversi livelli di intensità ottenuti
 \begin_layout Standard
 Data l'esiguità delle possibili combinazioni dei diversi livelli dei fattori
  in gioco, si è optato per un design full factorial, considerando tutte
- le 8 combinazioni.
+ le 8 combinazioni senza considerare gli effetti delle interazioni.
  Inoltre, come da traccia, ogni trattamento è stato ripetuto 10 volte.
 \end_layout
 
@@ -1648,7 +1644,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/DOE.png
-	lyxscale 50
+	lyxscale 25
 	scale 60
 
 \end_inset
