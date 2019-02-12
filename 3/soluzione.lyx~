@@ -2001,7 +2001,7 @@ Com’è possibile notare, la normalità non risulta verificata, avendo un p-val
 L’altra proprietà da verificare per scegliere il test ANOVA sarebbe quella
  di omoschedasticità.
  In realtà, data la non normalità dei residui, a prescindere dalla loro
- omoschedasticità il test che utilizzeremo è quello di Kruskal-Wallis, cue
+ omoschedasticità il test che utilizzeremo è quello di Kruskal-Wallis, che
  è un test di tipo non parametrico.
 \end_layout
 
@@ -2044,8 +2044,11 @@ Risultati del test di Kruskal-Wallis
 
 \begin_layout Standard
 Da tale test, possiamo dedurre che solo il parametro PageType presenta un
- valore di p-value sufficientemente basso per una significatività alfa pari
- a 0.05.
+ valore di p-value sufficientemente basso per una significatività 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ pari a 0.05.
  Mentre per quanto riguarda il parametro Request Rate non può essere affermato
  lo stesso, dato che il p-value è grande.
  Dunque, concludiamo affermando che solo il parametro PageType è significativo.
