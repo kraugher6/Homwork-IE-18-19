@@ -161,7 +161,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Marca
+Marca e modello
 \end_layout
 
 \end_inset
@@ -415,16 +415,22 @@ Dopo aver estratto 9 campioni da 49 osservazioni ognuno, sono stati messi
  Sono state applicate in maniera preliminare delle statistiche per verificare
  che i campioni appartenenti a configurazioni diverse di block size appartengano
  effettivamente a popolazioni differenti tra loro.
- Per la verifica è stato utilizzato il t-test
+ Per la verifica si potrebbe utilizzare il T-test nel caso in cui i campioni
+ siano distribuiti normalmente.
+ A tal fine è stato eseguito il test di Shapiro-Wilk sulle diverse distribuzioni.
 \end_layout
 
 \begin_layout Standard
-*IMMAGINE*
+*IMMAGINE con distributzioni e test di shakil o neal*
 \end_layout
 
 \begin_layout Standard
-Verificato ciò sono state quindi calcolate le medie campionarie e gli intervalli
- di confidenza per ogni campione.
+I risultati del test evidenziano che nessuna delle distribuzioni campionarie
+ risulta essere omoschedastica ad una gaussiana.
+ Si è optato quindi di utilizzare, per verificare la significatività statistica
+ dei diversi campioni, il test non-parametrico di Wilcoxon essendo che tale
+ test non fa assunzioni stringenti riguardo la normalità delle distribuzioni
+ considerate.
 \end_layout
 
 \begin_layout Standard
