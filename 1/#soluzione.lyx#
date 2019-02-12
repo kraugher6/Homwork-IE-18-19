@@ -400,13 +400,11 @@ Sulla base di tali considerazioni, per il calcolo di r è stato quindi tenuto
  di variazione (COV), scegliendo il valore di r proprio pari a 1/4 di quest'ulti
 mo.
  Considerando come confidenza il 99%, si è ottenuto come risultato un numero
- di esperimenti per ogni campione pari a 49, che si è stimato possibili
- eseguire in un tempo complessivo di circa 7 ore.
- 
+ di esperimenti per ogni campione pari a 49.
 \end_layout
 
 \begin_layout Standard
-*SCRIPT*
+*TABELLA DEI VALORI SCRIPT MATLAB*
 \end_layout
 
 \begin_layout Standard
@@ -424,9 +422,267 @@ Dopo aver estratto 9 campioni da 49 osservazioni ognuno, sono stati messi
 \end_layout
 
 \begin_layout Standard
-Come primo step si è deciso di plottare per ogni file size i valori ottenuti
- relativi ad ogni block size in maniera tale da poterne analizzare visivamente
- l'andamento:
+Per ogni file size si riportano i valori ottenuti relativi ad ogni block
+ size:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/TempiFS1_W.PNG
+	lyxscale 50
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Andamenti delle write al variare dei block size per FS1 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/TempiFS1_R.PNG
+	lyxscale 50
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Andamenti delle read al variare dei block size per FS1 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/TempiFS2_W.PNG
+	lyxscale 50
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Andamenti delle write al variare dei block size per FS2 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/TempiFS2_R.PNG
+	lyxscale 50
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Andamenti delle read al variare dei block size per FS2 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/TempiFS3_W.PNG
+	lyxscale 50
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Andamenti delle write al variare dei block size per FS3 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/TempiFS3_R.PNG
+	lyxscale 50
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Andamenti delle read al variare dei block size per FS3 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+È possibile notare che molti andamenti sono sovrapposti tra loro.
+ Il motivo di ciò è da ricercarsi nel fatto che le operazioni di write e
+ di read sono state considerate non come mera scrittura o lettura su file,
+ bensì comprensive di tutte le funzioni a supporto dell'intera operazione:
+ 
+\end_layout
+
+\begin_layout Itemize
+apertura/chiusura del file;
+\end_layout
+
+\begin_layout Itemize
+allocazione, riempimento (nel caso della scrittura) e deallocazione del
+ buffer;
+\end_layout
+
+\begin_layout Itemize
+controllo di eventuali errori.
+\end_layout
+
+\begin_layout Standard
+Per poter confrontare le diverse distribuzioni temporali (sempre a parità
+ di file size), si vuole dimostrare che tali distribuzioni provengano da
+ popolazioni differenti.
+ Un primo passo verso questo obiettivo è stato quello di effettuare un'analisi
+ visiva:
+\end_layout
+
+\begin_layout Standard
+*IMMAGINI VISIVE*
+\end_layout
+
+\begin_layout Standard
+*COMMENTO IMMAGINI VISIVE*
 \end_layout
 
 \begin_layout Standard
