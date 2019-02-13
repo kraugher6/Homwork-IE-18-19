@@ -1241,7 +1241,7 @@ Test di Wilcoxon per le read per FS2
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1278,7 +1278,7 @@ Test di Wilcoxon per le read per FS3
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1416,7 +1416,7 @@ Una volta appurato che i campioni ottenuti sono significativamente diversi,
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2024,9 +2024,10 @@ Come è possibile notare dai risultati, non ci sono sovrapposizioni tra i
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2636,7 +2637,7 @@ Scelti tali valori, per adempiere allo scopo del benchmark, si è deciso
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2712,6 +2713,7 @@ Una volta appurato che i campioni ottenuti sono significativamente diversi,
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status open
@@ -2901,6 +2903,7 @@ Come è possibile notare dai risultati, non ci sono sovrapposizioni tra i
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status open
