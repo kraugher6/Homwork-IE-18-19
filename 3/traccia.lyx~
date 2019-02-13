@@ -83,6 +83,46 @@
 Traccia
 \end_layout
 
+\begin_layout Subsection
+Workload Characterization
+\end_layout
+
+\begin_layout Standard
+Generare un random workload assumendo che sia un workload reale, usando
+ un random controller nel tool JMeter o tramite Httperf.
+ Collezionare i valori dei parametri sia di alto livello (controllabili)
+ che di basso livello (osservabili) del workload.
+ Per quanto riguarda i parametri di alto livello, concentrarsi su:
+\end_layout
+
+\begin_layout Itemize
+Byte count
+\end_layout
+
+\begin_layout Itemize
+Requested page
+\end_layout
+
+\begin_layout Itemize
+Thread name
+\end_layout
+
+\begin_layout Standard
+Utilizzare le tecniche di workload characterization spiegate al corso.
+\end_layout
+
+\begin_layout Subsection
+Capacity Test
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Subsection
+Design of experiment
+\end_layout
+
 \begin_layout Standard
 
 \end_layout
