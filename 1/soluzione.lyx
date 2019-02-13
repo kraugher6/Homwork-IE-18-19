@@ -1151,7 +1151,7 @@ Distribuzioni e test di Shapiro-Wilk per la read al variare dei block size
 \begin_layout Standard
 I risultati del test di Shapiro-Wilk confermano un'evidenza già nota dopo
  un semplice test visivo: nessuna delle distribuzioni campionarie risulta
- essere omoschedastica ad una gaussiana.
+ essere omoschedastica ad una distribuzione normale.
 \end_layout
 
 \begin_layout Standard
@@ -1241,7 +1241,7 @@ Test di Wilcoxon per le read per FS2
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1278,7 +1278,7 @@ Test di Wilcoxon per le read per FS3
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1416,7 +1416,7 @@ Una volta appurato che i campioni ottenuti sono significativamente diversi,
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2024,9 +2024,10 @@ Come è possibile notare dai risultati, non ci sono sovrapposizioni tra i
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2636,7 +2637,7 @@ Scelti tali valori, per adempiere allo scopo del benchmark, si è deciso
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2712,6 +2713,7 @@ Una volta appurato che i campioni ottenuti sono significativamente diversi,
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status open
@@ -2901,6 +2903,7 @@ Come è possibile notare dai risultati, non ci sono sovrapposizioni tra i
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status open
@@ -3155,8 +3158,8 @@ ente significativi.
 Codice
 \end_layout
 
-\begin_layout Standard
-
+\begin_layout Subsubsection
+Main per il benchmark
 \end_layout
 
 \begin_layout Standard
@@ -3167,7 +3170,9 @@ status open
 
 
 \backslash
-begin{lstlisting}[language=C++,caption={main.cpp}] 
+begin{lstlisting}[language=C++,caption={benchmark
+\backslash
+_main.cpp}] 
 \end_layout
 
 \begin_layout Plain Layout
@@ -3181,12 +3186,12 @@ begin{lstlisting}[language=C++,caption={main.cpp}]
 
 \begin_layout Plain Layout
 
-long int filesize[N] = {5*1048576, 2*10485760, 104857600};
+long int filesize[N] = {6*1048576, 24*10485760, 96*10485760};
 \end_layout
 
 \begin_layout Plain Layout
 
-long int blocksize[N] = {5*10240, 2*102400, 1*1048576};
+long int blocksize[N] = {5*102400, 1048576, 3*1048576};
 \end_layout
 
 \begin_layout Plain Layout
@@ -3200,7 +3205,12 @@ int main() {
 
 \begin_layout Plain Layout
 
-	long int numInteraction = 0;
+	system("echo 3 > /proc/sys/vm/drop_caches");
+\end_layout
+
+\begin_layout Plain Layout
+
+	long int numIteration = 0;
 \end_layout
 
 \begin_layout Plain Layout
@@ -3224,43 +3234,38 @@ int main() {
 
 \begin_layout Plain Layout
 
-			numInteraction = filesize[i]/blocksize[j];
+			numIteraction = filesize[i]/blocksize[j];
 \end_layout
 
 \begin_layout Plain Layout
 
-			cout << "RESULTS OF EXPERIMENT NUMBER: " << ++ex << endl;
+			cout << "RESULTS OF COMBINATION NUMBER: " << ++ex << endl;
 \end_layout
 
 \begin_layout Plain Layout
 
 			cout << "FILESIZE: " << filesize[i] << " BLOCKSIZE: " << blocksize[j]
- << " NUMINTERACTION: " << numInteraction << endl;			
+ << " NUM OF ITERATION: " << numIteration << endl;			
 \end_layout
 
 \begin_layout Plain Layout
 
-			for(int k=NUM_ESPERIMENTI;k>0;--k) {
+			for(int k=NUM_EX;k>0;--k) {
 \end_layout
 
 \begin_layout Plain Layout
 
-				cout << rep++%30 << ";";
+				cout << rep++%NUM_EX << ";";
 \end_layout
 
 \begin_layout Plain Layout
 
-				analysisWrite(blocksize[j], numInteraction);
+				analysisWrite(blocksize[j], numIteraction);
 \end_layout
 
 \begin_layout Plain Layout
 
-				//checkFileSize(filesize[i]);
-\end_layout
-
-\begin_layout Plain Layout
-
-				analysisRead(blocksize[j], numInteraction);
+				analysisRead(blocksize[j], numIteraction);
 \end_layout
 
 \begin_layout Plain Layout
@@ -3280,16 +3285,17 @@ int main() {
 
 \begin_layout Plain Layout
 
+	system("echo 1 > /proc/sys/vm/drop_caches");
+\end_layout
+
+\begin_layout Plain Layout
+
 	return 0;
 \end_layout
 
 \begin_layout Plain Layout
 
 }
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -3302,6 +3308,162 @@ end{lstlisting}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+Main per l'analisi preliminare
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[language=C++,caption={preliminary
+\backslash
+_main.cpp}] 
+\end_layout
+
+\begin_layout Plain Layout
+
+#include "benchmark.hpp"
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+long int filesize[N] = {6*1048576, 24*10485760, 96*10485760};
+\end_layout
+
+\begin_layout Plain Layout
+
+long int blocksize[N] = {5*102400, 1048576, 3*1048576};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+int main() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	system("echo 3 > /proc/sys/vm/drop_caches");
+\end_layout
+
+\begin_layout Plain Layout
+
+	long int numIteration = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+	unsigned int ex = 0, rep = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	for(int i=0;i<N;i++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		for(int j=N-1;j>=0;j--) {
+\end_layout
+
+\begin_layout Plain Layout
+
+			numIteraction = filesize[i]/blocksize[j];
+\end_layout
+
+\begin_layout Plain Layout
+
+			cout << "RESULTS OF PRELIMINARY EXPERIMENT NUMBER: " << ++ex << endl;
+\end_layout
+
+\begin_layout Plain Layout
+
+			cout << "FILESIZE: " << filesize[i] << " BLOCKSIZE: " << blocksize[j]
+ << " NUM OF INTERATION: " << numIteration << endl;
+\end_layout
+
+\begin_layout Plain Layout
+
+			for(int k=NUM_PRELIMINARY_EX;k>0;--k) {
+\end_layout
+
+\begin_layout Plain Layout
+
+				cout << rep++%NUM_PRELIMINARY_EX << ";";
+\end_layout
+
+\begin_layout Plain Layout
+
+				analysisWrite(blocksize[j], numIteraction);
+\end_layout
+
+\begin_layout Plain Layout
+
+				analysisRead(blocksize[j], numIteraction);
+\end_layout
+
+\begin_layout Plain Layout
+
+			}
+\end_layout
+
+\begin_layout Plain Layout
+
+		}
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+	system("echo 1 > /proc/sys/vm/drop_caches");	
+\end_layout
+
+\begin_layout Plain Layout
+
+	return 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Header file per il benchmark
 \end_layout
 
 \begin_layout Standard
@@ -3389,7 +3551,12 @@ using namespace std;
 
 \begin_layout Plain Layout
 
-#define NUM_ESPERIMENTI 30
+#define NUM_PRELIMINARY_EX 7
+\end_layout
+
+\begin_layout Plain Layout
+
+#define NUM_EX 49
 \end_layout
 
 \begin_layout Plain Layout
@@ -3438,25 +3605,11 @@ void analysisRead(long int, long int);
 
 \begin_layout Plain Layout
 
-long int fileSize();
-\end_layout
-
-\begin_layout Plain Layout
-
-void checkFileSize(long int);
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \begin_layout Plain Layout
 
 #endif //_BENCHMARK_H_
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -3469,6 +3622,10 @@ end{lstlisting}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection
+Function file per le funzioni kernel di scrittura e lettura
 \end_layout
 
 \begin_layout Standard
@@ -3584,12 +3741,7 @@ void initBufferWrite(long int bs) {
 
 \begin_layout Plain Layout
 
-	system("sync; echo 3 > /proc/sys/vm/drop_caches");	
-\end_layout
-
-\begin_layout Plain Layout
-
-	//cout << pathconf("file_prova.bin",_PC_REC_XFER_ALIGN) << endl;
+	system("sync");
 \end_layout
 
 \begin_layout Plain Layout
@@ -3658,7 +3810,7 @@ void initBufferRead(long int bs) {
 
 \begin_layout Plain Layout
 
-	//cout << pathconf("file_prova.bin",_PC_REC_XFER_ALIGN) << endl;
+	system("sync");
 \end_layout
 
 \begin_layout Plain Layout
@@ -3697,17 +3849,31 @@ void analysisWrite(long int bs, long int num) {
 
 \begin_layout Plain Layout
 
-	std::chrono::duration<double> elapsedAccumulatorWrite;
+	std::chrono::duration<double> elapsedWrite;
 \end_layout
 
 \begin_layout Plain Layout
 
-	elapsedAccumulatorWrite.zero();
+	elapsedWrite.zero();
 \end_layout
 
 \begin_layout Plain Layout
 
 	int writeSuccessful = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	//start timer
+\end_layout
+
+\begin_layout Plain Layout
+
+	auto start_time = std::chrono::system_clock::now();
 \end_layout
 
 \begin_layout Plain Layout
@@ -3722,8 +3888,8 @@ void analysisWrite(long int bs, long int num) {
 
 \begin_layout Plain Layout
 
-	int fd = open("file_prova.bin", O_CREAT|O_TRUNC|O_WRONLY|O_APPEND|O_DIRECT|O_SYN
-C, S_IRWXU);
+	int fd = open("file_prova.bin", O_CREAT|O_TRUNC|O_WRONLY|O_APPEND|O_DIRECT,
+ S_IRWXU);
 \end_layout
 
 \begin_layout Plain Layout
@@ -3780,20 +3946,6 @@ C, S_IRWXU);
 
 \begin_layout Plain Layout
 
-		//start timer
-\end_layout
-
-\begin_layout Plain Layout
-
-		auto start_time = std::chrono::system_clock::now();
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
 		//write buffer
 \end_layout
 
@@ -3804,17 +3956,7 @@ C, S_IRWXU);
 
 \begin_layout Plain Layout
 
-	
-\end_layout
-
-\begin_layout Plain Layout
-
-		//end timer
-\end_layout
-
-\begin_layout Plain Layout
-
-		auto end_time = std::chrono::system_clock::now();
+		system("sync");
 \end_layout
 
 \begin_layout Plain Layout
@@ -3867,20 +4009,6 @@ C, S_IRWXU);
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\begin_layout Plain Layout
-
-		//update accumulator
-\end_layout
-
-\begin_layout Plain Layout
-
-		elapsedAccumulatorWrite += end_time-start_time;
-\end_layout
-
-\begin_layout Plain Layout
-
 	}
 \end_layout
 
@@ -3900,12 +4028,41 @@ C, S_IRWXU);
 
 \begin_layout Plain Layout
 
+	//end timer
+\end_layout
+
+\begin_layout Plain Layout
+
+	auto end_time = std::chrono::system_clock::now();
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	//update elapsed
+\end_layout
+
+\begin_layout Plain Layout
+
+	elapsedWrite = end_time-start_time;
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
 	//print write time
 \end_layout
 
 \begin_layout Plain Layout
 
-	cout << elapsedAccumulatorWrite.count() << ";";
+	cout << elapsedWrite.count() << ";";
 \end_layout
 
 \begin_layout Plain Layout
@@ -3924,12 +4081,12 @@ void analysisRead(long int bs, long int num) {
 
 \begin_layout Plain Layout
 
-	std::chrono::duration<double> elapsedAccumulatorRead;
+	std::chrono::duration<double> elapsedRead;
 \end_layout
 
 \begin_layout Plain Layout
 
-	elapsedAccumulatorRead.zero();
+	elapsedRead.zero();
 \end_layout
 
 \begin_layout Plain Layout
@@ -3944,7 +4101,27 @@ void analysisRead(long int bs, long int num) {
 
 \begin_layout Plain Layout
 
-	int fd = open("file_prova.bin", O_RDONLY|O_DIRECT|O_SYNC, S_IRWXU);
+	//start timer
+\end_layout
+
+\begin_layout Plain Layout
+
+	auto start_time = std::chrono::system_clock::now();
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+	//open file and control
+\end_layout
+
+\begin_layout Plain Layout
+
+	int fd = open("file_prova.bin", O_RDONLY|O_DIRECT, S_IRWXU);
 \end_layout
 
 \begin_layout Plain Layout
@@ -3983,6 +4160,10 @@ void analysisRead(long int bs, long int num) {
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
 		//initialize buffer
 \end_layout
 
@@ -3997,11 +4178,7 @@ void analysisRead(long int bs, long int num) {
 
 \begin_layout Plain Layout
 
-		auto start_time = std::chrono::system_clock::now();
-\end_layout
-
-\begin_layout Plain Layout
-
+		//read from file
 \end_layout
 
 \begin_layout Plain Layout
@@ -4015,11 +4192,7 @@ void analysisRead(long int bs, long int num) {
 
 \begin_layout Plain Layout
 
-		auto end_time = std::chrono::system_clock::now();
-\end_layout
-
-\begin_layout Plain Layout
-
+		//control read
 \end_layout
 
 \begin_layout Plain Layout
@@ -4053,27 +4226,26 @@ void analysisRead(long int bs, long int num) {
 
 \begin_layout Plain Layout
 
-		termBufferRead();		
+		//free memory buffer
 \end_layout
 
 \begin_layout Plain Layout
 
-		
+		termBufferRead();			
 \end_layout
 
 \begin_layout Plain Layout
 
-		elapsedAccumulatorRead += end_time-start_time;
+	}	
 \end_layout
 
 \begin_layout Plain Layout
 
-	}
 \end_layout
 
 \begin_layout Plain Layout
 
-	
+	//close file
 \end_layout
 
 \begin_layout Plain Layout
@@ -4083,61 +4255,16 @@ void analysisRead(long int bs, long int num) {
 
 \begin_layout Plain Layout
 
-	cout << elapsedAccumulatorRead.count() << ";" << endl;
 \end_layout
 
 \begin_layout Plain Layout
 
-}
+	//end timer
 \end_layout
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\begin_layout Plain Layout
-
-long int fileSize() {
-\end_layout
-
-\begin_layout Plain Layout
-
-  streampos begin, end;
-\end_layout
-
-\begin_layout Plain Layout
-
-  ifstream fd ("file_prova.bin", ios::binary);
-\end_layout
-
-\begin_layout Plain Layout
-
-  begin = fd.tellg();
-\end_layout
-
-\begin_layout Plain Layout
-
-  fd.seekg (0, ios::end);
-\end_layout
-
-\begin_layout Plain Layout
-
-  end = fd.tellg();
-\end_layout
-
-\begin_layout Plain Layout
-
-  fd.close();
-\end_layout
-
-\begin_layout Plain Layout
-
-  return end-begin;
-\end_layout
-
-\begin_layout Plain Layout
-
-}
+	auto end_time = std::chrono::system_clock::now();	
 \end_layout
 
 \begin_layout Plain Layout
@@ -4146,32 +4273,40 @@ long int fileSize() {
 
 \begin_layout Plain Layout
 
-void checkFileSize(long int fs) {
+	//update elapsed
 \end_layout
 
 \begin_layout Plain Layout
 
-	if(fileSize()<fs) {
+	elapsedRead = end_time-start_time;
 \end_layout
 
 \begin_layout Plain Layout
 
-		cout << endl <<"File size mismatch" << endl;
 \end_layout
 
 \begin_layout Plain Layout
 
-		cout << fileSize() << " " << fs << endl;
+	//delete file
 \end_layout
 
 \begin_layout Plain Layout
 
-		exit(0);
+	remove("file_prova.bin");
 \end_layout
 
 \begin_layout Plain Layout
 
-	}
+\end_layout
+
+\begin_layout Plain Layout
+
+	//print read time
+\end_layout
+
+\begin_layout Plain Layout
+
+	cout << elapsedRead.count() << ";" << endl;
 \end_layout
 
 \begin_layout Plain Layout
