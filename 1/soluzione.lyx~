@@ -3022,6 +3022,7 @@ Come è possibile notare dai risultati, non ci sono sovrapposizioni tra i
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Float table
 placement H
 wide false
@@ -3029,9 +3030,11 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="5">
-<features tabularvalignment="middle">
+<lyxtabular version="3" rows="4" columns="6">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -3042,7 +3045,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+File size
 \end_layout
 
 \end_inset
@@ -3051,7 +3054,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Block size
 \end_layout
 
 \end_inset
@@ -3060,7 +3063,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Media
 \end_layout
 
 \end_inset
@@ -3069,7 +3072,16 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+Deviazione standard
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Errore standard
 \end_layout
 
 \end_inset
@@ -3078,7 +3090,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+C.I.
 \end_layout
 
 \end_inset
@@ -3089,7 +3101,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+5 MB
 \end_layout
 
 \end_inset
@@ -3098,7 +3110,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+50 KB
 \end_layout
 
 \end_inset
@@ -3107,7 +3119,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.0218857
 \end_layout
 
 \end_inset
@@ -3116,7 +3128,16 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+0.001521
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.000217
 \end_layout
 
 \end_inset
@@ -3125,7 +3146,63 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+[0.02145913, 0.02231087]
+\end_layout
 
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20 MB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50 KB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
 \end_layout
 
 \end_inset
@@ -3136,7 +3213,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+100 MB
 \end_layout
 
 \end_inset
@@ -3145,7 +3222,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+50 KB
 \end_layout
 
 \end_inset
@@ -3154,7 +3231,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+-
 \end_layout
 
 \end_inset
@@ -3163,7 +3240,16 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+-
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
 \end_layout
 
 \end_inset
@@ -3172,7 +3258,7 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+-
 \end_layout
 
 \end_inset
@@ -3189,7 +3275,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
+Configurazioni ottmali per le letture
 \end_layout
 
 \end_inset
