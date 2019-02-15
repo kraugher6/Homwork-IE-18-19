@@ -1391,7 +1391,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="6" columns="3">
+<lyxtabular version="3" rows="7" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -1513,7 +1513,7 @@ Medium
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1522,7 +1522,7 @@ Big
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1531,11 +1531,40 @@ Big
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 10.83
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Valori medi richieste specifiche
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+22.78
 \end_layout
 
 \end_inset
@@ -1594,6 +1623,20 @@ Valori di knee e usable capacity in sintesi
 
 \end_layout
 
+\begin_layout Standard
+A questo punto, come ultima considerazione, ci si potrebbe chiedere se la
+ media dei risultati dei capacity test con richieste specifiche per ogni
+ tipo di pagina sia comparabile ai risultati ottenuti nella riproduzione
+ di un workload reale (capacity test misto).
+ Come si può osservare dalla tabella i risultati ottenuti sono totalmente
+ diversi.
+ Ciò può essere attribuito al fatto che in un contesto reale è molto improbabile
+ che ci siano delle situazioni in cui vengono fatte, in un dato periodo
+ temporale, richieste specifiche per tipo di pagina; quindi mediare su questi
+ risultati significa tenere in conto situazioni di altissimo througuhput
+ che possono polarizzare il risultato finale.
+\end_layout
+
 \begin_layout Subsection
 Design of experiment
 \end_layout
@@ -1638,14 +1681,14 @@ Data l'esiguità delle possibili combinazioni dei diversi livelli dei fattori
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename images/DOE.png
 	lyxscale 25
-	scale 60
+	scale 30
 
 \end_inset
 
@@ -1689,8 +1732,8 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename images/Regressione 1.png
-	lyxscale 50
-	scale 60
+	lyxscale 30
+	scale 30
 
 \end_inset
 
@@ -1722,8 +1765,8 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename images/Regressione 2.png
-	lyxscale 50
-	scale 60
+	lyxscale 30
+	scale 30
 
 \end_inset
 
@@ -1781,7 +1824,7 @@ importanza
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1957,7 +2000,7 @@ A questo punto si è proceduto ad un'analisi della significatività dei fattori.
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2007,7 +2050,7 @@ L’altra proprietà da verificare per scegliere il test ANOVA sarebbe quella
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
