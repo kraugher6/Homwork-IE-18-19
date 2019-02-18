@@ -89,20 +89,16 @@ Si implementi un benchmark relativo ad operazioni I/O su Linux, in particolare
 \end_layout
 
 \begin_layout Itemize
-grandezza del file: [10MB, 100MB, 1GB, 10GB]
+grandezza del file: [5 MB, 20 MB, 100 MB]
 \end_layout
 
 \begin_layout Itemize
-grandezza del blocco: [1k, 10k, 100k, 1MB]
+grandezza del blocco: [50 KB, 200 KB, 1 MB]
 \end_layout
 
 \begin_layout Standard
 ps.
- Si pulisca la cache del processore prima di eseguire il benchmarking
-\end_layout
-
-\begin_layout Standard
-
+ Si pulisca la cache del processore prima di eseguire il benchmarking.
 \end_layout
 
 \end_body

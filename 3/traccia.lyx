@@ -136,17 +136,12 @@ scegliere come valori di usable e knee capacity quelli mediati sulle diverse
 \end_layout
 
 \begin_layout Itemize
-scegliere come valori di usable e knee capacity i peggiori (per ogni tipo
- di richiesta);
-\end_layout
-
-\begin_layout Itemize
 comparare i risultati con il caso del random controller.
 \end_layout
 
 \end_deeper
 \begin_layout Subsection
-Design of experiment
+Design of Experiment
 \end_layout
 
 \begin_layout Standard

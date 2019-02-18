@@ -154,8 +154,8 @@ L'analisi preliminare prevede, dopo aver importato il file nel tool, di
  informativo.
  A tale scopo si è proceduto all'analisi delle distribuzioni di tali attributi
  osservando, in particolare, il coefficiente di variazione (CV) di ognuna.
- Il coefficiente di variazione è la normalizzazione della varianza con la
- media.
+ Il coefficiente di variazione è la normalizzazione della deviazione standard
+ con la media.
  Se il coefficiente di variazione è nullo, il parametro misurato è costante,
  e quindi si sceglie di non includere quella feature nelle successive analisi.
 \end_layout
@@ -735,6 +735,86 @@ A questo punto si è proceduto al calcolo preciso della varianza persa a
  seguito prima della fase di PCA e poi di clusterizzazione.
  A tal fine, è stato utilizzato il tool di data analysis Knime.
  
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename images/calcolo inter.png
+	lyxscale 50
+	scale 40
+	rotateOrigin leftTop
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Calcolo della devianza inter cluster
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename images/calcolo intra.png
+	lyxscale 50
+	scale 45
+	rotateOrigin leftTop
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Calcolo della devianza intra cluster
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection

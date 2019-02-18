@@ -258,6 +258,9 @@ Per avere un valore preciso di Reliability, facciamo ricorso alla tecnica
  meno (considerandolo circuito aperto), è possibile effettuare una riduzione
  del sistema rispettivamente ad un parallelo ed una serie, che sono di più
  semplice trattazione.
+ In particolare, nel caso in cui il nodo 4 funzioni, si dovrebbe condizionare
+ il sistema anche al funzionamento del nodo 1; si è notato però che a prescinder
+e dal suo funzionamento, 
 \end_layout
 
 \begin_layout Standard

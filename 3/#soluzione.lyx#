@@ -681,8 +681,8 @@ Latency media rispetto alla pagina richiesta
 \begin_layout Standard
 Sul grafico è stata plottata la latenza media in relazione alle pagine richieste
  e, conseguentemente, ai bytes della richiesta.
- Come si può osservare le pagine small sono quelle caratterizzate da una
- più alta latenza rispetto alle altre.
+ Come si può osservare, la latenza non cresce in modo lineare con il variare
+ della dimensione della pagina richiesta.
 \end_layout
 
 \begin_layout Standard
@@ -1694,9 +1694,13 @@ request rate: 3.7 req/s, 14.8 req/s, due diversi livelli di intensità ottenuti
 
 \begin_layout Standard
 Data l'esiguità delle possibili combinazioni dei diversi livelli dei fattori
- in gioco, si è optato per un design full factorial, considerando tutte
- le 8 combinazioni senza considerare gli effetti delle interazioni.
- Inoltre, come da traccia, ogni trattamento è stato ripetuto 10 volte.
+ in gioco, si è optato per un modello 
+\shape italic
+two-factor experiment with repetition
+\shape default
+, considerando tutte le 8 combinazioni e relativi effetti delle interazioni.
+ Il numero di ripetizioni per ogni trattamento, come da traccia, è stato
+ fissato a 10.
 \end_layout
 
 \begin_layout Standard
@@ -1789,7 +1793,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/Regressione 2.png
-	lyxscale 30
+	lyxscale 50
 	scale 30
 
 \end_inset
@@ -1910,7 +1914,7 @@ Page Type
 \begin_inset Text
 
 \begin_layout Plain Layout
-98.99
+99
 \end_layout
 
 \end_inset
@@ -1950,7 +1954,7 @@ Request Rate
 \begin_inset Text
 
 \begin_layout Plain Layout
-Page Type*Request 
+Page Type*Request Rate
 \end_layout
 
 \end_inset
@@ -1959,7 +1963,7 @@ Page Type*Request
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+667094
 \end_layout
 
 \end_inset
@@ -1968,7 +1972,7 @@ Page Type*Request
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.6
 \end_layout
 
 \end_inset
@@ -1988,7 +1992,7 @@ Error
 \begin_inset Text
 
 \begin_layout Plain Layout
-877481
+210387
 \end_layout
 
 \end_inset
@@ -1997,7 +2001,7 @@ Error
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.8
+0.2
 \end_layout
 
 \end_inset

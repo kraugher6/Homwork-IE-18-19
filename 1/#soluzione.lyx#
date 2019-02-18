@@ -331,8 +331,8 @@ Ubuntu 18.04
 
 \begin_layout Standard
 Il primo passo è stato quello di effettuare un'analisi preliminare, con
- 7 osservazioni per ogni possibile combinazione dei fattori FileSize e BlockSize
-, per ottenere una prima stima dei tempi di read e write.
+ 7 osservazioni per ogni possibile combinazione dei fattori file size e
+ block size, per ottenere una prima stima dei tempi di read e write.
  Tali tempi sono stati utilizzati per calcolare la dimensione di ogni campione,
  e quindi il numero minimo di osservazioni necessarie affinchè potesse essere
  garantito un determinato grado di accuratezza ed una determinata confidenza;
@@ -413,7 +413,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Esempio COV
+Esempio di distribuzioni con diversi COV
 \end_layout
 
 \end_inset
@@ -429,14 +429,398 @@ Esempio COV
 \begin_layout Standard
 Sulla base di tali considerazioni, per il calcolo di r è stato quindi tenuto
  conto per ogni campione non il valore della media, bensì il coefficiente
- di variazione (COV), scegliendo il valore di r proprio pari a 1/4 di quest'ulti
+ di variazione (COV), scegliendo il valore di r proprio pari a 1/3 di quest'ulti
 mo.
  Considerando come confidenza il 99%, si è ottenuto come risultato un numero
  di esperimenti per ogni campione pari a 49.
+ I risultati delle accuratezze ottenute per ogni combinazione è riportata
+ di seguito.
 \end_layout
 
 \begin_layout Standard
-*TABELLA DEI VALORI SCRIPT MATLAB*
+\align center
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5 MB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20 MB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+96 MB
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50 KB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.3196
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.4398
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.4397
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+200 KB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.9202
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1581
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.4190
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 MB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.4066
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11.0778
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20.6722
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Accuratezza in percentuale per le diverse configurazioni (write)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5 MB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20 MB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+96 MB
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50 KB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.5365
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.3116
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.2761
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+200 KB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.0716
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.7785
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.2279
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 MB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.2865
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.1109
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.9598
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Accuratezza in percentuale per le diverse configurazioni (read)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -948,9 +1332,9 @@ Modello regressivo e smoothing per la read al variare dei block size per
 \end_layout
 
 \begin_layout Standard
-Come si può osservare da questi plot, per alcune configurazioni si ha una
- sovrapposizione degli intervalli di confidenza: questo potrebbe essere
- indice di una non significatività statistica dei risultati osservati.
+Come si può osservare da questi plot, per alcune configurazioni i modelli
+ ottenuti si sovrappongono: questo potrebbe essere indice di una non significati
+vità statistica dei risultati osservati.
  Vale a dire, i dati osservati provengono dalla stessa popolazione.
  Per scongiurare quest'ipotesi sono stati effettuati dei test statistici
  al fine di verificare che i campioni afferenti a configurazioni diverse
@@ -1431,8 +1815,8 @@ Dai risultati ottenuti si evidenzia che:
 
 \begin_layout Itemize
 per quanto riguarda le write, tutti i campioni afferenti al medesimo file
- size sono significativamente diversi, anche quelli che nel test visivo
- presentavano confidenze di regressione sovrapposte;
+ size sono significativamente diversi, anche quelli che dall'analisi visiva
+ preliminare non lo sembravano;
 \end_layout
 
 \begin_layout Itemize
@@ -1465,7 +1849,7 @@ status open
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="10" columns="6">
-<features tabularvalignment="middle">
+<features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -2380,22 +2764,9 @@ Stima tempi Write
 \end_layout
 
 \begin_layout Standard
-Dal grafico è possibile dedurre che:
-\end_layout
-
-\begin_layout Itemize
-per file maggiori di 5 MB, come ci si aspettava, sarebbe preferibile utilizzare
- un buffer di dimensioni minori (in particolare pari a 50 KB);
-\end_layout
-
-\begin_layout Itemize
-per file minori di 5 MB il modello suggerisce di utilizzare la dimensione
- più grande del buffer, ovvero quella da 1 MB;
-\end_layout
-
-\begin_layout Itemize
-per ottenere un compromesso si potrebbe pensare di utilizzare un'unica dimension
-e del buffer intermedia pari a 200 KB.
+Dal grafico è possibile dedurre che, come ci si aspettava, sarebbe sempre
+ preferibile utilizzare un buffer di dimensioni minori (in particolare pari
+ a 50 KB).
 \end_layout
 
 \begin_layout Standard
@@ -2431,7 +2802,7 @@ status open
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="10" columns="6">
-<features tabularvalignment="middle">
+<features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -3026,8 +3397,8 @@ Intervalli di confidenza per le letture
 Dai risultati, come già ci si poteva aspettare grazie al test di Wilcoxon,
  ci sono alcune sovrapposizioni tra gli intervalli di confidenza.
  In particolare, le configurazioni che comprendono file size di 20 MB e
- 100 MB (con tutti i block size), risultano non signif I valori migliori
- di block size trovati per ogni file size si riportano nella seguente tabella:
+ 100 MB (con tutti i block size) risultano non significative.
+ Pertanto l'unica combinazione valida è riportata di seguito:
 \end_layout
 
 \begin_layout Standard
@@ -3299,36 +3670,8 @@ Configurazioni ottimali per le letture
 
 \begin_layout Standard
 Rispetto al caso delle scritture, non è possibile effettuare la stessa analisi
+ con i punti caratteristici per poter effettuare le dovute comparazioni.
  
-\end_layout
-
-\begin_layout Standard
-Dal grafico è possibile dedurre che:
-\end_layout
-
-\begin_layout Itemize
-per file maggiori di 5 MB sarebbe preferibile utilizzare un buffer di dimensioni
- minori (in particolare pari a 50 KB);
-\end_layout
-
-\begin_layout Itemize
-per file minori di 5 MB il modello suggerisce di utilizzare la dimensione
- più grande del buffer, ovvero quella da 1 MB;
-\end_layout
-
-\begin_layout Itemize
-per ottenere un compromesso si potrebbe pensare di utilizzare un'unica dimension
-e del buffer intermedia pari a 200 KB.
-\end_layout
-
-\begin_layout Standard
-E' necessario tener presente che queste sono conclusioni tratte a valle
- di un modello che, in quanto tale, suggerisce un comportamento nominale
- sulla base dei campioni forniti.
- Di conseguenza, non si può garantire che i risultati ottenuti siano statisticam
-ente significativi.
- Per trarre delle conclusioni che siano più accurate sarebbe necessario
- effettuare un'analisi più approfondita con un numero maggiore di esperimenti.
 \end_layout
 
 \begin_layout Subsection
