@@ -1489,7 +1489,7 @@ Small
 \begin_inset Text
 
 \begin_layout Plain Layout
-45.83
+8.33
 \end_layout
 
 \end_inset
@@ -1576,7 +1576,7 @@ Valori medi richieste specifiche
 \begin_inset Text
 
 \begin_layout Plain Layout
-20
+7.5
 \end_layout
 
 \end_inset
@@ -1605,7 +1605,7 @@ Valori medi
 \begin_inset Text
 
 \begin_layout Plain Layout
-15.83
+6.457
 \end_layout
 
 \end_inset
@@ -1650,12 +1650,15 @@ A questo punto, come ultima considerazione, ci si potrebbe chiedere se la
  tipo di pagina sia comparabile ai risultati ottenuti nella riproduzione
  di un workload reale (capacity test misto).
  Come si può osservare dalla tabella i risultati ottenuti sono totalmente
- diversi.
+ diversi per quanto riguarda la usable capacity.
  Ciò può essere attribuito al fatto che in un contesto reale è molto improbabile
  che ci siano delle situazioni in cui vengono fatte, in un dato periodo
  temporale, richieste specifiche per tipo di pagina; quindi mediare su questi
  risultati significa tenere in conto situazioni di altissimo througuhput
  che possono polarizzare il risultato finale.
+ Per quanto riguarda le knee capacity i risultati sembrano essere meno distanti
+ tra loro; ciò non è comunque indice del fatto che le prestazioni siano
+ paragonabili.
 \end_layout
 
 \begin_layout Subsection
@@ -1747,7 +1750,7 @@ o.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1780,13 +1783,13 @@ Risultati della regressione
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename images/Regressione 2.png
-	lyxscale 30
+	lyxscale 50
 	scale 30
 
 \end_inset
@@ -1845,12 +1848,12 @@ importanza
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="3">
+<lyxtabular version="3" rows="5" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -1907,7 +1910,7 @@ Page Type
 \begin_inset Text
 
 \begin_layout Plain Layout
-98.99
+99
 \end_layout
 
 \end_inset
@@ -1943,6 +1946,35 @@ Request Rate
 </cell>
 </row>
 <row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Page Type*Request Rate
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+667094
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -1956,7 +1988,7 @@ Error
 \begin_inset Text
 
 \begin_layout Plain Layout
-877481
+210387
 \end_layout
 
 \end_inset
@@ -1965,7 +1997,7 @@ Error
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.8
+0.2
 \end_layout
 
 \end_inset

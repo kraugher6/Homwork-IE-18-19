@@ -1564,7 +1564,6 @@ Big
 </row>
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1578,35 +1577,6 @@ Valori medi richieste specifiche
 
 \begin_layout Plain Layout
 7.5
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-22.78
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Valori medi richieste specifiche
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-20
 \end_layout
 
 \end_inset
@@ -1686,21 +1656,9 @@ A questo punto, come ultima considerazione, ci si potrebbe chiedere se la
  temporale, richieste specifiche per tipo di pagina; quindi mediare su questi
  risultati significa tenere in conto situazioni di altissimo througuhput
  che possono polarizzare il risultato finale.
- Per quanto riguarda le knee capacity i risultati 
-\end_layout
-
-\begin_layout Standard
-A questo punto, come ultima considerazione, ci si potrebbe chiedere se la
- media dei risultati dei capacity test con richieste specifiche per ogni
- tipo di pagina sia comparabile ai risultati ottenuti nella riproduzione
- di un workload reale (capacity test misto).
- Come si può osservare dalla tabella i risultati ottenuti sono totalmente
- diversi.
- Ciò può essere attribuito al fatto che in un contesto reale è molto improbabile
- che ci siano delle situazioni in cui vengono fatte, in un dato periodo
- temporale, richieste specifiche per tipo di pagina; quindi mediare su questi
- risultati significa tenere in conto situazioni di altissimo througuhput
- che possono polarizzare il risultato finale.
+ Per quanto riguarda le knee capacity i risultati sembrano essere meno distanti
+ tra loro; ciò non è comunque indice del fatto che le prestazioni siano
+ paragonabili.
 \end_layout
 
 \begin_layout Subsection
@@ -1736,9 +1694,8 @@ request rate: 3.7 req/s, 14.8 req/s, due diversi livelli di intensità ottenuti
 
 \begin_layout Standard
 Data l'esiguità delle possibili combinazioni dei diversi livelli dei fattori
- in gioco, si è optato per un modello two-factor experiment with repetition,
- considerando tutte le 8 combinazioni senza considerare gli effetti delle
- interazioni.
+ in gioco, si è optato per un design full factorial, considerando tutte
+ le 8 combinazioni senza considerare gli effetti delle interazioni.
  Inoltre, come da traccia, ogni trattamento è stato ripetuto 10 volte.
 \end_layout
 
@@ -1793,7 +1750,7 @@ o.
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1826,15 +1783,13 @@ Risultati della regressione
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename images/Regressione 2.png
 	lyxscale 30
-	scale 30
-	lyxscale 50
 	scale 30
 
 \end_inset
@@ -1893,7 +1848,7 @@ importanza
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1955,7 +1910,7 @@ Page Type
 \begin_inset Text
 
 \begin_layout Plain Layout
-99
+98.99
 \end_layout
 
 \end_inset
@@ -1984,7 +1939,7 @@ Request Rate
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.002
+0.2
 \end_layout
 
 \end_inset
@@ -1995,7 +1950,7 @@ Request Rate
 \begin_inset Text
 
 \begin_layout Plain Layout
-Page Type*Request Rate
+Page Type*Request 
 \end_layout
 
 \end_inset
@@ -2004,7 +1959,7 @@ Page Type*Request Rate
 \begin_inset Text
 
 \begin_layout Plain Layout
-667094
+
 \end_layout
 
 \end_inset
@@ -2013,7 +1968,7 @@ Page Type*Request Rate
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.006
+
 \end_layout
 
 \end_inset
@@ -2033,7 +1988,7 @@ Error
 \begin_inset Text
 
 \begin_layout Plain Layout
-210387
+877481
 \end_layout
 
 \end_inset
@@ -2042,7 +1997,7 @@ Error
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.002
+0.8
 \end_layout
 
 \end_inset
