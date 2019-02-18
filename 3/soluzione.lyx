@@ -1195,7 +1195,11 @@ Ai fini di aumentare il carico, il capacity test è stato condotto facendo
  variare il numero di thread, ognuno dei quali settato per fare 10 richieste
  al minuto; così facendo, è stato possibile far variare il numero di richieste
  totali inoltrate al server.
- I risultati del test si riportano in figura:
+ 
+\end_layout
+
+\begin_layout Standard
+I risultati del test si riportano in figura:
 \end_layout
 
 \begin_layout Standard
@@ -1251,6 +1255,23 @@ La knee capacity risulta essere di 3.33 req/s, mentre la usable capacity
 A questo punto, il capacity test è stato condotto separatamente in base
  alle dimensioni delle pagine richieste.
  I risultati sono discussi nelle seguenti sezioni.
+\end_layout
+
+\begin_layout Standard
+I valori di knee capacity e usable capacity sono stati presi dapprima ad
+ occhio, prendendo rispettivamente il punto di cambio di pendenza della
+ retta rappresentante il throughput e il punto di throughput massimo.
+ Per avere una conferma della bontà della scelta effettuata per la knee
+ capacity, considerando che questa rappresenta il punto in cui il rapporto
+ tra throughput e response time è massimo, si è deciso di plottare tale
+ rapporto: in sostanza si è rappresentata la potenza del sistema.
+ In realtà, tale espediente è stato ritenuto necessario soltanto per l'unico
+ caso del capacity test per pagine small, in cui non si è riuscito ad individuar
+e un netto cambio di pendenza della curva: dimostrazione della complessità
+ di questa situazione è anche il fatto che il grafico della potenza non
+ presenta un picco definito, ma rimane alta per un intervallo prolungato
+ di tempo.
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -1468,7 +1489,7 @@ Small
 \begin_inset Text
 
 \begin_layout Plain Layout
-45.83
+8.33
 \end_layout
 
 \end_inset
@@ -1555,7 +1576,7 @@ Valori medi richieste specifiche
 \begin_inset Text
 
 \begin_layout Plain Layout
-20
+7.5
 \end_layout
 
 \end_inset
@@ -1584,7 +1605,7 @@ Valori medi
 \begin_inset Text
 
 \begin_layout Plain Layout
-15.83
+6.457
 \end_layout
 
 \end_inset
@@ -1629,12 +1650,15 @@ A questo punto, come ultima considerazione, ci si potrebbe chiedere se la
  tipo di pagina sia comparabile ai risultati ottenuti nella riproduzione
  di un workload reale (capacity test misto).
  Come si può osservare dalla tabella i risultati ottenuti sono totalmente
- diversi.
+ diversi per quanto riguarda la usable capacity.
  Ciò può essere attribuito al fatto che in un contesto reale è molto improbabile
  che ci siano delle situazioni in cui vengono fatte, in un dato periodo
  temporale, richieste specifiche per tipo di pagina; quindi mediare su questi
  risultati significa tenere in conto situazioni di altissimo througuhput
  che possono polarizzare il risultato finale.
+ Per quanto riguarda le knee capacity i risultati sembrano essere meno distanti
+ tra loro; ciò non è comunque indice del fatto che le prestazioni siano
+ paragonabili.
 \end_layout
 
 \begin_layout Subsection

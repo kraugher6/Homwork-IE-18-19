@@ -1195,7 +1195,11 @@ Ai fini di aumentare il carico, il capacity test è stato condotto facendo
  variare il numero di thread, ognuno dei quali settato per fare 10 richieste
  al minuto; così facendo, è stato possibile far variare il numero di richieste
  totali inoltrate al server.
- I risultati del test si riportano in figura:
+ 
+\end_layout
+
+\begin_layout Standard
+I risultati del test si riportano in figura:
 \end_layout
 
 \begin_layout Standard
@@ -1204,7 +1208,7 @@ Ai fini di aumentare il carico, il capacity test è stato condotto facendo
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1253,6 +1257,23 @@ A questo punto, il capacity test è stato condotto separatamente in base
  I risultati sono discussi nelle seguenti sezioni.
 \end_layout
 
+\begin_layout Standard
+I valori di knee capacity e usable capacity sono stati presi dapprima ad
+ occhio, prendendo rispettivamente il punto di cambio di pendenza della
+ retta rappresentante il throughput e il punto di throughput massimo.
+ Per avere una conferma della bontà della scelta effettuata per la knee
+ capacity, considerando che questa rappresenta il punto in cui il rapporto
+ tra throughput e response time è massimo, si è deciso di plottare tale
+ rapporto: in sostanza si è rappresentata la potenza del sistema.
+ In realtà, tale espediente è stato ritenuto necessario soltanto per l'unico
+ caso del capacity test per pagine small, in cui non si è riuscito ad individuar
+e un netto cambio di pendenza della curva: dimostrazione della complessità
+ di questa situazione è anche il fatto che il grafico della potenza non
+ presenta un picco definito, ma rimane alta per un intervallo prolungato
+ di tempo.
+ 
+\end_layout
+
 \begin_layout Subsubsection
 Capacity test pagine small
 \end_layout
@@ -1263,7 +1284,7 @@ Capacity test pagine small
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1304,7 +1325,7 @@ Capacity test pagine medium
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1345,7 +1366,7 @@ Capacity test pagine big
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -1386,12 +1407,12 @@ In sintesi i valori ottenuti, compresi di media, sono riportati in tabella
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="6" columns="3">
+<lyxtabular version="3" rows="7" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -1439,7 +1460,7 @@ Misto
 \begin_inset Text
 
 \begin_layout Plain Layout
-2.5
+3.33
 \end_layout
 
 \end_inset
@@ -1468,7 +1489,7 @@ Small
 \begin_inset Text
 
 \begin_layout Plain Layout
-16.67
+45.83
 \end_layout
 
 \end_inset
@@ -1497,7 +1518,7 @@ Medium
 \begin_inset Text
 
 \begin_layout Plain Layout
-5
+6.667
 \end_layout
 
 \end_inset
@@ -1513,7 +1534,7 @@ Medium
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1522,11 +1543,40 @@ Big
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.83
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-5
+Valori medi richieste specifiche
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20
 \end_layout
 
 \end_inset
@@ -1535,7 +1585,7 @@ Big
 \begin_inset Text
 
 \begin_layout Plain Layout
-10.83
+22.78
 \end_layout
 
 \end_inset
@@ -1555,7 +1605,7 @@ Valori medi
 \begin_inset Text
 
 \begin_layout Plain Layout
-7.29
+15.83
 \end_layout
 
 \end_inset
@@ -1589,13 +1639,23 @@ Valori di knee e usable capacity in sintesi
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+A questo punto, come ultima considerazione, ci si potrebbe chiedere se la
+ media dei risultati dei capacity test con richieste specifiche per ogni
+ tipo di pagina sia comparabile ai risultati ottenuti nella riproduzione
+ di un workload reale (capacity test misto).
+ Come si può osservare dalla tabella i risultati ottenuti sono totalmente
+ diversi.
+ Ciò può essere attribuito al fatto che in un contesto reale è molto improbabile
+ che ci siano delle situazioni in cui vengono fatte, in un dato periodo
+ temporale, richieste specifiche per tipo di pagina; quindi mediare su questi
+ risultati significa tenere in conto situazioni di altissimo througuhput
+ che possono polarizzare il risultato finale.
 \end_layout
 
 \begin_layout Subsection
@@ -1632,7 +1692,7 @@ request rate: 3.7 req/s, 14.8 req/s, due diversi livelli di intensità ottenuti
 \begin_layout Standard
 Data l'esiguità delle possibili combinazioni dei diversi livelli dei fattori
  in gioco, si è optato per un design full factorial, considerando tutte
- le 8 combinazioni.
+ le 8 combinazioni senza considerare gli effetti delle interazioni.
  Inoltre, come da traccia, ogni trattamento è stato ripetuto 10 volte.
 \end_layout
 
@@ -1642,14 +1702,14 @@ Data l'esiguità delle possibili combinazioni dei diversi livelli dei fattori
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename images/DOE.png
-	lyxscale 50
-	scale 60
+	lyxscale 25
+	scale 30
 
 \end_inset
 
@@ -1693,8 +1753,8 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename images/Regressione 1.png
-	lyxscale 50
-	scale 60
+	lyxscale 30
+	scale 30
 
 \end_inset
 
@@ -1726,8 +1786,8 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename images/Regressione 2.png
-	lyxscale 50
-	scale 60
+	lyxscale 30
+	scale 30
 
 \end_inset
 
@@ -1785,7 +1845,7 @@ importanza
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -1961,7 +2021,7 @@ A questo punto si è proceduto ad un'analisi della significatività dei fattori.
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2011,7 +2071,7 @@ L’altra proprietà da verificare per scegliere il test ANOVA sarebbe quella
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
