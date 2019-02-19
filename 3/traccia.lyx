@@ -118,28 +118,10 @@ Capacity Test
 \begin_layout Standard
 Tramite JMeter, settare il request rate e testare il server per un dato
  tempo; ripetere il tutto aumentando di volta in volta il request rate.
-\end_layout
-
-\begin_layout Enumerate
-Eseguire il test e determinare la usable capacity e la knee capacity usando
+ Eseguire il test e determinare la usable capacity e la knee capacity usando
  un random controller e considerando tutte le pagine.
 \end_layout
 
-\begin_layout Enumerate
-Ripetere il test con i singoli tipi di richieste e:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-scegliere come valori di usable e knee capacity quelli mediati sulle diverse
- tipologie di richieste;
-\end_layout
-
-\begin_layout Itemize
-comparare i risultati con il caso del random controller.
-\end_layout
-
-\end_deeper
 \begin_layout Subsection
 Design of Experiment
 \end_layout

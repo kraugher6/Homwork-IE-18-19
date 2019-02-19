@@ -1412,7 +1412,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="3">
+<lyxtabular version="3" rows="6" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -1563,35 +1563,6 @@ Big
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Valori medi richieste specifiche
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-7.5
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-22.78
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -1644,25 +1615,8 @@ Valori di knee e usable capacity in sintesi
 
 \end_layout
 
-\begin_layout Standard
-A questo punto, come ultima considerazione, ci si potrebbe chiedere se la
- media dei risultati dei capacity test con richieste specifiche per ogni
- tipo di pagina sia comparabile ai risultati ottenuti nella riproduzione
- di un workload reale (capacity test misto).
- Come si può osservare dalla tabella i risultati ottenuti sono totalmente
- diversi per quanto riguarda la usable capacity.
- Ciò può essere attribuito al fatto che in un contesto reale è molto improbabile
- che ci siano delle situazioni in cui vengono fatte, in un dato periodo
- temporale, richieste specifiche per tipo di pagina; quindi mediare su questi
- risultati significa tenere in conto situazioni di altissimo througuhput
- che possono polarizzare il risultato finale.
- Per quanto riguarda le knee capacity i risultati sembrano essere meno distanti
- tra loro; ciò non è comunque indice del fatto che le prestazioni siano
- paragonabili.
-\end_layout
-
 \begin_layout Subsection
-Design of experiment
+Design of Experiment
 \end_layout
 
 \begin_layout Standard
@@ -1687,9 +1641,9 @@ page type: small (100 kB), medium1 (500 kB), medium2 (1 MB), big (2 MB);
 \end_layout
 
 \begin_layout Itemize
-request rate: 3.7 req/s, 14.8 req/s, due diversi livelli di intensità ottenuti
- calcolando rispettivamente il 20% e l'80% dei valori medi di usable capacity
- calcolati precedentemente.
+request rate: low (3.7 req/s), high (14.8 req/s), due diversi livelli di intensità
+ ottenuti calcolando rispettivamente il 20% e l'80% dei valori medi di usable
+ capacity calcolati precedentemente.
 \end_layout
 
 \begin_layout Standard

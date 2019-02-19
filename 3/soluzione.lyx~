@@ -681,8 +681,8 @@ Latency media rispetto alla pagina richiesta
 \begin_layout Standard
 Sul grafico è stata plottata la latenza media in relazione alle pagine richieste
  e, conseguentemente, ai bytes della richiesta.
- Come si può osservare le pagine small sono quelle caratterizzate da una
- più alta latenza rispetto alle altre.
+ Come si può osservare, la latenza non cresce con l'aumentare della dimensione
+ della pagina richiesta.
 \end_layout
 
 \begin_layout Standard
@@ -1252,12 +1252,6 @@ La knee capacity risulta essere di 3.33 req/s, mentre la usable capacity
 \end_layout
 
 \begin_layout Standard
-A questo punto, il capacity test è stato condotto separatamente in base
- alle dimensioni delle pagine richieste.
- I risultati sono discussi nelle seguenti sezioni.
-\end_layout
-
-\begin_layout Standard
 I valori di knee capacity e usable capacity sono stati presi dapprima ad
  occhio, prendendo rispettivamente il punto di cambio di pendenza della
  retta rappresentante il throughput e il punto di throughput massimo.
@@ -1272,6 +1266,12 @@ e un netto cambio di pendenza della curva: dimostrazione della complessità
  presenta un picco definito, ma rimane alta per un intervallo prolungato
  di tempo.
  
+\end_layout
+
+\begin_layout Standard
+A questo punto, il capacity test è stato condotto separatamente in base
+ alle dimensioni delle pagine richieste.
+ I risultati sono discussi nelle seguenti sezioni.
 \end_layout
 
 \begin_layout Subsubsection
