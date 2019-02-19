@@ -2734,8 +2734,9 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename design/Matlab/regressioneTempiWFinale.png
-	scale 45
+	filename Images/plotMedie.png
+	lyxscale 50
+	scale 60
 
 \end_inset
 

@@ -2734,7 +2734,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename design/Matlab/regressioneTempiWFinale.png
+	filename Images/plotMedie.png
 	scale 45
 
 \end_inset
@@ -2764,22 +2764,9 @@ Stima tempi Write
 \end_layout
 
 \begin_layout Standard
-Dal grafico è possibile dedurre che:
-\end_layout
-
-\begin_layout Itemize
-per file maggiori di 5 MB, come ci si aspettava, sarebbe preferibile utilizzare
- un buffer di dimensioni minori (in particolare pari a 50 KB);
-\end_layout
-
-\begin_layout Itemize
-per file minori di 5 MB il modello suggerisce di utilizzare la dimensione
- più grande del buffer, ovvero quella da 1 MB;
-\end_layout
-
-\begin_layout Itemize
-per ottenere un compromesso si potrebbe pensare di utilizzare un'unica dimension
-e del buffer intermedia pari a 200 KB.
+Dal grafico è possibile dedurre che, come ci si aspettava, sarebbe sempre
+ preferibile utilizzare un buffer di dimensioni minori (in particolare pari
+ a 50 KB).
 \end_layout
 
 \begin_layout Standard
@@ -2815,7 +2802,7 @@ status open
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="10" columns="6">
-<features tabularvalignment="middle">
+<features booktabs="true" tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
